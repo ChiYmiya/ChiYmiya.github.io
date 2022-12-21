@@ -131,7 +131,7 @@ nav ul li a:hover::after {
 
 @keyframes h1-text {
     100% {
-        background-position: 1000px 0;
+        background-position: 2000px 0;
     }
 }
 
