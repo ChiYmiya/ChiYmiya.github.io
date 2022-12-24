@@ -87,6 +87,12 @@ nav ul li {
     display: inline-block;
     font-size: 20px;
     font-weight: 600;
+    transition: background 0.5s,text-shadow 0.5s;
+}
+
+nav ul li:hover{
+    background-clip: calc(50%);
+    text-shadow: 10px -13px 2px #CECECE;
 }
 
 nav ul li a {
