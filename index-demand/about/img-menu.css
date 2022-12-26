@@ -1,0 +1,101 @@
+.myid {
+    display: block;
+    position: relative;
+    width: 50px;
+    right: 8%;
+}
+
+.myid img {
+    width: 35px;
+    clip-path: circle(50%);
+    cursor: pointer;
+}
+
+.myid-content {
+    display: block;
+    position: absolute;
+    width: 270px;
+    top: 45px;
+    right: -50px;
+    box-shadow: 13px 12px 20px 3px #D3D3D3;
+    overflow: hidden;
+    height: 0;
+    transition-duration: 0.5s;
+}
+
+.myid:hover .myid-content {
+    height: 136px;
+}
+
+.myid-content .content-mian {
+    display: flex;
+    justify-items: flex-start;
+    position: relative;
+    border-bottom: rgba(0, 0, 0, 0.2) solid 1px;
+}
+
+.myid-content .content-mian .function {
+    position: absolute;
+    display: block;
+    right: 9%;
+}
+
+.myid-content .content-mian .function h3 {
+    margin: 5px 0 10px 0;
+    color: rgba(0, 0, 0, 0.5);
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.myid-content .content-mian .function button {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #cb7ba0;
+    color: #fff;
+    font-size: 18px;
+    width: 120px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: auto;
+}
+
+.myid-content .content-mian .function button img {
+    width: 30px;
+    margin: 0;
+}
+
+.myid-content .content-mian img {
+    width: 75px;
+    clip-path: circle(50%);
+    margin: 5px 5px;
+}
+
+.myid-content .content-text {
+    display: block;
+    width: 270px;
+}
+
+.content-text ul{
+    list-style-type: none;
+}
+
+.content-text ul li{
+    line-height: 50px;
+    display: block;
+    text-align: center;
+}
+
+.content-text a {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.content-text a:hover{
+    color: #c57ca1;
+}

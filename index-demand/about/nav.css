@@ -1,0 +1,60 @@
+nav {
+    display: flex;
+    position: sticky;
+    /* 导航栏在滚动时不随页面滑动 */
+    width: 100%;
+    align-items: center;
+    padding: 3px 0;
+    border-bottom: rgb(244, 143, 177, .4) solid 3px;
+}
+
+.nav {
+    display: inline-block;
+    flex: 1;
+    flex-wrap: wrap;
+    text-align: left;
+    list-style-type: none;
+    padding-left: 30px;
+}
+
+.nav li {
+    margin: 0;
+    padding: 0;
+    margin-inline: 2%;
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 600;
+    transition: background 0.5s, text-shadow 0.5s;
+}
+
+.nav li:hover {
+    background-clip: calc(50%);
+    text-shadow: 10px -13px 2px #CECECE;
+}
+
+.nav li a {
+    text-decoration: none;
+    color: #fff;
+    position: relative;
+    display: block;
+}
+
+.nav li a:active{
+    color: #c57ca1;
+}
+
+.nav li a::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    position: absolute;
+    top: 23px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fff;
+    transition: width 0.2s;
+}
+
+.nav li a:hover::after {
+    width: 60%;
+}
