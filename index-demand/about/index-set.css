@@ -1,16 +1,10 @@
-/***
-     普通渐变背景
-    background: #ffdde6 no-repeat fixed top;
-    background-image: linear-gradient(to top, #ee9ca7, #ffe3e3, #ffdde1, #fff0f6);
-    background-attachment: fixed;
-***/
-
 /* 页面基本设置 */
 * {
     margin: 0px;
     padding: 0px;
     font-family: 'yuyang','STXihei', 'FZShuTi', 'FZYaoTi', 'STxinwei';
     box-sizing: border-box;
+    color: #FFF;
 }
 
 body,html{
@@ -41,9 +35,9 @@ body,html{
 /* 设置背景图片 颜色蒙版 */
 .background_img {
     background:
-        linear-gradient(160deg, rgba(252, 194, 215, .7), transparent 80%),
-        linear-gradient(250deg, rgba(50, 204, 188, .5), transparent 80%),
-        linear-gradient(0deg, rgba(255, 206, 153, .7), transparent 40%),
+        linear-gradient(160deg, rgba(252, 194, 215, 0.4), transparent 80%),
+        linear-gradient(250deg, rgba(50, 204, 188, 0.3), transparent 80%),
+        linear-gradient(0deg, rgba(255, 206, 153, 0.5), transparent 40%),
         url(../img/background1.jpg);
     background-size: cover;
     background-position: center;
@@ -95,8 +89,6 @@ body,html{
     color: transparent;
     text-align-last: right;
     background:
-        /* linear-gradient(to left, #fbc7d4 10%, #fff0f6 30%,
-            #c5f6fa 50%, #fff3bf 70%, #fbc7d4 100%); */
         radial-gradient(at 50% 50%, #fbc7d4 10%, #fff0f6 30%,
         #c5f6fa 50%, #fff3bf 70%, #fbc7d4);
     -webkit-background-clip: text;
@@ -123,6 +115,7 @@ body,html{
 .main-content .flex-1{
     display: grid;
     grid-template-columns: auto auto auto;
+    column-gap: 50px;
     align-content: center;
     width: 75%;
     background-image: radial-gradient(at 50% 50%, rgba(0, 0, 0,0.3),transparent);

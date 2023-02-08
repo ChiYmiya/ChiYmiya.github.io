@@ -1,0 +1,13 @@
+/* 平板大小 */
+@media screen and (max-width:820px) {
+    /* 页面主标题 */
+    .background_img h1{
+        font-size: 166px;
+        font-weight: 500;
+    }
+    /* 右下角标题 */
+    .text-box h2{
+        font-size: 36px;
+        font-weight: 1000;
+    }
+}
