@@ -1,49 +1,57 @@
+/* 导航栏基本设置 */
 nav {
     display: flex;
-    position: sticky;
     /* 导航栏在滚动时不随页面滑动 */
-    width: 100%;
+    position: sticky;
     align-items: center;
     padding: 3px 0;
-    border-bottom: rgb(244, 143, 177, .4) solid 3px;
+    border-bottom: 4px solid;
+    border-image: linear-gradient(to right, #fbc7d4 ,#c5f6fa)30 30;
 }
 
-.nav {
+/* 对导航栏内列表ul的设置 */
+.nav-ul {
     display: inline-block;
+    /* 弹性增长量相同 */
     flex: 1;
-    flex-wrap: wrap;
     text-align: left;
     list-style-type: none;
     padding-left: 30px;
 }
 
-.nav li {
+/* 列表单项的设置 */
+.nav-ul li {
     margin: 0;
     padding: 0;
     margin-inline: 2%;
     display: inline-block;
     font-size: 20px;
     font-weight: 600;
+    /* 设置阴影动画 */
     transition: background 0.5s, text-shadow 0.5s;
 }
 
-.nav li:hover {
+/* 列表下拉时的悬停 */
+.nav-ul li:hover {
     background-clip: calc(50%);
     text-shadow: 10px -13px 2px #CECECE;
 }
 
-.nav li a {
+/* 链接相对定位及其格式 */
+.nav-ul li a {
     text-decoration: none;
     color: #fff;
     position: relative;
     display: block;
 }
 
-.nav li a:active{
+/* 点击时列表链接的颜色变化 */
+.nav-ul li a:active{
     color: #c57ca1;
 }
 
-.nav li a::after {
+/* 在链接下添加短横线 */
+.nav-ul li a::after {
     content: '';
     width: 0;
     height: 3px;
@@ -55,6 +63,7 @@ nav {
     transition: width 0.2s;
 }
 
-.nav li a:hover::after {
+/* 设置悬停时后面短线的最长度 */
+.nav-ul li a:hover::after {
     width: 60%;
 }
