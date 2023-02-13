@@ -1,0 +1,25 @@
+/* 中间内容设置 */
+.main-content{
+    display: flex;
+    width: 100%;
+    min-height: calc(93% - 60px);
+    justify-content: center;
+}
+
+/* 中间内容网格布局 */
+.main-content .grid-1{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(100px,1fr));
+    grid-gap: 50px;
+    align-content: center;
+    justify-content: space-evenly;
+    width: 75%;
+    background-image: radial-gradient(at 50% 50%, rgba(0, 0, 0,0.3),transparent);
+}
+
+/* 中间元素设置 */
+.main-content .grid-1 .itme{
+    background-image: radial-gradient(at 20% 0%, rgba(186, 255, 253, 0.3), transparent);
+    height: 150px;
+    width: 150px;
+}

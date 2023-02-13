@@ -1,8 +1,13 @@
+/* 一般情况下隐藏手机栏 */
+.iphone-nav{
+    display: none;
+}
 /* 导航栏基本设置 */
-nav {
+.pc-nav {
     display: flex;
     /* 导航栏在滚动时不随页面滑动 */
     position: sticky;
+    width: 100%;
     align-items: center;
     padding: 3px 0;
     border-bottom: 4px solid;
@@ -11,7 +16,6 @@ nav {
 
 /* 对导航栏内列表ul的设置 */
 .nav-ul {
-    display: inline-block;
     /* 弹性增长量相同 */
     flex: 1;
     text-align: left;
@@ -28,12 +32,11 @@ nav {
     font-size: 20px;
     font-weight: 600;
     /* 设置阴影动画 */
-    transition: background 0.5s, text-shadow 0.5s;
+    transition: text-shadow 0.5s;
 }
 
 /* 列表下拉时的悬停 */
 .nav-ul li:hover {
-    background-clip: calc(50%);
     text-shadow: 10px -13px 2px #CECECE;
 }
 

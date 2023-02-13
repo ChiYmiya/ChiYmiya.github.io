@@ -1,3 +1,4 @@
+@import url(main-content.css);
 /* 页面基本设置 */
 * {
     margin: 0px;
@@ -11,7 +12,10 @@ body,html{
     width: 100%;
     height: 100%;
 }
-
+body{
+    min-height: 200px;
+    /* min-width: 1000px; */
+}
 
 /* 鼠标选择的颜色样式 */
 ::selection {
@@ -23,13 +27,6 @@ body,html{
 @font-face {
     font-family: yuyang;
     src: url(yuyang.ttf);
-}
-
-
-/* 部分类的最小宽度 */
-.background_img,
-.nav-ul,.main-content,.flex-1{
-    min-width: 800px;
 }
 
 /* 设置背景图片 颜色蒙版 */
@@ -46,8 +43,14 @@ body,html{
     height: 100vh;
     position: fixed;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     z-index: -100;
+}
+
+/* 一般隐藏手机的h1格式 */
+.iphone-h1{
+    display: none;
 }
 
 /* 背景中央标题 */
@@ -78,7 +81,7 @@ body,html{
 /* 右下角文字内容定位 */
 .text-box {
     position: absolute;
-    right: 50px;
+    right: 45px;
     bottom: 15%;
 }
 
@@ -103,33 +106,8 @@ body,html{
     }
 }
 
-/* 中间内容设置 */
-.main-content{
-    display: flex;
-    width: 100%;
-    min-height: calc(93% - 60px);
-    justify-content: center;
-}
-
-/* 中间内容网格布局 */
-.main-content .flex-1{
-    display: grid;
-    grid-template-columns: auto auto auto;
-    column-gap: 50px;
-    align-content: center;
-    width: 75%;
-    background-image: radial-gradient(at 50% 50%, rgba(0, 0, 0,0.3),transparent);
-}
-
-/* 中间元素设置 */
-.main-content .flex-1 .itme{
-    background-image: radial-gradient(at 20% 0%, rgba(186, 255, 253, 0.3), transparent);
-    height: 250px;
-}
-
 /* 页脚设置 */
 footer{
-    display: inline-block;
     bottom: 0%;
     width: 100%;
     text-align: center;
@@ -137,7 +115,6 @@ footer{
     line-height: 20px;
     color: #fff;
     background-image: radial-gradient(at 50% 0%,rgba(0, 0, 0, 0.2),transparent);
-    border-top:4px solid ;
+    border-top:4px solid;
     border-image: linear-gradient(to left, #fbc7d4 ,#c5f6fa)30 30;
-
 }

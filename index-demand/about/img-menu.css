@@ -108,12 +108,7 @@
     height: auto;
 }
 
-/* .myid-c2 .li1{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-} */
-
+/* 第二行链接栏 */
 .myid-c2 ul{
     list-style-type: none;
     display: flex;
