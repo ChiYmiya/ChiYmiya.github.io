@@ -9,9 +9,10 @@
     position: sticky;
     width: 100%;
     align-items: center;
-    padding: 3px 0;
-    border-bottom: 4px solid;
+    border-bottom: 2px solid;
     border-image: linear-gradient(to right, #fbc7d4 ,#c5f6fa)30 30;
+    animation: border-change 2s linear infinite alternate;
+    filter: hue-rotate(360deg);
 }
 
 /* 对导航栏内列表ul的设置 */
@@ -46,6 +47,10 @@
     color: #fff;
     position: relative;
     display: block;
+    height: 46.6px;
+    width: 100px;
+    line-height: 46.6px;
+    text-align: center;
 }
 
 /* 点击时列表链接的颜色变化 */
@@ -59,10 +64,12 @@
     width: 0;
     height: 3px;
     position: absolute;
-    top: 23px;
+    top: 37px;
     left: 50%;
     transform: translateX(-50%);
-    background: #fff;
+    background: linear-gradient(160deg, rgba(252, 194, 215, 1), transparent 80%),
+    linear-gradient(250deg, rgba(50, 204, 188, 1), transparent 80%),
+    linear-gradient(0deg, rgba(255, 206, 153, 1), transparent 40%);
     transition: width 0.2s;
 }
 

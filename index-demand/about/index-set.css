@@ -14,7 +14,6 @@ body,html{
 }
 body{
     min-height: 200px;
-    /* min-width: 1000px; */
 }
 
 /* 鼠标选择的颜色样式 */
@@ -31,8 +30,7 @@ body{
 
 /* 设置背景图片 颜色蒙版 */
 .background_img {
-    background:
-        linear-gradient(160deg, rgba(252, 194, 215, 0.4), transparent 80%),
+    background: linear-gradient(160deg, rgba(252, 194, 215, 0.4), transparent 80%),
         linear-gradient(250deg, rgba(50, 204, 188, 0.3), transparent 80%),
         linear-gradient(0deg, rgba(255, 206, 153, 0.5), transparent 40%),
         url(../img/background1.jpg);
@@ -92,7 +90,7 @@ body{
     color: transparent;
     text-align-last: right;
     background:
-        radial-gradient(at 50% 50%, #fbc7d4 10%, #fff0f6 30%,
+        linear-gradient(45deg, #fbc7d4 10%, #fff0f6 30%,
         #c5f6fa 50%, #fff3bf 70%, #fbc7d4);
     -webkit-background-clip: text;
     background-position: 0 0;
@@ -115,6 +113,7 @@ footer{
     line-height: 20px;
     color: #fff;
     background-image: radial-gradient(at 50% 0%,rgba(0, 0, 0, 0.2),transparent);
-    border-top:4px solid;
+    border-top: 2px solid;
     border-image: linear-gradient(to left, #fbc7d4 ,#c5f6fa)30 30;
+    animation: border-change 2s linear infinite alternate;
 }

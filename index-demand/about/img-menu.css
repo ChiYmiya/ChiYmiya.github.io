@@ -53,10 +53,23 @@
 }
 
 /* 按键左侧图片设置 */
-.myid-c1 .grid_mebu1 button img {
+.myid-c1 .grid_mebu1 button .zanImg {
+    /* 空心图标 */
+    background: url(../img/noZan.jpg);
     width: 30px;
+    height: 30px;
     margin: 0;
 }
+
+/* 实心赞图标 */
+.myid-c1 .grid_mebu1 button .zan_on {
+    background: url(../img/isZan.jpg);
+    background-size: 30px 30px;
+    width: 30px;
+    height: 30px;
+    margin: 0;
+}
+
 
 /* 第一栏左侧头像图片样式 */
 .myid-c1 .img img {
@@ -80,7 +93,7 @@
     justify-content: space-evenly;
     margin: 0;
     background-color: #faa2c1;
-    color:  #fff;
+    color: #fff;
     font-size: 18px;
     font-weight: 1000;
     width: 120px;
@@ -93,12 +106,12 @@
 }
 
 /* 按键悬停时颜色变化 */
-.myid-c1 .grid_mebu1 button:hover{
+.myid-c1 .grid_mebu1 button:hover {
     background-color: #dd7694;
 }
 
 /* 点击时颜色改变 */
-.myid-c1 .grid_mebu1 button:active{
+.myid-c1 .grid_mebu1 button:active {
     color: #dd0040;
 }
 
@@ -109,7 +122,7 @@
 }
 
 /* 第二行链接栏 */
-.myid-c2 ul{
+.myid-c2 ul {
     list-style-type: none;
     display: flex;
     align-items: center;
@@ -117,7 +130,7 @@
     height: 100%;
 }
 
-.myid-c2 ul li{
+.myid-c2 ul li {
     width: 100%;
 }
 
@@ -134,42 +147,42 @@
 }
 
 /* 在列表链接前后添加悬停箭头 */
-.myid-c2 a::after{
+.myid-c2 a::after {
     content: '\00AB';
     position: absolute;
     right: 50px;
     opacity: 0;
-    transition: right 0.7s,opacity 0.7s;
+    transition: right 0.7s, opacity 0.7s;
     top: 8px;
 }
 
-.myid-c2 a::before{
+.myid-c2 a::before {
     content: '\00bb';
     position: absolute;
     left: 50px;
     opacity: 0;
     top: 8px;
-    transition: left 0.7s,opacity 0.7s;
+    transition: left 0.7s, opacity 0.7s;
 }
 
 /* 设置箭头过渡动画 */
-.myid-c2 a:hover::after{
+.myid-c2 a:hover::after {
     right: 70px;
     opacity: 1;
 }
 
-.myid-c2 a:hover::before{
+.myid-c2 a:hover::before {
     left: 70px;
     opacity: 1;
 }
 
 
 /* 设置悬停链接时的颜色 */
-.myid-c2 a:hover{
+.myid-c2 a:hover {
     color: #c57ca1;
 }
 
 /* 设置点击时颜色变化 */
-.myid-c2 a:hover:active{
+.myid-c2 a:hover:active {
     color: #c50064;
 }
