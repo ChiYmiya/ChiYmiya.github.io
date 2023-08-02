@@ -1,0 +1,403 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+html,
+body {
+	height: 100%;
+	overflow: auto;
+	margin: 0;
+	cursor: url("../images/cur/normal.cur"),auto;
+}
+
+#bgid {
+	transition: background-image 1.3s;
+	font-family: Sans-serif;
+	background: url("../images/bgs/bg01.jpg");
+}
+
+a {
+	text-decoration: none;
+	cursor: url("../images/tips/hand.cur"),auto;
+}
+
+input{
+	cursor: url("../images/tips/Texto.cur"),auto;
+}
+
+button{
+	cursor: url("../images/tips/hand.cur"),auto;
+}
+
+
+
+li {
+	list-style: none;
+	display: inline-block;
+}
+
+.img {
+	width: 1200px;
+	height: 100px;
+	position: relative;
+	margin: 0 auto;
+}
+
+.img img {
+	width: 60px;
+	height: 60px;
+	position: absolute;
+	top: 50%;
+	left: 40%;
+	margin-top: -30px;
+	margin-left: -30px;
+}
+
+.img .clock {
+	display: flex;
+	width: 60px;
+	height: 60px;
+	position: absolute;
+	top: 50%;
+	left: 45%;
+	margin-top: -30px;
+	margin-left: -30px;
+}
+
+.clock p {
+	font-size: 50px;
+	color: #fff;
+	text-align: center;
+	font-family: "Kanit";
+	font-weight: 900;
+	/* 文字阴影 实现3D效果 */
+	text-shadow:
+		0 1px 0 #deafaf,
+		0 2px 0 #bda8a8,
+		0 3px 0 #d8a1a1,
+		0 4px 0 #d59999,
+		0 5px 0 #d29292,
+		0 6px 0 #cf8b8b,
+		0 7px 0 #cc8484,
+		0 8px 0 #c97d7d,
+		0 0 5px rgba(231, 156, 156, 0.05),
+		0 -1px 3px rgba(231, 156, 156, 0.2),
+		0 9px 9px rgba(231, 156, 156, 0.3),
+		0 12px 12px rgba(231, 156, 156, 0.3),
+		0 15px 15px rgba(231, 156, 156, 0.3);
+}
+
+header {
+	width: 1200px;
+	height: 40px;
+	margin: 0 auto;
+	margin-top: 10px;
+	background-color: transparent;
+	border: 1px solid transparent;
+	transition: all 0.7s;
+}
+
+.tabbar {
+	/* 弹性布局 水平+垂直居中 */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/* 相对定位 */
+	position: relative;
+	width: 350px;
+	height: 70px;
+	margin: 0 auto;
+}
+
+.tabbar ul {
+	/* 让li横向撑开 */
+	display: flex;
+}
+
+.tabbar ul li {
+	width: 70px;
+	height: 70px;
+	position: relative;
+	z-index: 1;
+}
+
+.tabbar ul li a {
+	/* 弹性布局 居中 */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/* 垂直排列 */
+	flex-direction: column;
+	/* color: #fff; */
+	text-align: center;
+	color: #fff;
+}
+
+.tabbar ul li a .icon{
+    line-height: 70px;
+    font-size: 30px;
+    /* 设置过渡 */
+    transition: 0.5s;
+}
+
+.tabbar ul li a .text{
+    /* 绝对定位 */
+    position: absolute;
+    font-size: 12px;
+    bottom: 13px;
+    /* 设置过渡 */
+    transition: 0.5s;
+    /* 默认隐藏 */
+    transform: scale(0);
+}
+
+.tabbar ul li.active a .icon{
+    font-size: 23px;
+    /* 图标上移 */
+    transform: translateY(-10px);
+}
+
+.tabbar ul li.active a .text{
+    /* 选中,文字显示 */
+    transform: scale(1);
+}
+
+.active-bg{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    /* --c,--cc为CSS中的自定义属性,通过var函数可对其调用 */
+    background-color: var(--c);
+    box-shadow: 0 10px 15px var(--cc);
+    transition: 0.5s;
+}
+
+/* 分别为每一个.active-bg设置颜色,阴影,位移 */
+.tabbar ul li:nth-child(1).active ~ .active-bg{
+    --c:#ffa502;
+    --cc:#ffa50299;
+    left: 0;
+}
+.tabbar ul li:nth-child(2).active ~ .active-bg{
+    --c:#ff6348;
+    --cc:#ff634899;
+    left: calc(1 * 70px);
+}
+.tabbar ul li:nth-child(3).active ~ .active-bg{
+    --c:#2ed573;
+    --cc:#2ed57399;
+    left: calc(2 * 70px);
+}
+.tabbar ul li:nth-child(4).active ~ .active-bg{
+    --c:#1e90ff;
+    --cc:#1e90ff99;
+    left: calc(3 * 70px);
+}
+.tabbar ul li:nth-child(5).active ~ .active-bg{
+    --c:#ff6b81;
+    --cc:#ff6b8199;
+    left: calc(4 * 70px);
+}
+
+.leftbox,
+.rightbox {
+	visibility: hidden;
+	float: left;
+	display: inline-block;
+	width: 296px;
+	height: 40px;
+	color: white;
+	font-size: 20px;
+	letter-spacing: 3px;
+	line-height: 40px;
+	transition: all 1s;
+}
+
+.leftbox em {
+	float: left;
+	display: inline-block;
+	width: 44px;
+	height: 40px;
+}
+
+.leftbox em img {
+	width: 40px;
+	height: 40px;
+}
+
+#lttime {
+	float: left;
+	display: inline-block;
+	width: 200px;
+	height: 40px;
+	padding-left: 30px;
+	line-height: 40px;
+}
+
+.rightbox {
+	/* text-align: center; */
+	text-indent: 20px;
+}
+
+header:hover .leftbox,
+header:hover .rightbox {
+	visibility: visible;
+	transition: all 1s;
+}
+
+.midbox {
+	float: left;
+	display: inline-block;
+	background: transparent;
+	width: 600px;
+	height: 40px;
+}
+
+.midbox form {
+	width: 100%;
+	height: 40px;
+}
+
+#seaid {
+	float: left;
+	width: 550px;
+	height: 40px;
+	outline: none;
+	border: none;
+	font-size: 18px;
+	text-indent: 1em;
+	border-radius: 50px;
+	background: rgba(255, 255, 255, .4);
+}
+
+#subid {
+	float: left;
+	width: 50px;
+	height: 36px;
+	outline: none;
+	background: transparent;
+	border: 0;
+	font-size: 18px;
+	background: url("../images/tips/搜索.svg") no-repeat center;
+	background-position-y: 4px;
+	cursor: url("../images/cur/hand.cur"),auto;
+}
+
+.container {
+	width: 1080px;
+	margin: 0 auto;
+	margin-top: 40px;
+}
+
+.container ul {
+	width: 100%;
+	height: 100%;
+}
+
+.container ul li {
+	margin: 20px;
+	width: 60px;
+	height: 60px;
+	background-color: rgba(0, 0, 0, 0);
+	border-radius: 5px;
+	text-align: center;
+}
+
+.container ul li:hover a img{
+	transform: translate(-10px,-25px);
+	transition: all 0.5s;
+	height: 70px;
+	width: 70px;
+}
+
+.container ul li a img {
+	position: absolute;
+	margin: 5px;
+	width: 48px;
+	height: 48px;
+	opacity: 1;
+}
+
+footer {
+	position: fixed;
+	width: 100%;
+	height: 250px;
+	/* bottom: -95px; */
+	bottom: -140px;
+	text-align: center;
+	z-index: 98;
+}
+
+.topbtn,
+#note {
+	border-radius: 10px;
+	position: absolute;
+	display: block;
+	width: 60px;
+	height: 60px;
+	right: 40px;
+	top: 150px;
+	text-align: center;
+	outline: none;
+	border: 0;
+	font-size: 20px;
+	line-height: 60px;
+	background-color: rgba(0, 0, 0, .3);
+	color: #fff;
+}
+
+footer #note {
+	border-radius: 10px;
+	left: 40px;
+}
+
+footer:hover #note,
+footer:hover .topbtn {
+	transform: translateY(-120px);
+	transition: all .3s;
+}
+
+footer ul {
+	position: absolute;
+	margin-top: 100px;
+	height: 60px;
+	width: 950px;
+	top: -60px;
+	left: 18.8%;
+	list-style: none;
+	background-color: rgba(0, 0, 0, .3);
+	border-radius: 30px;
+	transform: translateY(70px);
+	transition: all .3s;
+}
+
+footer ul li img {
+	width: 45px;
+	height: 45px;
+	margin: 5px;
+}
+
+footer:hover ul {
+	transform: translateY(0px);
+	transition: all .3s;
+}
+
+footer ul li {
+	/* float: left; */
+	width: 60px;
+	height: 60px;
+	margin-top: 2px;
+	margin-left: 40px;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+footer ul li:hover {
+	transform: scale(1.6);
+	transform-origin: 50% 100%;
+	transition: all .1s;
+}
