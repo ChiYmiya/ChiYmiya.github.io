@@ -388,6 +388,18 @@ footer #note {
 	left: 40px;
 }
 
+footer #note .menu{
+	width: 60px;
+	height: 60px;
+	background: url("../images/tips/菜单.svg") no-repeat center;
+}
+
+footer .topbtn .change{
+	width: 60px;
+	height: 60px;
+	background: url("../images/tips/向上.svg") no-repeat center;
+}
+
 footer:hover #note,
 footer:hover .topbtn {
 	transform: translateY(-120px);
