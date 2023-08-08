@@ -50,5 +50,28 @@ function timeSetRight() {
     lttime.innerHTML = ampm + '  ' + hour + ':' + minutes + ':' + s
     clock_p.innerHTML = hour + ':' + minutes + ':' + s
 }
+// 定时刷新时间，更换壁纸
 setInterval(timeSetRight, 1000);
+setInterval(changeBg, 8000);
+// 定义上下转换标志
+var getFocus_flag=true;
+function getFocus() {
+    let nn=document.getElementById("note");
+    let tul=document.getElementById("footul");
+    let tt=document.getElementById("topbtn");
+    let cc = document.querySelector(".change")
+    if (getFocus_flag==true) {
+        nn.classList.add("stopfoot");
+        tul.classList.add("stopfootul");
+        tt.classList.add("stopfoot");
+        cc.classList.add("topbtnspin");
+        getFocus_flag=false;
+    }else{
+        nn.classList.remove("stopfoot");
+        tul.classList.remove("stopfootul");
+        tt.classList.remove("stopfoot");
+        cc.classList.remove("topbtnspin");
+        getFocus_flag=true;
+    }
+ }
 
