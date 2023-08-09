@@ -95,7 +95,7 @@ li {
 
 header {
 	width: 1200px;
-	height: 40px;
+	height: 200px;
 	margin: 0 auto;
 	margin-top: 10px;
 	background-color: transparent;
@@ -323,7 +323,9 @@ header:hover .rightbox {
 .container {
 	width: 1080px;
 	margin: 0 auto;
-	margin-top: 40px;
+	/* margin-top: 40px; */
+	position: relative;
+
 }
 
 .container ul {
@@ -362,6 +364,7 @@ footer {
 	bottom: -140px;
 	text-align: center;
 	z-index: 98;
+	min-width: 1000px;
 }
 
 .topbtn,
@@ -387,14 +390,14 @@ footer #note {
 	left: 40px;
 }
 
-footer #note .menu{
+footer #note .menu_butt{
 	width: 45px;
 	height: 45px;
 	transition: all .3s;
 	transform: translateY(7px);
 }
 
-footer #note:hover .menu{
+footer #note:hover .menu_butt{
 	width: 60px;
 	height: 60px;
 	transition: all .3s;
@@ -449,7 +452,8 @@ footer ul li {
 	width: 60px;
 	height: 60px;
 	margin-top: 2px;
-	margin-left: 40px;
+	margin-left: 20px;
+	margin-right: 20px;
 	border-radius: 50%;
 	cursor: pointer;
 }
@@ -476,3 +480,32 @@ footer ul li:hover {
 	transition: all .3s;
 }
 	
+.jiajian{
+	border-radius: 50%;
+	border: 3px double #d48db3;
+}
+
+.menu_wai{
+	width: 100%;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.menu{
+	position: absolute;
+	top: -80px;
+	width: 670px;
+	height: 450px;
+	transform: scale(0);
+	background-color: rgba(0, 0, 0, .5);
+	z-index: 98;
+	border-radius: 50px;
+	transition: all .3s;
+}
+
+.menu_active{
+	transform: scale(1);
+	transition: all .3s;
+}

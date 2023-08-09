@@ -59,7 +59,7 @@ function getFocus() {
     let nn=document.getElementById("note");
     let tul=document.getElementById("footul");
     let tt=document.getElementById("topbtn");
-    let cc = document.querySelector(".change")
+    let cc = document.querySelector(".change");
     if (getFocus_flag==true) {
         nn.classList.add("stopfoot");
         tul.classList.add("stopfootul");
@@ -75,3 +75,15 @@ function getFocus() {
     }
  }
 
+ var menu_flag = true;
+ function menu_show() {
+   let mm =document.querySelector(".menu");
+   mm.classList.add(".menu_active");
+    if (menu_flag==true) {
+        mm.classList.add("menu_active");
+        menu_flag=false;
+    }else{
+        mm.classList.remove("menu_active")
+        menu_flag=true;
+    }
+ }
