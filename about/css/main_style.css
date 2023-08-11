@@ -404,6 +404,13 @@ footer #note:hover .menu_butt{
 	transform: translateY(0px);
 }
 
+footer #note:active .menu_butt{
+	width: 40px;
+	height: 40px;
+	transition: none;
+	transform: translateY(10px);
+}
+
 footer .topbtn .change{
 	width: 60px;
 	height: 60px;
@@ -503,9 +510,27 @@ footer ul li:hover {
 	z-index: 98;
 	border-radius: 50px;
 	transition: all .3s;
+	/* border: 100px solid transparent; */
+	border-image-source: url("../images/bd_bgs/上下金花边.png");
+	border-image-slice: 1000 0 1000 0;
+	border-image-width: 0 0px 0 0px;
+	border-image-outset: 0px 0px 0px 0px;
+	border-image-repeat: stretch;
 }
 
 .menu_active{
 	transform: scale(1);
-	transition: all .3s;
+	transition: transform .3s,border-image-outset .7s,border-image-width .7s;
+	border-image-width: 200px 0px 200px 0px;
+	border-image-outset: 40px 0px 40px 0px;
+}
+
+.menu_use ul{
+	width: 100%;
+}
+
+.menu_use ul li{
+	color: #fff;
+	width: 60px;
+	height: 60px;
 }

@@ -54,36 +54,39 @@ function timeSetRight() {
 setInterval(timeSetRight, 1000);
 setInterval(changeBg, 8000);
 // 定义上下转换标志
-var getFocus_flag=true;
+var getFocus_flag = true;
 function getFocus() {
-    let nn=document.getElementById("note");
-    let tul=document.getElementById("footul");
-    let tt=document.getElementById("topbtn");
+    let nn = document.getElementById("note");
+    let tul = document.getElementById("footul");
+    let tt = document.getElementById("topbtn");
     let cc = document.querySelector(".change");
-    if (getFocus_flag==true) {
+    if (getFocus_flag == true) {
         nn.classList.add("stopfoot");
         tul.classList.add("stopfootul");
         tt.classList.add("stopfoot");
         cc.classList.add("topbtnspin");
-        getFocus_flag=false;
-    }else{
+        getFocus_flag = false;
+    } else {
         nn.classList.remove("stopfoot");
         tul.classList.remove("stopfootul");
         tt.classList.remove("stopfoot");
         cc.classList.remove("topbtnspin");
-        getFocus_flag=true;
+        getFocus_flag = true;
     }
- }
+}
 
- var menu_flag = true;
- function menu_show() {
-   let mm =document.querySelector(".menu");
-   mm.classList.add(".menu_active");
-    if (menu_flag==true) {
+//  显示弹出框
+var menu_flag = true;
+function menu_show() {
+    let mm = document.querySelector(".menu");
+    if (menu_flag == true) {
         mm.classList.add("menu_active");
-        menu_flag=false;
-    }else{
-        mm.classList.remove("menu_active")
-        menu_flag=true;
+        menu_flag = false;
+        this.getFocus();
+    } else {
+        mm.classList.remove("menu_active");
+        menu_flag = true;
+        this.getFocus();
     }
- }
+}
+
