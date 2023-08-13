@@ -53,26 +53,47 @@ function timeSetRight() {
 // 定时刷新时间，更换壁纸
 setInterval(timeSetRight, 1000);
 setInterval(changeBg, 8000);
-// 定义上下转换标志
-var getFocus_flag = true;
-function getFocus() {
+// 定义上下转换标志,支持菜单点击时锁定。0代表关闭状态，1代表上下箭头，2代表菜单
+var getFocus_flag = 'noed';
+function getFocus(foid) {
     let nn = document.getElementById("note");
     let tul = document.getElementById("footul");
     let tt = document.getElementById("topbtn");
     let cc = document.querySelector(".change");
-    if (getFocus_flag == true) {
-        nn.classList.add("stopfoot");
-        tul.classList.add("stopfootul");
-        tt.classList.add("stopfoot");
-        cc.classList.add("topbtnspin");
-        getFocus_flag = false;
-    } else {
-        nn.classList.remove("stopfoot");
-        tul.classList.remove("stopfootul");
-        tt.classList.remove("stopfoot");
-        cc.classList.remove("topbtnspin");
-        getFocus_flag = true;
+    if (getFocus_flag == 'noed') {
+        if (foid=='p1') {
+            nn.classList.add("stopfoot");
+            tul.classList.add("stopfootul");
+            tt.classList.add("stopfoot");
+            cc.classList.add("topbtnspin");
+            getFocus_flag = getFocus_flag+foid;
+        }
+        if (foid=='p2') {
+            nn.classList.add("stopfoot");
+            tul.classList.add("stopfootul");
+            tt.classList.add("stopfoot");
+            cc.classList.add("topbtnspin");
+            tt.style.cursor='url("about/images/cur/no.cur"),auto';
+            getFocus_flag = getFocus_flag+foid;
+        }
     }
+    else{
+        if (getFocus_flag=='noed'+'p1'&&foid=='p1'&&this.menu_flag!=false) {
+            nn.classList.remove("stopfoot");
+            tul.classList.remove("stopfootul");
+            tt.classList.remove("stopfoot");
+            cc.classList.remove("topbtnspin");
+            getFocus_flag = 'noed';
+        }
+        if (getFocus_flag == 'noed'+'p2'&&foid=='p2') {
+            nn.classList.remove("stopfoot");
+            tul.classList.remove("stopfootul");
+            tt.classList.remove("stopfoot");
+            cc.classList.remove("topbtnspin");
+            tt.style.cursor='url("about/images/cur/hand.cur"),auto';
+            getFocus_flag = 'noed';
+        }
+    } 
 }
 
 //  显示弹出框
@@ -82,11 +103,15 @@ function menu_show() {
     if (menu_flag == true) {
         mm.classList.add("menu_active");
         menu_flag = false;
-        this.getFocus();
+        this.getFocus('p2');
     } else {
         mm.classList.remove("menu_active");
         menu_flag = true;
-        this.getFocus();
+        this.getFocus('p2');
     }
+}
+
+function select_bgs() {  
+    
 }
 

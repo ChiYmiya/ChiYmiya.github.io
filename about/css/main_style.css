@@ -526,11 +526,91 @@ footer ul li:hover {
 }
 
 .menu_use ul{
-	width: 100%;
+	top: 20px;
+	color: #fff;
+	width: 670px;
 }
 
-.menu_use ul li{
+.menu_wai {
+	width: 100%;
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 98;
+}
+
+.menu_use ul li {
 	color: #fff;
 	width: 60px;
 	height: 60px;
+	text-align: center;	
+	margin: 25px 51px;
+}
+
+.menu_use p {
+	width: 100%;
+	text-align: center;
+	color: #fff;
+	font-size: 57px;
+	word-spacing: 35px;
+	/* margin: 20px 0px; */
+	font-family: 'dingding';	
+	color: #d1b91f;
+	text-shadow:4px 1px 12px #fff;
+	-webkit-text-stroke:0.8px #fff;
+	line-height: 70px;
+}
+
+@font-face {
+	font-family: 'dingding';
+	src: url("../DingDing.otf");
+}
+
+.menu_use button {
+	position: relative;
+	border-radius: 20px;
+	display: block;
+	width: 60px;
+	height: 60px;
+	text-align: center;
+	border: 0;
+	font-size: 20px;
+	line-height: 60px;
+	background-color: transparent;
+	color: #fff;
+}
+
+.menu_use button img {
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	transform: translate(-25px, -25px);
+}
+
+.menu_use button:hover img {
+	width: 40px;
+	height: 40px;
+	transition: all .3s;
+	transform: translate(-20px, -19px);
+}
+
+.DIYbds{
+	position: absolute;
+	background: url("../images/bd_bgs/选择框.svg") no-repeat center;
+	width: 65px;
+	height: 65px;
+	transform: translate(-33px,-33px) scale(1.5);
+	visibility: hidden;
+}
+
+.menu_use button:hover .DIYbds{
+	transform: translate(-33px,-31.2px) scale(0.8);
+	visibility:visible;
+	transition: all .2s;
+}
+
+.menu_use button:active .DIYbds{
+	transform: translate(-33px,-31.2px) scale(0.7);
+	transition: all 0s;
 }
