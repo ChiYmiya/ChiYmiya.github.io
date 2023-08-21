@@ -19,7 +19,7 @@ body {
 #bgid {
 	transition: background-image 1.3s;
 	font-family: Sans-serif;
-	background: url("../images/bgs/bg01.jpg");
+	background: url("../images/bgs/bg11.jpg");
 }
 
 a {
@@ -135,7 +135,6 @@ header {
 	align-items: center;
 	/* 垂直排列 */
 	flex-direction: column;
-	/* color: #fff; */
 	text-align: center;
 	color: #fff;
 }
@@ -614,3 +613,4 @@ footer ul li:hover {
 	transform: translate(-33px,-31.2px) scale(0.7);
 	transition: all 0s;
 }
+
