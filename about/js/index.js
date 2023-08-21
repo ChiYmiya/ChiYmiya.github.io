@@ -86,20 +86,18 @@ var bgs = new Array(
 var bgs_ready = [];
 var bgs_src=[];
 for (let i = 0, j = 0; i < 5; i++) {
-    let str =bgs[Math.floor(Math.random() * (bgs.length - 1 - 0 + 1)) + 0];
-    let newstr = str.replace(/url\(\"\s*([^)]*)\s*\"\)/, "$1");
     bgs_ready[i] = bgs[Math.floor(Math.random() * (bgs.length - 1 - 0 + 1)) + 0];
-    bgs_src.push(newstr)
+    let str =bgs_ready[i];
+    let newstr = str.replace(/url\(\"\s*([^)]*)\s*\"\)/, "$1");
+    bgs_src.push(newstr);
 }
 //开始预加载
 loadStart();
 // promise实现异步加载，异步调用
 function loadImg(src) {
-    console.log('src :>> ', src);
     let p = new Promise(function (resolve, reject) {
         let img = new Image();
         img.onload=()=>{
-            console.log('src加载为 :>> ', src);
             resolve(img);
         }
         img.onerror=()=>{
@@ -107,17 +105,12 @@ function loadImg(src) {
         }
         img.src=src;
     });
-    console.log('p :>> ', p);
     return p;
 }
 // 设置async异步函数
 async function loadStart(){
     for (let i = 0; i < bgs_src.length; i++) {
-        await loadImg(bgs_src[i]).then(() => {
-            console.log('bgs_ready :>> ', bgs_src[i]);
-        }).catch((err) => {
-            console.log('图片加载出错 :>> ');
-        });
+        await loadImg(bgs_src[i]);
     }
 }
 
