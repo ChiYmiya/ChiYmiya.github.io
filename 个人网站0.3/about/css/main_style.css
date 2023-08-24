@@ -159,12 +159,12 @@ header {
 	transform: translateY(10px);
 }
 .item:nth-child(2) .icon{
-	background: url("../images/tips/爱心.svg") no-repeat center;
+	background: url("../images/tips/切换.svg") no-repeat center;
 	background-size: 50px;
 	transform: translateY(10px);
 }
 .item:nth-child(3) .icon{
-	background: url("../images/tips/切换.svg") no-repeat center;
+	background: url("../images/tips/爱心.svg") no-repeat center;
 	background-size: 50px;
 	transform: translateY(10px);
 }
