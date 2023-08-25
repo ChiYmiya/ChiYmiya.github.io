@@ -491,13 +491,6 @@ footer ul li:hover {
 	border: 3px double #d48db3;
 }
 
-.menu_wai{
-	width: 100%;
-	position: relative;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
 
 .menu{
 	position: absolute;
@@ -518,7 +511,7 @@ footer ul li:hover {
 }
 
 .menu_active{
-	transform: scale(1);
+	transform: scale(1) translateY(180px);
 	transition: transform .3s,border-image-outset .7s,border-image-width .7s;
 	border-image-width: 200px 0px 200px 0px;
 	border-image-outset: 40px 0px 40px 0px;
@@ -532,10 +525,11 @@ footer ul li:hover {
 
 .menu_wai {
 	width: 100%;
+	height: 100%;
+	top: 0;
 	position: absolute;
 	display: flex;
 	justify-content: center;
-	align-items: center;
 	z-index: 98;
 }
 
@@ -611,6 +605,6 @@ footer ul li:hover {
 
 .menu_use button:active .DIYbds{
 	transform: translate(-33px,-31.2px) scale(0.7);
-	transition: all 0s;
+	transition: all 0s;	
 }
 

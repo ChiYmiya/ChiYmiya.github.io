@@ -84,10 +84,10 @@ var bgs = new Array(
 );
 // 设置预加载组
 var bgs_ready = [];
-var bgs_src=[];
+var bgs_src = [];
 for (let i = 0, j = 0; i < 5; i++) {
     bgs_ready[i] = bgs[Math.floor(Math.random() * (bgs.length - 1 - 0 + 1)) + 0];
-    let str =bgs_ready[i];
+    let str = bgs_ready[i];
     let newstr = str.replace(/url\(\"\s*([^)]*)\s*\"\)/, "$1");
     bgs_src.push(newstr);
 }
@@ -97,18 +97,18 @@ loadStart();
 function loadImg(src) {
     let p = new Promise(function (resolve, reject) {
         let img = new Image();
-        img.onload=()=>{
+        img.onload = () => {
             resolve(img);
         }
-        img.onerror=()=>{
+        img.onerror = () => {
             reject(src);
         }
-        img.src=src;
+        img.src = src;
     });
     return p;
 }
 // 设置async异步函数
-async function loadStart(){
+async function loadStart() {
     for (let i = 0; i < bgs_src.length; i++) {
         await loadImg(bgs_src[i]);
     }
@@ -219,7 +219,18 @@ function menu_show() {
     }
 }
 
+document.querySelector(".menu_wai").addEventListener("click", () => {
+    document.querySelector(".menu").classList.remove("menu_active");
+    document.getElementById("topbtn").style.cursor = 'url("about/images/cur/hand.cur"),auto';
+    document.getElementById("note").classList.remove("stopfoot");
+    document.getElementById("footul").classList.remove("stopfootul");
+    document.getElementById("topbtn").classList.remove("stopfoot");
+    document.querySelector(".change").classList.remove("topbtnspin");
+    menu_flag = true;
+    getFocus_flag = 'noed';
+})
+
 function select_bgs() {
-    
+
 }
 
