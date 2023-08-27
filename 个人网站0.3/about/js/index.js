@@ -114,17 +114,15 @@ async function loadStart() {
     }
 }
 
-
-
 // 随机更换
 function changeBg() {
     document.getElementById('bgid').style.background = bgs_ready[Math.floor(Math.random() * (bgs_ready.length - 1 - 0 + 1)) + 0] + "no-repeat center fixed";
     document.getElementById('bgid').style.backgroundSize = "cover";
 }
 
+// 右边时间
 var lttime = document.getElementById("lttime");
 var clock_p = document.getElementById("clock_p");
-
 function timeSetRight() {
     var time = new Date();
     year = time.getFullYear();
@@ -152,6 +150,7 @@ function timeSetRight() {
     lttime.innerHTML = ampm + '  ' + hour + ':' + minutes + ':' + s;
     clock_p.innerHTML = hour + ':' + minutes + ':' + s;
 }
+
 // 定时刷新时间，更换壁纸
 setInterval(timeSetRight, 1000);
 setInterval(changeBg, 8000);
@@ -204,10 +203,12 @@ function menu_show() {
     let mm = document.querySelector(".menu");
     let mew = document.querySelector(".menu_wai");
     if (menu_flag == true) {
-        mm.classList.add("menu_active");
-        menu_flag = false;
-        this.getFocus('p2');
         mew.style.display="flex";
+        setTimeout(() => {
+            mm.classList.add("menu_active");
+            menu_flag = false;
+            this.getFocus('p2');
+        }, 100);
     } else {
         mm.classList.remove("menu_active");
         menu_flag = true;
@@ -222,6 +223,7 @@ function menu_show() {
     }
 }
 
+// 添加窗口外点击消失的事件
 document.querySelector(".menu_wai").addEventListener("click", () => {
     document.querySelector(".menu").classList.remove("menu_active");
     document.getElementById("topbtn").style.cursor = 'url("about/images/cur/hand.cur"),auto';
@@ -234,14 +236,19 @@ document.querySelector(".menu_wai").addEventListener("click", () => {
     document.querySelector(".menu_wai").style.display="none"; 
 })
 
-document.querySelector(".menu").addEventListener("click",(event)=>{
-    let e = event||window.event;
-    if (e.cancelBubble) {
-        e.cancelBubble=true;//ie 阻止事件冒泡
-    } else {
-        e.stopPropagation();// 其余浏览器 阻止事件冒泡
-    }
-})
+// 阻止弹出框
+except(".menu");
+// 过滤非窗口外的冒泡,封装过滤函数
+function except (id) {  
+    document.querySelector(`${id}`).addEventListener("click",(event)=>{
+        let e = event||window.event;
+        if (e.cancelBubble) {
+            e.cancelBubble=true;//ie 阻止事件冒泡
+        } else {
+            e.stopPropagation();// 其余浏览器 阻止事件冒泡
+        }
+    })
+}
 
 function select_bgs() {
     
