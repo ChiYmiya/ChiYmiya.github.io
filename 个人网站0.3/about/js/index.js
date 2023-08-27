@@ -202,14 +202,17 @@ function getFocus(foid) {
 var menu_flag = true;
 function menu_show() {
     let mm = document.querySelector(".menu");
+    let mew = document.querySelector(".menu_wai");
     if (menu_flag == true) {
         mm.classList.add("menu_active");
         menu_flag = false;
         this.getFocus('p2');
+        mew.style.display="flex";
     } else {
         mm.classList.remove("menu_active");
         menu_flag = true;
         this.getFocus('p2');
+        mew.style.display="none";   
     }
     if (menu_flag == false) {
         document.getElementById("topbtn").style.cursor = 'url("about/images/cur/no.cur"),auto';
@@ -228,9 +231,19 @@ document.querySelector(".menu_wai").addEventListener("click", () => {
     document.querySelector(".change").classList.remove("topbtnspin");
     menu_flag = true;
     getFocus_flag = 'noed';
+    document.querySelector(".menu_wai").style.display="none"; 
+})
+
+document.querySelector(".menu").addEventListener("click",(event)=>{
+    let e = event||window.event;
+    if (e.cancelBubble) {
+        e.cancelBubble=true;//ie 阻止事件冒泡
+    } else {
+        e.stopPropagation();// 其余浏览器 阻止事件冒泡
+    }
 })
 
 function select_bgs() {
-
+    
 }
 
