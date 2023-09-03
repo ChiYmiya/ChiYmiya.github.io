@@ -26,7 +26,7 @@
 					</a>
 				</li>
 				<li class="item">
-					<a href="../个人网站0.2/index.html" target="_self">
+					<a href="#" target="_self" onclick="">
 						<div class="icon"></div>
 						<span class="text">バージョン歴史</span>
 					</a>
@@ -47,14 +47,14 @@
 			</ul>
 		</div>
 		<div class="img">
-			<img src="about/images/tips/头像.png">
+			<div class="head"></div>
 			<div class="clock">
 				<p id="clock_p"></p>
 			</div>
 		</div>
 
 		<div class="leftbox" id="ltbox">
-			<em><img src="about/images/tips/clock.svg" alt=""></em>
+			<em></em>
 			<span id="lttime"></span>
 		</div>
 		<div class="midbox">
@@ -67,12 +67,61 @@
 		<div class="rightbox" id="rtbox"></div>
 	</header>
 	<div class="menu_wai">
-		<div class="menu">
+		<div class="menu" id="menu_main">
+			<p>菜 单</p>
 			<div class="menu_use">
-				<p>菜 单</p>
 				<ul>
 					<li>
-						<button onclick="select_bgs()">
+						<button onclick="show_bgs_list('bgs_list')">
+							<img src="about/images/tips/背景图片.svg" alt="">
+							<span class="DIYbds"></span>
+						</button>
+					</li>
+					<li>
+						<button>
+							<img src="about/images/tips/背景图片.svg" alt="">
+							<span class="DIYbds"></span>
+						</button>
+					</li>
+					<li>
+						<button>
+							<img src="about/images/tips/背景图片.svg" alt="">
+							<span class="DIYbds"></span>
+						</button>
+					</li>
+					<li>
+						<button>
+							<img src="about/images/tips/背景图片.svg" alt="">
+							<span class="DIYbds"></span>
+						</button>
+					</li>
+					<li>
+						<button>
+							<img src="about/images/tips/背景图片.svg" alt="">
+							<span class="DIYbds"></span>
+						</button>
+					</li>
+					<li>
+						<button>
+							<img src="about/images/tips/背景图片.svg" alt="">
+							<span class="DIYbds"></span>
+						</button>
+					</li>
+					<li>
+						<button>
+							<img src="about/images/tips/背景图片.svg" alt="">
+							<span class="DIYbds"></span>
+						</button>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="menu" id="bgs_list">
+			<p>图 片 选 择</p>
+			<div class="menu_use">
+				<ul>
+					<li>
+						<button onclick="versions_show('bgs_list')">
 							<img src="about/images/tips/背景图片.svg" alt="">
 							<span class="DIYbds"></span>
 						</button>
@@ -172,8 +221,8 @@
 	<footer>
 		<button id="topbtn" onclick="getFocus('p1')" class="topbtn">
 			<div class="change"></div>
-		</button>
-		<button id="note" onclick="menu_show()"><img src="about/images/tips/菜单.svg" alt="" class="menu_butt"></button>
+		</button>	
+		<button id="note" onclick="menu_mian_show()"><img src="about/images/tips/菜单.svg" alt="" class="menu_butt"></button>
 		<ul id="footul">
 			<li><a href="https://wx.qq.com/" target="_blank"><img src="about/images/tips/微信.png"></a></li>
 			<li><a href="https://www.bilibili.com/" target="_blank"><img src="about/images/tips/bilibili.svg"

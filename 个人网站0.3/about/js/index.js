@@ -2,10 +2,10 @@
 let items = document.querySelectorAll(".item");
 // 添加点击事件
 items.forEach((item) => {
-    item.addEventListener("click", setActive);
+    item.addEventListener("click", sethead_Active);
 })
 // 移除所有active，为当前元素添加active类
-function setActive() {
+function sethead_Active() {
     items.forEach((item) => {
         item.classList.remove("active");
     })
@@ -86,7 +86,7 @@ var bgs = new Array(
 var bgs_ready = [];
 var bgs_src = [];
 for (let i = 0, j = 0; i < 5; i++) {
-    bgs_ready[i] = bgs[Math.floor(Math.random() * (bgs.length - 1 - 0 + 1)) + 0];
+    bgs_ready[i] = bgs[Math.floor(Math.random() * (bgs.length - 1 - 0 + 1)) + 0]; 
     let str = bgs_ready[i];
     let newstr = str.replace(/url\(\"\s*([^)]*)\s*\"\)/, "$1");
     bgs_src.push(newstr);
@@ -199,21 +199,28 @@ function getFocus(foid) {
 
 //  显示弹出框
 var menu_flag = true;
-function menu_show() {
-    let mm = document.querySelector(".menu");
+function menu_mian_show() {
+    let mm = document.querySelector("#menu_main");
     let mew = document.querySelector(".menu_wai");
     if (menu_flag == true) {
-        mew.style.display="flex";
+        mew.style.display = "flex";
         setTimeout(() => {
             mm.classList.add("menu_active");
             menu_flag = false;
             this.getFocus('p2');
         }, 100);
     } else {
-        mm.classList.remove("menu_active");
+        for (let i = 0; i < menu_list.length; i++) {
+            const menu = menu_list[i];
+            setTimeout(() => {
+                menu.classList.remove("menu_active");
+            }, 100);
+        }
         menu_flag = true;
         this.getFocus('p2');
-        mew.style.display="none";   
+        setTimeout(() => {
+            mew.style.display = "none";
+        }, 200);
     }
     if (menu_flag == false) {
         document.getElementById("topbtn").style.cursor = 'url("about/images/cur/no.cur"),auto';
@@ -223,34 +230,65 @@ function menu_show() {
     }
 }
 
+
 // 添加窗口外点击消失的事件
 document.querySelector(".menu_wai").addEventListener("click", () => {
-    document.querySelector(".menu").classList.remove("menu_active");
-    document.getElementById("topbtn").style.cursor = 'url("about/images/cur/hand.cur"),auto';
-    document.getElementById("note").classList.remove("stopfoot");
-    document.getElementById("footul").classList.remove("stopfootul");
-    document.getElementById("topbtn").classList.remove("stopfoot");
-    document.querySelector(".change").classList.remove("topbtnspin");
+    setTimeout(() => {
+        document.getElementById("topbtn").style.cursor = 'url("about/images/cur/hand.cur"),auto';
+        document.getElementById("note").classList.remove("stopfoot");
+        document.getElementById("footul").classList.remove("stopfootul");
+        document.getElementById("topbtn").classList.remove("stopfoot");
+        document.querySelector(".change").classList.remove("topbtnspin");
+        setActive(menu_list, typeof id, "menu_active");
+    }, 100);
+    setTimeout(() => {
+        document.querySelector(".menu_wai").style.display = "none";
+    }, 200);
     menu_flag = true;
     getFocus_flag = 'noed';
-    document.querySelector(".menu_wai").style.display="none"; 
 })
 
-// 阻止弹出框
-except(".menu");
+
 // 过滤非窗口外的冒泡,封装过滤函数
-function except (id) {  
-    document.querySelector(`${id}`).addEventListener("click",(event)=>{
-        let e = event||window.event;
+function except(id) {
+    document.getElementById(`${id}`).addEventListener("click", (event) => {
+        let e = event || window.event;
         if (e.cancelBubble) {
-            e.cancelBubble=true;//ie 阻止事件冒泡
+            e.cancelBubble = true;//ie 阻止事件冒泡
         } else {
             e.stopPropagation();// 其余浏览器 阻止事件冒泡
         }
     })
 }
+// 获得所有菜单
+var menu_list = document.getElementsByClassName("menu");
 
-function select_bgs() {
-    
+// 移除所有active，为当前元素添加active类
+function setActive(listName, id, activeName) {
+    for (let i = 0; i < listName.length; i++) {
+        listName[i].classList.remove(`${activeName}`);
+    }
+    if (id != "undefined") {
+        document.getElementById(id).classList.add(`${activeName}`);
+    }
+}
+// 为当前menu获得活动窗口
+function show_bgs_list(id) {
+    setActive(menu_list, id, "menu_active");
 }
 
+function menu_except() {  
+    for (let i = 0; i < menu_list.length; i++) {
+        const element = menu_list[i].id ;
+        except(element);
+    }
+}
+menu_except();
+
+function versions_show(temp) {
+    console.log('temp :>> ', temp);
+    // var menu_list = document.querySelectorAll(".menu");
+    // menu_list.forEach((menu) => {
+    //     console.log('id :>> ', menu.id);
+    // })
+} 

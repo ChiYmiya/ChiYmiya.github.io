@@ -49,7 +49,9 @@ li {
 	margin: 0 auto;
 }
 
-.img img {
+.head {
+	background: url("../images/tips/头像.png") center no-repeat;
+	background-size: 60px 60px;
 	width: 60px;
 	height: 60px;
 	position: absolute;
@@ -250,15 +252,12 @@ header {
 }
 
 .leftbox em {
-	float: left;
-	display: inline-block;
-	width: 44px;
-	height: 40px;
-}
-
-.leftbox em img {
 	width: 40px;
 	height: 40px;
+	background: url("../images/tips/clock.svg") center no-repeat;
+	background-size: 40px 40px;
+	float: left;
+	display: inline-block;
 }
 
 #lttime {
@@ -393,12 +392,13 @@ footer #note .menu_butt{
 	width: 45px;
 	height: 45px;
 	transition: all .3s;
-	transform: translateY(7px);
+	transform: translateY(8px);
 }
 
 footer #note:hover .menu_butt{
 	width: 60px;
 	height: 60px;
+	/* transition: width .2s ,height .2s,background-size .2s; */
 	transition: all .3s;
 	transform: translateY(0px);
 }
@@ -407,7 +407,7 @@ footer #note:active .menu_butt{
 	width: 40px;
 	height: 40px;
 	transition: none;
-	transform: translateY(10px);
+	transform: translateY(11px);
 }
 
 footer .topbtn .change{
@@ -517,7 +517,7 @@ footer ul li:hover {
 	border-image-outset: 40px 0px 40px 0px;
 }
 
-.menu_use ul{
+.menu ul{
 	top: 20px;
 	color: #fff;
 	width: 670px;
@@ -533,7 +533,7 @@ footer ul li:hover {
 	z-index: 10;
 }
 
-.menu_use ul li {
+.menu ul li {
 	color: #fff;
 	width: 60px;
 	height: 60px;
@@ -541,7 +541,7 @@ footer ul li:hover {
 	margin: 25px 51px;
 }
 
-.menu_use p {
+.menu p {
 	width: 100%;
 	text-align: center;
 	color: #fff;
@@ -560,7 +560,7 @@ footer ul li:hover {
 	src: url("../DingDing.otf");
 }
 
-.menu_use button {
+.menu button {
 	position: relative;
 	border-radius: 20px;
 	display: block;
@@ -574,14 +574,14 @@ footer ul li:hover {
 	color: #fff;
 }
 
-.menu_use button img {
+.menu button img {
 	position: absolute;
 	width: 50px;
 	height: 50px;
 	transform: translate(-25px, -25px);
 }
 
-.menu_use button:hover img {
+.menu button:hover img {
 	width: 40px;
 	height: 40px;
 	transition: all .3s;
@@ -597,14 +597,39 @@ footer ul li:hover {
 	visibility: hidden;
 }
 
-.menu_use button:hover .DIYbds{
+.menu button:hover .DIYbds{
 	transform: translate(-33px,-31.2px) scale(0.8);
 	visibility:visible;
 	transition: all .2s;
 }
 
-.menu_use button:active .DIYbds{
+.menu button:active .DIYbds{
 	transform: translate(-33px,-31.2px) scale(0.7);
 	transition: all 0s;	
+}
+
+.bgs_list ul{
+	top: 20px;
+	width: 670px;
+}
+
+.bgs_list ul li {
+	width: 60px;
+	height: 60px;
+	text-align: center;	
+	margin: 12px 12px;
+}
+
+.bgs_list button {
+	position: relative;
+	border-radius: 20px;
+	display: block;
+	width: 60px;
+	height: 60px;
+	text-align: center;
+	border: 0;
+	font-size: 20px;
+	line-height: 60px;
+	background-color: transparent;
 }
 
