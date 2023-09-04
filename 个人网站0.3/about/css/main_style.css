@@ -633,3 +633,22 @@ footer ul li:hover {
 	background-color: transparent;
 }
 
+#bgs_list ul{
+	padding: 0px 0px;
+	margin: 0px 0px;
+	height: 340px;	
+	overflow-y: auto;
+}
+#bgs_list li{
+	margin: 0;
+	width: 200px;
+    height: 110px;
+	transform: translateX(35px)
+}
+
+#bgs_list img{
+	width: 180px;
+    height: 90px;
+}
+
+

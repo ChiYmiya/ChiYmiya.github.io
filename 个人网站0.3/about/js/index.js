@@ -86,7 +86,7 @@ var bgs = new Array(
 var bgs_ready = [];
 var bgs_src = [];
 for (let i = 0, j = 0; i < 5; i++) {
-    bgs_ready[i] = bgs[Math.floor(Math.random() * (bgs.length - 1 - 0 + 1)) + 0]; 
+    bgs_ready[i] = bgs[Math.floor(Math.random() * (bgs.length - 1 - 0 + 1)) + 0];
     let str = bgs_ready[i];
     let newstr = str.replace(/url\(\"\s*([^)]*)\s*\"\)/, "$1");
     bgs_src.push(newstr);
@@ -230,7 +230,6 @@ function menu_mian_show() {
     }
 }
 
-
 // 添加窗口外点击消失的事件
 document.querySelector(".menu_wai").addEventListener("click", () => {
     setTimeout(() => {
@@ -247,7 +246,6 @@ document.querySelector(".menu_wai").addEventListener("click", () => {
     menu_flag = true;
     getFocus_flag = 'noed';
 })
-
 
 // 过滤非窗口外的冒泡,封装过滤函数
 function except(id) {
@@ -277,18 +275,11 @@ function show_bgs_list(id) {
     setActive(menu_list, id, "menu_active");
 }
 
-function menu_except() {  
+function menu_except() {
     for (let i = 0; i < menu_list.length; i++) {
-        const element = menu_list[i].id ;
-        except(element);
+        const menu = menu_list[i].id;
+        except(menu);
     }
 }
 menu_except();
 
-function versions_show(temp) {
-    console.log('temp :>> ', temp);
-    // var menu_list = document.querySelectorAll(".menu");
-    // menu_list.forEach((menu) => {
-    //     console.log('id :>> ', menu.id);
-    // })
-} 
