@@ -197,7 +197,7 @@ function getFocus(foid) {
     }
 }
 
-//  显示弹出框
+//  显示菜单弹出框
 var menu_flag = true;
 function menu_mian_show() {
     let mm = document.querySelector("#menu_main");
@@ -275,6 +275,7 @@ function show_bgs_list(id) {
     setActive(menu_list, id, "menu_active");
 }
 
+// 为所有菜单添加过滤器
 function menu_except() {
     for (let i = 0; i < menu_list.length; i++) {
         const menu = menu_list[i].id;
@@ -283,3 +284,7 @@ function menu_except() {
 }
 menu_except();
 
+document.getElementById("bgs_list").addEventListener("mousewheel",onmousewheel)
+function onmousewheel(event) {  
+    var event = event||window.event;
+}
