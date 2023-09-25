@@ -1,6 +1,6 @@
 # ChiYmiya.github.io
 这是一个小白的成长
-
+\n
 1、完成HTML和CSS的基本网页制作。
 2、重新制作，加入js。
 3、设置域名，使用阿里的DNS，配置netlify的网站域名解析。
