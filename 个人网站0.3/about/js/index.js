@@ -284,7 +284,21 @@ function menu_except() {
 }
 menu_except();
 
-document.getElementById("bgs_list").addEventListener("mousewheel",onmousewheel)
-function onmousewheel(event) {  
-    var event = event||window.event;
+document.getElementById("bgs_list").addEventListener("mousewheel", onmousewheel)
+function onmousewheel(event) {
+    var event = event || window.event;
 }
+
+function show_addwindow() {
+    var addpop_box = document.querySelector('.addpop_box');
+    addpop_box.classList.add("addpop_box_active");
+    setTimeout(()=>{
+        document.querySelector('.addpop').classList.add("addpop_active");
+    },100);
+}
+
+document.getElementById('submit_button').addEventListener("click", ()=>{
+    var addpop_box = document.querySelector('.addpop_box');
+    addpop_box.classList.remove("addpop_box_active");
+    console.log("addpop_box被点击了",addpop_box);
+})

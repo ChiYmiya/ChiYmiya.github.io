@@ -3,7 +3,7 @@
 	margin: 0;
 }
 
-::selection{
+::selection {
 	color: #FFF;
 	background-color: #ff6b81;
 }
@@ -13,7 +13,7 @@ body {
 	height: 100%;
 	overflow: auto;
 	margin: 0;
-	cursor: url("../images/cur/normal.cur"),auto;
+	cursor: url("../images/cur/normal.cur"), auto;
 }
 
 #bgid {
@@ -24,18 +24,16 @@ body {
 
 a {
 	text-decoration: none;
-	cursor: url("../images/cur/hand.cur"),auto;
+	cursor: url("../images/cur/hand.cur"), auto;
 }
 
-input{
-	cursor: url("../images/cur/texto.cur"),auto;
+input {
+	cursor: url("../images/cur/texto.cur"), auto;
 }
 
-button{
-	cursor: url("../images/cur/hand.cur"),auto;
+button {
+	cursor: url("../images/cur/hand.cur"), auto;
 }
-
-
 
 li {
 	list-style: none;
@@ -141,100 +139,108 @@ header {
 	color: #fff;
 }
 
-.tabbar ul li a .icon{
+.tabbar ul li a .icon {
 	width: 50px;
 	height: 50px;
-    line-height: 70px;
-    /* 设置过渡 */
-    transition: 0.5s;
+	line-height: 70px;
+	/* 设置过渡 */
+	transition: 0.5s;
 }
 
-.tabbar ul li.active a .icon{
-    /* 图标上移 */
-    transform: translateY(-10px);
+.tabbar ul li.active a .icon {
+	/* 图标上移 */
+	transform: translateY(-10px);
 	background-size: 35px;
 }
 
-.item:nth-child(1) .icon{
+.item:nth-child(1) .icon {
 	background: url("../images/tips/主页1.svg") no-repeat center;
 	background-size: 50px;
 	transform: translateY(10px);
 }
-.item:nth-child(2) .icon{
+
+.item:nth-child(2) .icon {
 	background: url("../images/tips/切换.svg") no-repeat center;
 	background-size: 50px;
 	transform: translateY(10px);
 }
-.item:nth-child(3) .icon{
+
+.item:nth-child(3) .icon {
 	background: url("../images/tips/爱心.svg") no-repeat center;
 	background-size: 50px;
 	transform: translateY(10px);
 }
-.item:nth-child(4) .icon{
+
+.item:nth-child(4) .icon {
 	background: url("../images/tips/切换.svg") no-repeat center;
 	background-size: 50px;
 	transform: translateY(10px);
 }
-.item:nth-child(5) .icon{
+
+.item:nth-child(5) .icon {
 	background: url("../images/tips/切换.svg") no-repeat center;
 	background-size: 50px;
 	transform: translateY(10px);
 }
 
-.tabbar ul li a .text{
-    /* 绝对定位 */
-    position: absolute;
-    font-size: 12px;
-    bottom: 13px;
-    /* 设置过渡 */
-    transition: 0.5s;
-    /* 默认隐藏 */
-    transform: scale(0);
+.tabbar ul li a .text {
+	/* 绝对定位 */
+	position: absolute;
+	font-size: 12px;
+	bottom: 13px;
+	/* 设置过渡 */
+	transition: 0.5s;
+	/* 默认隐藏 */
+	transform: scale(0);
 }
 
-.tabbar ul li.active a .text{
-    /* 选中,文字显示 */
-    transform: scale(1);
+.tabbar ul li.active a .text {
+	/* 选中,文字显示 */
+	transform: scale(1);
 }
 
-.active-bg{
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    /* --c,--cc为CSS中的自定义属性,通过var函数可对其调用 */
-    background-color: var(--c);
-    box-shadow: 0 10px 15px var(--cc);
-    transition: 0.5s;
+.active-bg {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 70px;
+	height: 70px;
+	border-radius: 50%;
+	/* --c,--cc为CSS中的自定义属性,通过var函数可对其调用 */
+	background-color: var(--c);
+	box-shadow: 0 10px 15px var(--cc);
+	transition: 0.5s;
 }
 
 /* 分别为每一个.active-bg设置颜色,阴影,位移 */
-.tabbar ul li:nth-child(1).active ~ .active-bg{
-    --c:#ffa502;
-    --cc:#ffa50299;
-    left: -60px;
+.tabbar ul li:nth-child(1).active~.active-bg {
+	--c: #ffa502;
+	--cc: #ffa50299;
+	left: -60px;
 }
-.tabbar ul li:nth-child(2).active ~ .active-bg{
-    --c:#ff6348;
-    --cc:#ff634899;
-    left: calc(1 * 40px);
+
+.tabbar ul li:nth-child(2).active~.active-bg {
+	--c: #ff6348;
+	--cc: #ff634899;
+	left: calc(1 * 40px);
 }
-.tabbar ul li:nth-child(3).active ~ .active-bg{
-    --c:#2ed573;
-    --cc:#2ed57399;
-    left: calc(2 * 70px);
+
+.tabbar ul li:nth-child(3).active~.active-bg {
+	--c: #2ed573;
+	--cc: #2ed57399;
+	left: calc(2 * 70px);
 }
-.tabbar ul li:nth-child(4).active ~ .active-bg{
-    --c:#1e90ff;
-    --cc:#1e90ff99;
-    left: calc(3 * 80px);
+
+.tabbar ul li:nth-child(4).active~.active-bg {
+	--c: #1e90ff;
+	--cc: #1e90ff99;
+	left: calc(3 * 80px);
 }
-.tabbar ul li:nth-child(5).active ~ .active-bg{
-    --c:#ff6b81;
-    --cc:#ff6b8199;
-    left: calc(5 * 68px);
+
+.tabbar ul li:nth-child(5).active~.active-bg {
+	--c: #ff6b81;
+	--cc: #ff6b8199;
+	left: calc(5 * 68px);
 }
 
 .leftbox,
@@ -315,7 +321,7 @@ header:hover .rightbox {
 	font-size: 18px;
 	background: url("../images/tips/搜索.svg") no-repeat center;
 	background-position-y: 4px;
-	cursor: url("../images/cur/hand.cur"),auto;
+	cursor: url("../images/cur/hand.cur"), auto;
 }
 
 .container {
@@ -340,8 +346,8 @@ header:hover .rightbox {
 	text-align: center;
 }
 
-.container ul li:hover a img{
-	transform: translate(-10px,-25px);
+.container ul li:hover a img {
+	transform: translate(-10px, -25px);
 	transition: all 0.5s;
 	height: 70px;
 	width: 70px;
@@ -388,14 +394,14 @@ footer #note {
 	left: 40px;
 }
 
-footer #note .menu_butt{
+footer #note .menu_butt {
 	width: 45px;
 	height: 45px;
 	transition: all .3s;
 	transform: translateY(8px);
 }
 
-footer #note:hover .menu_butt{
+footer #note:hover .menu_butt {
 	width: 60px;
 	height: 60px;
 	/* transition: width .2s ,height .2s,background-size .2s; */
@@ -403,14 +409,14 @@ footer #note:hover .menu_butt{
 	transform: translateY(0px);
 }
 
-footer #note:active .menu_butt{
+footer #note:active .menu_butt {
 	width: 40px;
 	height: 40px;
 	transition: none;
 	transform: translateY(11px);
 }
 
-footer .topbtn .change{
+footer .topbtn .change {
 	width: 60px;
 	height: 60px;
 	background: url("../images/tips/向上.svg") no-repeat center;
@@ -418,7 +424,7 @@ footer .topbtn .change{
 	transition: all .3s;
 }
 
-footer .topbtn:hover .change{
+footer .topbtn:hover .change {
 	background-size: 75px;
 }
 
@@ -471,28 +477,36 @@ footer ul li:hover {
 }
 
 
-.stopfoot{
+.stopfoot {
 	transform: translateY(-120px);
 	transition: all .3s;
 }
 
-.stopfootul{
+.stopfootul {
 	transform: translateY(0px);
 	transition: all .3s;
 }
 
-.topbtnspin{
+.topbtnspin {
 	transform: rotate(180deg) translateY(3px);
 	transition: all .3s;
 }
-	
-.jiajian{
+
+.jiajian {
+	--jiajian: 50px;
 	border-radius: 50%;
 	border: 3px double #d48db3;
+	transform: translate(27px, -28px);
+	width: var(--jiajian);
+	height: var(--jiajian);
 }
 
+.jiajian:hover {
+	transform: translate(29px, -40px) scale(1.2);
+	transition: all 0.5s;
+}
 
-.menu{
+.menu {
 	position: absolute;
 	top: -80px;
 	width: 670px;
@@ -510,14 +524,14 @@ footer ul li:hover {
 	border-image-repeat: stretch;
 }
 
-.menu_active{
+.menu_active {
 	transform: scale(1) translateY(180px);
-	transition: transform .3s,border-image-outset .7s,border-image-width .7s;
+	transition: transform .3s, border-image-outset .7s, border-image-width .7s;
 	border-image-width: 200px 0px 200px 0px;
 	border-image-outset: 40px 0px 40px 0px;
 }
 
-.menu ul{
+.menu ul {
 	top: 20px;
 	color: #fff;
 	width: 670px;
@@ -537,7 +551,7 @@ footer ul li:hover {
 	color: #fff;
 	width: 60px;
 	height: 60px;
-	text-align: center;	
+	text-align: center;
 	margin: 25px 51px;
 }
 
@@ -548,10 +562,10 @@ footer ul li:hover {
 	font-size: 57px;
 	word-spacing: 35px;
 	/* margin: 20px 0px; */
-	font-family: 'dingding';	
+	font-family: 'dingding';
 	color: #d1b91f;
-	text-shadow:4px 1px 12px #fff;
-	-webkit-text-stroke:0.8px #fff;
+	text-shadow: 4px 1px 12px #fff;
+	-webkit-text-stroke: 0.8px #fff;
 	line-height: 70px;
 }
 
@@ -588,27 +602,27 @@ footer ul li:hover {
 	transform: translate(-20px, -19px);
 }
 
-.DIYbds{
+.DIYbds {
 	position: absolute;
 	background: url("../images/bd_bgs/选择框.svg") no-repeat center;
 	width: 65px;
 	height: 65px;
-	transform: translate(-33px,-33px) scale(1.5);
+	transform: translate(-33px, -33px) scale(1.5);
 	visibility: hidden;
 }
 
-.menu button:hover .DIYbds{
-	transform: translate(-33px,-31.2px) scale(0.8);
-	visibility:visible;
+.menu button:hover .DIYbds {
+	transform: translate(-33px, -31.2px) scale(0.8);
+	visibility: visible;
 	transition: all .2s;
 }
 
-.menu button:active .DIYbds{
-	transform: translate(-33px,-31.2px) scale(0.7);
-	transition: all 0s;	
+.menu button:active .DIYbds {
+	transform: translate(-33px, -31.2px) scale(0.7);
+	transition: all 0s;
 }
 
-.bgs_list ul{
+.bgs_list ul {
 	top: 20px;
 	width: 670px;
 }
@@ -616,7 +630,7 @@ footer ul li:hover {
 .bgs_list ul li {
 	width: 60px;
 	height: 60px;
-	text-align: center;	
+	text-align: center;
 	margin: 12px 12px;
 }
 
@@ -633,22 +647,127 @@ footer ul li:hover {
 	background-color: transparent;
 }
 
-#bgs_list ul{
+#bgs_list ul {
 	padding: 0px 0px;
 	margin: 0px 0px;
-	height: 340px;	
+	height: 340px;
 	overflow-y: auto;
 }
-#bgs_list li{
+
+#bgs_list li {
 	margin: 0;
 	width: 200px;
-    height: 110px;
+	height: 110px;
 	transform: translateX(35px)
 }
 
-#bgs_list img{
+#bgs_list img {
 	width: 180px;
-    height: 90px;
+	height: 90px;
 }
 
+.addpop {
+	top: 30px;
+	left: -50px;
+	width: 670px;
+	height: 450px;
+	background-color: rgba(0, 0, 0, .5);
+	z-index: 98;
+	border-radius: 50px;
+	transition: all .3s;
+	border-image-source: url("../images/bd_bgs/上下金花边.png");
+	border-image-slice: 1000 0 1000 0;
+	border-image-width: 0 0px 0 0px;
+	border-image-outset: 0px 0px 0px 0px;
+	border-image-repeat: stretch;
+}
 
+.addpop_active {
+	border-image-width: 200px 0px 200px 0px;
+	border-image-outset: 40px 0px 40px 0px;
+	transition: all .3s;
+}
+
+.addpop_box {
+	transition: all .3s;
+	transform: scale(0);
+	width: 100%;
+	height: 520px;
+	position: absolute;
+	top: -110px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.addpop_box_active {
+	transition: all .3s;
+	transform: scale(1);
+}
+
+.addpop_box p {
+	width: 100%;
+	text-align: center;
+	font-size: 57px;
+	word-spacing: 35px;
+	font-family: 'dingding';
+	color: #d1b91f;
+	text-shadow: 4px 1px 12px #fff;
+	-webkit-text-stroke: 0.8px #fff;
+	line-height: 70px;
+}
+
+.addpop_img {
+	width: 100px;
+	height: 100px;
+	background-color: #c97d7d;
+}
+
+.addpop_form {
+	font-family: 'dingding';
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	font-size: 45px;
+	color: #fff;
+}
+
+.webside_url_text {
+	width: 200px;
+	height: 20px;
+	transform: translateY(20px);
+	background-color: rgba(224, 224, 224, 0.748);
+	border: transparent;
+	border-radius: 20px;
+}
+
+.submit_button {
+	cursor: pointer;
+	font-family: 'dingding';
+	width: 100px;
+	height: 50px;
+	border-radius: 20px;
+	border: solid 1px #5f5e5e44;
+	background: linear-gradient(180deg, #fff886, #f072b6);
+	color: #fff;
+	text-shadow: 4px 1px 12px #fff;
+	font-size: 40px;
+	-webkit-text-stroke: 0.8px #fff;
+	text-align: center;
+	line-height: 0px;
+}
+
+.submit_button:active {
+	background: #fff886;
+}
+
+.submit_box {
+	position: absolute;
+	bottom: 20px;
+	width: 350px;
+	height: 50px;
+	display: flex;
+	justify-content: space-around;
+}

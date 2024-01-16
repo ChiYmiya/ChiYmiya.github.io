@@ -217,15 +217,33 @@
 			<li><a href="https://www.runoob.com/" target="_blank"><img src="about/images/tips/菜鸟教程.png" alt=""></a></li>
 			<li><a href="https://www.jd.com" target="_blank"><img src="about/images/tips/京东.png" alt=""></a></li>
 			<li><a href="https://www.tmall.com" target="_blank"><img src="about/images/tips/天猫.png" alt=""></a></li>
-			<li><a href="#"><img src="about/images/tips/加.svg" alt="" class="jiajian"></a></li>
-			<li><a href="#"><img src="about/images/tips/减.svg" alt="" class="jiajian"></a></li>
+			<li><img src="about/images/tips/加.svg" alt="" class="jiajian" onclick="show_addwindow()"></li>
+			<li><img src="about/images/tips/减.svg" alt="" class="jiajian"></li>
 		</ul>
+		<div class="addpop_box" id="addpop_box">
+			<div class="addpop">
+				<p>添加网站</p>
+				<form class="addpop_form" id="addpop_form">
+					<label for="tubiao">图标：</label>
+					<div class="addpop_img" id="tubiao"></div>
+
+					<label for="webside_url">网址</label>
+					<input type="text" id="webside_url" class="webside_url_text">
+
+					<div class="submit_box">
+						<input type="button" value="提交" class="submit_button">
+						<div class="submit_button" id="submit_button"></div>
+					</div>
+				</form>
+			</div>
+		</div>
 	</div>
 	<footer>
 		<button id="topbtn" onclick="getFocus('p1')" class="topbtn">
 			<div class="change"></div>
-		</button>	
-		<button id="note" onclick="menu_mian_show()"><img src="about/images/tips/菜单.svg" alt="" class="menu_butt"></button>
+		</button>
+		<button id="note" onclick="menu_mian_show()"><img src="about/images/tips/菜单.svg" alt=""
+				class="menu_butt"></button>
 		<ul id="footul">
 			<li><a href="https://wx.qq.com/" target="_blank"><img src="about/images/tips/微信.png"></a></li>
 			<li><a href="https://www.bilibili.com/" target="_blank"><img src="about/images/tips/bilibili.svg"
