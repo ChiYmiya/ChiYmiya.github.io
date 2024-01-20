@@ -154,98 +154,89 @@ function timeSetRight() {
 // 定时刷新时间，更换壁纸
 setInterval(timeSetRight, 1000);
 setInterval(changeBg, 8000);
-// 定义上下转换标志,支持菜单点击时锁定。0代表关闭状态，1代表上下箭头，2代表菜单
-var getFocus_flag = 'noed';
-function getFocus(foid) {
-    let nn = document.getElementById("note");
-    let tul = document.getElementById("footul");
-    let tt = document.getElementById("topbtn");
-    let cc = document.querySelector(".change");
-    function Focusadd() {
-        nn.classList.add("stopfoot");
-        tul.classList.add("stopfootul");
-        tt.classList.add("stopfoot");
-        cc.classList.add("topbtnspin");
-    }
-    function Focusremove() {
-        nn.classList.remove("stopfoot");
-        tul.classList.remove("stopfootul");
-        tt.classList.remove("stopfoot");
-        cc.classList.remove("topbtnspin");
-    }
-    if (getFocus_flag == 'noed') {
-        if (foid == 'p1') {
-            Focusadd();
-            getFocus_flag = getFocus_flag + foid;
-        }
-        if (foid == 'p2') {
-            Focusadd();
-            tt.style.cursor = 'url("about/images/cur/no.cur"),auto';
-            getFocus_flag = getFocus_flag + foid;
-        }
-    }
-    else {
-        if (getFocus_flag == 'noed' + 'p1' && foid == 'p1' && menu_flag == true) {
-            Focusremove();
-            getFocus_flag = 'noed';
-        }
-        if (getFocus_flag == 'noed' + 'p2' && foid == 'p2') {
-            Focusremove();
-            tt.style.cursor = 'url("about/images/cur/hand.cur"),auto';
-            getFocus_flag = 'noed';
-        }
-    }
-}
 
-//  显示菜单弹出框
-var menu_flag = true;
+// 展示弹窗函数
+var foot_btn = document.querySelectorAll('.foot_btn');
+var footul = document.querySelector('.footul');
+var topbtn = document.querySelector('.topbtn');
+var direction_img = document.querySelector('.direction_img');
+var mew = document.querySelector(".menu_wai");
 function menu_mian_show() {
     let mm = document.querySelector("#menu_main");
-    let mew = document.querySelector(".menu_wai");
-    if (menu_flag == true) {
+    if (mew.dataset.menu_status == 'off') {
+        mew.dataset.menu_status = 'on';
         mew.style.display = "flex";
         setTimeout(() => {
             mm.classList.add("menu_active");
-            menu_flag = false;
-            this.getFocus('p2');
-        }, 100);
-    } else {
-        for (let i = 0; i < menu_list.length; i++) {
-            const menu = menu_list[i];
-            setTimeout(() => {
-                menu.classList.remove("menu_active");
-            }, 100);
+        }, 50);
+        footul_style_change('up');
+        topbtn.classList.add('topbtn_nocursor');
+        if (topbtn.dataset.direction_status == 'Up') {
+            direction_style_change('dn')
         }
-        menu_flag = true;
-        this.getFocus('p2');
-        setTimeout(() => {
-            mew.style.display = "none";
-        }, 200);
+    } else {
+        off_menu();
     }
-    if (menu_flag == false) {
-        document.getElementById("topbtn").style.cursor = 'url("about/images/cur/no.cur"),auto';
+}
+
+// 封装改变右下方向函数
+function direction_style_change(status) {
+    if (status == 'dn') {
+        topbtn.dataset.direction_status = 'Dn';
+        direction_img.classList.add('direction_img_change');
+    }else {
+        topbtn.dataset.direction_status = 'Up';
+        direction_img.classList.remove('direction_img_change');
     }
-    else {
-        document.getElementById("topbtn").style.cursor = 'url("about/images/cur/hand.cur"),auto';
+}
+
+// 封装下部弹窗函数
+function footul_style_change(status){
+    if (status=='up') {
+        foot_btn.forEach((element) => {
+            element.classList.add('static_footbtn');
+        })
+        footul.classList.add('static_footul');
+        footul.dataset.direction_status == 'Up'
+    } else {
+        foot_btn.forEach((element) => {
+            element.classList.remove('static_footbtn');
+        })
+        footul.classList.remove('static_footul');
+        footul.dataset.direction_status == 'Dn';
+    }
+}
+
+// 右下定止弹窗函数
+function staic_foot() {
+    if (topbtn.dataset.direction_status=='Dn'&&mew.dataset.menu_status == 'on') {
+        direction_style_change('dn');
+        footul_style_change('up');
+    }else if (topbtn.dataset.direction_status=='Up'&&mew.dataset.menu_status == 'off') {
+        direction_style_change('dn');
+        footul_style_change('up');
+    }else if(topbtn.dataset.direction_status=='Dn'&&mew.dataset.menu_status == 'off'){
+        direction_style_change('up')
+        footul_style_change('dn');
     }
 }
 
 // 添加窗口外点击消失的事件
 document.querySelector(".menu_wai").addEventListener("click", () => {
+    off_menu();
+});
+
+// 关闭弹窗函数
+function off_menu() {
+    setActive(menu_list, typeof id, "menu_active");
     setTimeout(() => {
-        document.getElementById("topbtn").style.cursor = 'url("about/images/cur/hand.cur"),auto';
-        document.getElementById("note").classList.remove("stopfoot");
-        document.getElementById("footul").classList.remove("stopfootul");
-        document.getElementById("topbtn").classList.remove("stopfoot");
-        document.querySelector(".change").classList.remove("topbtnspin");
-        setActive(menu_list, typeof id, "menu_active");
-    }, 100);
-    setTimeout(() => {
-        document.querySelector(".menu_wai").style.display = "none";
-    }, 200);
-    menu_flag = true;
-    getFocus_flag = 'noed';
-})
+        mew.style.display = "none";
+    }, 300);
+    mew.dataset.menu_status = 'off';
+    footul_style_change('Dn')
+    direction_style_change('up')
+    topbtn.classList.remove('topbtn_nocursor');
+}
 
 // 过滤非窗口外的冒泡,封装过滤函数
 function except(id) {
@@ -287,18 +278,65 @@ menu_except();
 document.getElementById("bgs_list").addEventListener("mousewheel", onmousewheel)
 function onmousewheel(event) {
     var event = event || window.event;
+    console.log("onmousewheel()函数触发");
 }
 
 function show_addwindow() {
     var addpop_box = document.querySelector('.addpop_box');
     addpop_box.classList.add("addpop_box_active");
-    setTimeout(()=>{
+    setTimeout(() => {
         document.querySelector('.addpop').classList.add("addpop_active");
-    },100);
+    }, 100);
 }
 
-document.getElementById('submit_button').addEventListener("click", ()=>{
-    var addpop_box = document.querySelector('.addpop_box');
-    addpop_box.classList.remove("addpop_box_active");
-    console.log("addpop_box被点击了",addpop_box);
+function off_show_addwindow() {
+    document.querySelector('.addpop_box').classList.remove("addpop_box_active");
+}
+
+except('addpop');
+document.querySelector('.addpop_box').addEventListener('click', () => {
+    off_show_addwindow();
 })
+
+function show_operate() {
+    let jian = document.getElementById('jian');
+    var operate_mark_list = [];
+    if (jian.dataset.jianoff == 'off') {
+        jian.dataset.jianoff = 'on';
+        var container_ul_li_list = document.querySelectorAll('.container ul li');
+        console.log('这是css选择器下的全部选择结果', container_ul_li_list.length);
+        container_ul_li_list = Array.from(container_ul_li_list);
+        for (let i = 0; i < container_ul_li_list.length - 2; i++) {
+            const operate_mark = document.createElement('div');
+            operate_mark.className = 'operate_mark';
+            operate_mark.id = `serial_num${i}`;
+            operate_mark.addEventListener("click", () => {
+                const mark_id = event.target;
+                console.log(mark_id.id);
+            })
+            const element = container_ul_li_list[i];
+            element.appendChild(operate_mark);
+            element.addEventListener('click', () => {
+                const li_element = event.currentTarget;
+                li_element.remove();
+            })
+            operate_mark_list.push(operate_mark);
+        }
+        setTimeout(() => {
+            for (let i = 0; i < operate_mark_list.length; i++) {
+                operate_mark_list[i].style.opacity = '1';
+            }
+        }, 300);
+    } else {
+        jian.dataset.jianoff = 'off';
+        let operate_mark_list = document.querySelectorAll('.operate_mark');
+        for (let i = 0; i < operate_mark_list.length; i++) {
+            operate_mark_list[i].style.opacity = '0';
+        }
+        setTimeout(() => {
+            operate_mark_list.forEach((item) => {
+                item.remove();
+            })
+        }, 500);
+    }
+}

@@ -16,6 +16,13 @@ body {
 	cursor: url("../images/cur/normal.cur"), auto;
 }
 
+main {
+	position: relative;
+	width: 100%;
+	height: 54%;
+	/* background-color: #cc8484; */
+}
+
 #bgid {
 	transition: background-image 1.3s;
 	font-family: Sans-serif;
@@ -95,12 +102,12 @@ li {
 
 header {
 	width: 1200px;
-	height: 200px;
+	height: 30%;
 	margin: 0 auto;
 	margin-top: 10px;
 	background-color: transparent;
-	border: 1px solid transparent;
 	transition: all 0.7s;
+	/* background-color: #d1b91f; */
 }
 
 .tabbar {
@@ -325,11 +332,10 @@ header:hover .rightbox {
 }
 
 .container {
-	width: 1080px;
+	width: 70%;
 	margin: 0 auto;
 	/* margin-top: 40px; */
 	position: relative;
-
 }
 
 .container ul {
@@ -338,6 +344,7 @@ header:hover .rightbox {
 }
 
 .container ul li {
+	position: relative;
 	margin: 20px;
 	width: 60px;
 	height: 60px;
@@ -346,9 +353,9 @@ header:hover .rightbox {
 	text-align: center;
 }
 
-.container ul li:hover a img {
+.container ul li a img:hover {
 	transform: translate(-10px, -25px);
-	transition: all 0.5s;
+	transition: all 0.3s;
 	height: 70px;
 	width: 70px;
 }
@@ -364,22 +371,34 @@ header:hover .rightbox {
 footer {
 	position: fixed;
 	width: 100%;
-	height: 250px;
-	bottom: -140px;
+	height: 15%;
+	bottom: 0;
 	text-align: center;
 	z-index: 10;
 	min-width: 1000px;
+	/* background-color: #1e90ff; */
+}
+
+.footer_box {
+	position: absolute;
+	bottom: -60px;
+	width: 100%;
+	/* height: 10px; */
+	background-color: #fff;
+	display: flex;
+	justify-content: center;
 }
 
 .topbtn,
-#note {
+.note {
+	transition: all .3s;
+	transform: translateY(50px);
 	border-radius: 10px;
 	position: absolute;
 	display: block;
 	width: 60px;
 	height: 60px;
 	right: 40px;
-	top: 150px;
 	text-align: center;
 	outline: none;
 	border: 0;
@@ -389,63 +408,80 @@ footer {
 	color: #fff;
 }
 
-footer #note {
+.note {
 	border-radius: 10px;
 	left: 40px;
 }
 
-footer #note .menu_butt {
+.menu_butt {
 	width: 45px;
 	height: 45px;
 	transition: all .3s;
 	transform: translateY(8px);
 }
 
-footer #note:hover .menu_butt {
+.note:hover .menu_butt {
 	width: 60px;
 	height: 60px;
-	/* transition: width .2s ,height .2s,background-size .2s; */
 	transition: all .3s;
 	transform: translateY(0px);
 }
 
-footer #note:active .menu_butt {
+.note:active .menu_butt {
 	width: 40px;
 	height: 40px;
 	transition: none;
 	transform: translateY(11px);
 }
 
-footer .topbtn .change {
-	width: 60px;
-	height: 60px;
+.direction_img {
+	--direction_img_size: 60px;
+	width: var(--direction_img_size);
+	height: var(--direction_img_size);
 	background: url("../images/tips/向上.svg") no-repeat center;
-	background-size: 50px;
+	background-size: var(--direction_img_size) var(--direction_img_size);
 	transition: all .3s;
 }
 
-footer .topbtn:hover .change {
-	background-size: 75px;
+.topbtn:hover .direction_img {
+	background-size: 75px 75px;
 }
 
-footer:hover #note,
+.topbtn:active .direction_img{
+	background-size: 60px 60px;
+	transition: all 0s;
+}
+
+.topbtn_nocursor{
+	cursor: url("../images/cur/no.cur"), auto;
+}
+
+.direction_img_change{
+	transition: all .3s;
+	transform: rotate(180deg);
+}
+
+footer:hover .note,
 footer:hover .topbtn {
-	transform: translateY(-120px);
+	transform: translateY(-100px);
 	transition: all .3s;
 }
 
-footer ul {
-	position: absolute;
-	margin-top: 100px;
+.static_footbtn {
+	transform: translateY(-100px);
+	transition: all .3s;
+}
+
+.footul {
+	/* position: absolute; */
 	height: 60px;
 	width: 950px;
-	top: -60px;
-	left: 18.8%;
+	/* left: 18.8%; */
 	list-style: none;
 	background-color: rgba(0, 0, 0, .3);
 	border-radius: 30px;
-	transform: translateY(70px);
-	transition: all .3s;
+	transition: all .4s;
+	transform: translateY(20px);
 }
 
 footer ul li img {
@@ -454,8 +490,13 @@ footer ul li img {
 	margin: 5px;
 }
 
-footer:hover ul {
-	transform: translateY(0px);
+footer:hover .footul {
+	transform: translateY(-70px);
+	transition: all .4s;
+}
+
+.static_footul {
+	transform: translateY(-70px);
 	transition: all .3s;
 }
 
@@ -470,27 +511,12 @@ footer ul li {
 	cursor: pointer;
 }
 
-footer ul li:hover {
+.footul li:hover {
 	transform: scale(1.7);
 	transform-origin: 50% 100%;
-	transition: all .2s;
-}
-
-
-.stopfoot {
-	transform: translateY(-120px);
 	transition: all .3s;
 }
 
-.stopfootul {
-	transform: translateY(0px);
-	transition: all .3s;
-}
-
-.topbtnspin {
-	transform: rotate(180deg) translateY(3px);
-	transition: all .3s;
-}
 
 .jiajian {
 	--jiajian: 50px;
@@ -503,13 +529,13 @@ footer ul li:hover {
 
 .jiajian:hover {
 	transform: translate(29px, -40px) scale(1.2);
-	transition: all 0.5s;
+	transition: all 0.3s;
 }
 
 .menu {
 	position: absolute;
-	top: -80px;
-	width: 670px;
+	top: -240px;
+	h: 670px;
 	height: 450px;
 	transform: scale(0);
 	background-color: rgba(0, 0, 0, .5);
@@ -545,6 +571,7 @@ footer ul li:hover {
 	display: none;
 	justify-content: center;
 	z-index: 10;
+	/* background-color: #de4ea4; */
 }
 
 .menu ul li {
@@ -667,10 +694,9 @@ footer ul li:hover {
 }
 
 .addpop {
-	top: 30px;
-	left: -50px;
+	margin-top: -50px;
 	width: 670px;
-	height: 450px;
+	height: 440px;
 	background-color: rgba(0, 0, 0, .5);
 	z-index: 98;
 	border-radius: 50px;
@@ -692,12 +718,15 @@ footer ul li:hover {
 	transition: all .3s;
 	transform: scale(0);
 	width: 100%;
-	height: 520px;
+	height: 390px;
 	position: absolute;
-	top: -110px;
+	top: 0px;
+	/* left: -20px; */
+	margin-top: 0;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	/* background-color: #FFF; */
 }
 
 .addpop_box_active {
@@ -744,6 +773,7 @@ footer ul li:hover {
 }
 
 .submit_button {
+	transition: all .3s;
 	cursor: pointer;
 	font-family: 'dingding';
 	width: 100px;
@@ -763,11 +793,48 @@ footer ul li:hover {
 	background: #fff886;
 }
 
+.submit_button:hover {
+	transition: all .3s;
+	font-size: 55px;
+}
+
 .submit_box {
 	position: absolute;
-	bottom: 20px;
+	bottom: 0px;
 	width: 350px;
 	height: 50px;
 	display: flex;
 	justify-content: space-around;
+}
+
+.operate_mark {
+	transition: all .3s;
+	--operate_mark: 30px;
+	position: absolute;
+	top: -25px;
+	right: -45px;
+	width: var(--operate_mark);
+	height: var(--operate_mark);
+	animation: operate_mark 1s infinite alternate;
+	background-image: url("../images/tips/图标删减.png");
+	background-size: var(--operate_mark) var(--operate_mark);
+	opacity: 0;
+}
+
+@keyframes operate_mark {
+	0% {
+		transform: rotate(-20deg);
+	}
+
+	100% {
+		transform: rotate(20deg);
+	}
+}
+
+.operate_mark:hover {
+	--operate_mark: 35px;
+	transform: scale(1.5);
+	transition: all .3s;
+	top: -30px;
+	right: -47px;
 }
