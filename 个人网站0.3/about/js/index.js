@@ -291,6 +291,7 @@ function show_addwindow() {
 
 function off_show_addwindow() {
     document.querySelector('.addpop_box').classList.remove("addpop_box_active");
+    document.querySelector('.addpop').classList.remove("addpop_active");
 }
 
 except('addpop');
