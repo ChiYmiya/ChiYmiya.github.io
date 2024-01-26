@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.lessons.dao.StudentDao">
+    <delete id="delStudentCourseLeaning" parameterType="map">
+        DELETE FROM t_student_course
+        WHERE student_id = #{id}
+        AND course_id IN
+        <foreach collection="courseIds" item="arr" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+
+    <insert id="addStudentCourseLeaning" parameterType="java.util.List">
+        INSERT INTO my_table (studentId, courseId,)
+        VALUES
+        <foreach collection="list" item="item" separator=",">
+            (#{item.property1}, #{item.property2}, )
+        </foreach>
+    </insert>
+</mapper>
