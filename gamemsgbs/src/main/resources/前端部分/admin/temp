@@ -1,0 +1,25 @@
+<el-form class="center-form-pv" :inline="true" :model="searchForm">
+    <el-row>
+        <div>
+            <label class="item-label">标签</label>
+            <el-input v-model="searchForm.biaoqian" placeholder="标签" @keydown.enter.native="search()"
+                clearable></el-input>
+        </div>
+        <el-button class="search" type="success" @click="search()">
+            <span class="icon iconfont icon-chakan14"></span>
+            查询
+        </el-button>
+    </el-row>
+
+    <el-row class="actions">
+        <el-button class="add" v-if="isAuth('youxibiaoqian','新增')" type="success" @click="addOrUpdateHandler()">
+            <span class="icon iconfont icon-tianjia14"></span>
+            添加
+        </el-button>
+        <el-button class="del" v-if="isAuth('youxibiaoqian','删除')" :disabled="dataListSelections.length?false:true"
+            type="danger" @click="deleteHandler()">
+            <span class="icon iconfont icon-shanchu6"></span>
+            删除
+        </el-button>
+    </el-row>
+</el-form>
