@@ -1,0 +1,79 @@
+/* 一般情况下隐藏手机栏 */
+.iphone-nav{
+    display: none;
+}
+/* 导航栏基本设置 */
+.pc-nav {
+    display: flex;
+    /* 导航栏在滚动时不随页面滑动 */
+    position: sticky;
+    width: 100%;
+    align-items: center;
+    border-bottom: 2px solid;
+    border-image: linear-gradient(to right, #fbc7d4 ,#c5f6fa)30 30;
+    animation: border-change 2s linear infinite alternate;
+    filter: hue-rotate(360deg);
+}
+
+/* 对导航栏内列表ul的设置 */
+.nav-ul {
+    /* 弹性增长量相同 */
+    flex: 1;
+    text-align: left;
+    list-style-type: none;
+    padding-left: 30px;
+}
+
+/* 列表单项的设置 */
+.nav-ul li {
+    margin: 0;
+    padding: 0;
+    margin-inline: 2%;
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 600;
+    /* 设置阴影动画 */
+    transition: text-shadow 0.5s;
+}
+
+/* 列表下拉时的悬停 */
+.nav-ul li:hover {
+    text-shadow: 10px -13px 2px #CECECE;
+}
+
+/* 链接相对定位及其格式 */
+.nav-ul li a {
+    text-decoration: none;
+    color: #fff;
+    position: relative;
+    display: block;
+    height: 46.6px;
+    width: 100px;
+    line-height: 46.6px;
+    text-align: center;
+}
+
+/* 点击时列表链接的颜色变化 */
+.nav-ul li a:active{
+    color: #c57ca1;
+}
+
+/* 在链接下添加短横线 */
+.nav-ul li a::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    position: absolute;
+    top: 37px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(160deg, rgba(252, 194, 215, 1), transparent 80%),
+    linear-gradient(250deg, rgba(50, 204, 188, 1), transparent 80%),
+    linear-gradient(0deg, rgba(255, 206, 153, 1), transparent 40%);
+    transition: width 0.2s;
+}
+
+/* 设置悬停时后面短线的最长度 */
+.nav-ul li a:hover::after {
+    width: 60%;
+}

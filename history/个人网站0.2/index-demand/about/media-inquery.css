@@ -1,0 +1,26 @@
+/* 导入手机大小 */
+@import url(media-iphone.css);
+/* 平板大小 */
+@media screen and (min-width:679px)
+ and (max-width:1100px) {
+    /* 页面背景 */
+    body{
+        min-width: 0;
+    }
+    .background_img{
+        min-width: 0;
+    }
+    /* 页面主标题 */
+    .background_img h1{
+        font-size: 166px;
+        font-weight: 500;
+    }
+    /* 右下角标题 */
+    .text-box h2{
+        font-size: 36px;
+        font-weight: 1000;
+    }
+    .main-content{
+        min-height: calc(96% - 55px);
+    }
+}

@@ -1,0 +1,147 @@
+/* 页面基本设置 */
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'yuyang', 'STXihei', 'FZShuTi', 'FZYaoTi', 'STxinwei';
+    box-sizing: border-box;
+}
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    min-height: 200px;
+}
+
+/* 鼠标选择的颜色样式 */
+::selection {
+    color: #fff;
+    background-color: #f06595;
+}
+
+.mainAll {
+    display: grid;
+    grid-template-rows: auto auto ;
+    grid-template-columns: 200px auto;
+    grid-template-areas:
+        "nav nav"
+        "my ismain";
+}
+
+#nav {
+    grid-area: nav;
+}
+
+.el-menu-demo,.el-menu--horizontal,.el-menu{
+    background: radial-gradient(at 50% 0%, rgba(0, 0, 0, 0.2), transparent) !important;
+    border-bottom: 4px solid !important;
+    border-image: linear-gradient(to right, #fbc7d4, #c5f6fa)30 30 !important;
+}
+.el-menu-item{
+    background: transparent !important;
+    color: #000 !important ;
+}
+.el-menu-item:hover{
+    background-color: rgba(0, 0, 0, 0.1) !important;
+}
+.el-menu-item.is-active {
+    background-color: rgba(0, 0, 0, 0.3) !important;
+    color: #fff !important;
+    border-bottom-color: #f06595 !important;
+  }
+
+  .el-button--small{
+    font-size: 15px;
+    padding: 10px 10px;
+  }
+  .el-button--primary{
+    background: linear-gradient(to left,#dae2f8,#d6a4a4) !important;
+  }
+  .el-button--danger{
+    background: linear-gradient(to right,#dae2f8,#d6a4a4) !important;
+  }
+
+  .tijiao{
+    background: #409EFF !important;
+  }
+#nav li {
+    font-size: 20px;
+}
+
+.logo {
+    padding: 0;
+}
+
+.username {
+    border-bottom: none !important;
+
+}
+
+
+/* 个人信息框 */
+#my {
+    width: 200px;
+    border: 2px solid rgba(0, 0, 0, 0.3);
+    grid-area: my;
+}
+
+/* 个人信息框标题 */
+.el-descriptions .el-descriptions__title {
+    font-size: 20px;
+}
+
+/* 个人信息框标题内容 */
+.el-descriptions-item__container {
+    font-size: 16px;
+}
+
+/* .footerblock{
+    width: 100%;
+    height: 57.6px;
+} */
+
+.footer {
+    position:absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 8px;
+    line-height: 20px;
+    background-image: radial-gradient(at 50% 0%, rgba(0, 0, 0, 0.2), transparent);
+    border-top: 4px solid;
+    border-image: linear-gradient(to left, #fbc7d4, #c5f6fa)30 30;
+}
+
+/* 课程信息表格 */
+#lib {
+    width: 100%;
+    grid-area: ismain;
+}
+
+/* 课程信息表格的hover状态 */
+.el-table tr:hover td {
+    background-color: rgba(0, 0, 0, 0.1) !important;
+    color: #000;
+}
+
+/* 课程信息表格的字体样式*/
+.has-gutter th,
+.el-table__row td {
+    text-align: center;
+    font-size: 16px;
+}
+
+/* 选择课程样式 */
+.select {
+    grid-area: ismain;
+}
+
+.select .selectbutton{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}

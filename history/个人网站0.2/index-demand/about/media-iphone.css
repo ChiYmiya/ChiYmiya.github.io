@@ -1,0 +1,139 @@
+/* 手机大小 */
+@media screen and (min-width: 34px)
+    and (max-width: 678px){
+        body{
+            min-width: 0;
+        }
+        /* 背景更改 */
+        .background_img{
+            background:
+            linear-gradient(160deg, rgba(252, 194, 215, 0.4), transparent 80%),
+            linear-gradient(250deg, rgba(50, 204, 188, 0.3), transparent 80%),
+            linear-gradient(0deg, rgba(255, 206, 153, 0.5), transparent 40%),
+            url(../img/ipone_background.jpg);
+            background-size:cover;
+            background-repeat: no-repeat;
+        }
+        /* 重设背景文字 */
+        .background_img h1{
+            position: initial;
+            font-size: 100px;
+            font-weight: 300;
+        }
+        /* 清除pc的布局 */
+        .background_img .pc-h1{
+            display: none;
+        }
+        /* 显示手机的布局 */
+        .background_img .iphone-h1{
+            display: block;
+        }
+        /* 右下角文字定位改变 */
+        .background_img .text-box{
+            right: 0px;
+            bottom: 85px;
+        }
+        /* 改变字体大小 */
+        .background_img .text-box h2{
+            font-size: 25px;
+        }
+        /* 中间内容大小改变 */
+        .main-content{
+            min-height: calc(93% - 66px);
+        }
+        /* 页脚上边框设置 */
+        footer{
+            border-top: 1px solid rgba(0, 0, 0, 0.5);
+        }
+        /* 页脚字体设置 */
+        footer p{
+            font-size: 12px;
+        }
+        
+
+        /* 导航栏重置 */
+        /* 清除pc的导航 */
+        .pc-nav{
+            display: none;
+        }
+        /* 显示手机的导航 */
+        .iphone-nav{
+            display:flex;
+            width: 100%;
+            height: 50px;
+            align-items: center;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+            border-image: linear-gradient(to left, #fbc7d4 ,#c5f6fa)30 30;
+        }
+        /* 导航栏图标设置 */
+        .iphone-nav img{
+            height: 37.5px;
+            width: 37.5px;
+            cursor: pointer;
+        }
+        /* 导航栏菜单设置 */
+        .iphone-nav-menu{
+            list-style-type: none;
+            position: absolute;
+            top: 50px;
+            width: 0px;
+            background-color: rgba(44, 45, 46, 0.41);
+            overflow: hidden;
+            transition: width 0.5s;
+        }
+        .iphone-nav .iphone-menu:hover+.iphone-nav-menu {
+            width: 150px;
+        }
+        .iphone-nav-menu a,
+        .iphone-nav-myid-firstline a{
+            text-decoration: none;
+            display: block;
+            padding: 10px 0px;
+            min-width: 100px;
+        }
+        .iphone-nav-myid-firstline a:active,
+        .iphone-nav-menu a:active{
+            background-color: #f06595;
+        }
+        /* 导航栏我的信息（图片） */
+        .iphone-nav .iphone-myid{
+            position: absolute;
+            right: 4px;
+            height: 32px;
+            width: 32px;
+            border: 5px solid transparent;
+            box-sizing: initial;
+        }
+        /* 我的信息内容部分 */
+        .iphone-nav .iphone-nav-myid{
+            position: absolute;
+            top: 50px;
+            right: 0px;
+            width: 60%;
+            height: 0px;
+            overflow: hidden;
+            transition: height 0.5s;
+        }
+        /* 设置动画 */
+        .iphone-nav .iphone-myid:hover+.iphone-nav-myid{
+            height: 95px;
+        }
+        /* 内容第一行 */
+        .iphone-nav-myid-firstline{
+            display: grid;
+            grid-template-columns: 60px auto;
+            justify-content: space-evenly;
+            align-items: center;
+            gap: 10px;
+            background-color: rgba(44, 45, 46, 0.41);
+        }
+        .iphone-nav-myid-firstline div h1,
+        .iphone-nav-myid-firstline div p{
+            padding: 2px 0px;
+        }
+        .iphone-nav-myid-firstline img{
+            width: 60px;
+            height: 60px;
+            cursor: initial;
+        }
+}

@@ -1,0 +1,45 @@
+<div @click="storeup(41)" v-show="!isStoreup">
+    <span>点我关注</span>
+</div>
+<div @click="storeup(-1)" v-show="isStoreup">
+    <span>取消关注</span>
+</div>
+
+<script>
+    storeup(type) {
+        if (this.detail.id == localStorage.getItem("frontUserid")) {
+            this.$message.error("不能关注自己");
+            return false;
+        }
+        if (type == 41 && !this.isStoreup) {
+            this.storeupParams.name = this.title;
+            this.storeupParams.picture = this.detailBanner[0];
+            this.storeupParams.refid = this.detail.id;
+            this.storeupParams.type = type;
+            this.$http.post("storeup/add", this.storeupParams).then((res) => {
+                if (res.data.code == 0) {
+                    this.isStoreup = true;
+                    this.$message({
+                        type: "success",
+                        message: "关注成功!",
+                        duration: 1500,
+                    });
+                }
+            });
+        }
+        if (type == -1 && this.isStoreup) {
+            let delIds = new Array();
+            delIds.push(this.storeupInfo.id);
+            this.$http.post("storeup/delete", delIds).then((res) => {
+                if (res.data.code == 0) {
+                    this.isStoreup = false;
+                    this.$message({
+                        type: "success",
+                        message: "取关成功!",
+                        duration: 1500,
+                    });
+                }
+            });
+        }
+    }
+</script>

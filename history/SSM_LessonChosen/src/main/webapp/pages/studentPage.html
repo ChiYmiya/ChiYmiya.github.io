@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>学生选课系统</title>
+  <script src="../about/js/vue2.js"></script>
+  <script src="../about/element-ui/lib/index.js"></script>
+  <link rel="stylesheet" href="../about/element-ui/lib/theme-chalk/index.css">
+  <link rel="stylesheet" href="../about/css/studentPage.css">
+  <link rel="icon" href="../about/img/default-img.jpg">
+</head>
+
+<body>
+  <div id="app" class="mainAll">
+    <!-- 导航栏 -->
+    <div id="nav" class="nav">
+      <el-menu :default-active="activeIndex2" class="el-menu-demo" mode="horizontal" @select="handleSelect"
+        background-color="#545c64" text-color="#fff" active-text-color="#ffd04b">
+        <el-menu-item index="0" class="logo"><img src="../about/img/temp_logo.png" alt=""
+              style="width: 100px; height: 60px;"></el-menu-item>
+        <el-menu-item index="1" @click="changeLib">课程信息</el-menu-item>
+        <el-menu-item index="2" @click="changeSelect">选择课程</el-menu-item>
+        <el-menu-item index="3" @click="changeResult">成绩查询</el-menu-item>
+        <el-menu-item index="user" class="username" style="position: absolute; right: 8vw;">
+          <div style="display: flex; justify-content: space-between; font-size: 20px;">
+            <span>{{userName}}</span>
+          </div>
+      </el-menu>
+    </div>
+    <!-- 个人信息 -->
+    <div id="my" class="my">
+      <el-descriptions title="个人信息" :model="student" :column='1' :size="size">
+        <el-descriptions-item label="用户名">{{ student.userName }}</el-descriptions-item>
+        <el-descriptions-item label="密码">{{ student.password }}</el-descriptions-item>
+        <el-descriptions-item label="真实姓名">{{ student.trueName }}</el-descriptions-item>
+        <el-descriptions-item label="学号">{{ student.stuNo }}</el-descriptions-item>
+        <el-descriptions-item label="专业">{{ student.professional }}</el-descriptions-item>
+      </el-descriptions>
+      <el-button type="primary" size="small " @click="updataPossword">修改密码</el-button>
+      <el-button type="danger" size="small " @click="exitSystam">退出系统</el-button>
+      <!-- 修改密码对话框 -->
+      <el-dialog title="修改密码" :visible.sync="dialogFormVisible" width="500px">
+        <el-form :model="ruleForm" status-icon :rules="rules" ref="ruleForm" label-width="100px" class="demo-ruleForm">
+          <el-form-item label="新密码" prop="pass">
+            <el-input type="password" v-model="ruleForm.pass" autocomplete="off"></el-input>
+          </el-form-item>
+          <el-form-item label="确认密码" prop="checkPass">
+            <el-input type="password" v-model="ruleForm.checkPass" autocomplete="off"></el-input>
+          </el-form-item>
+          <el-form-item>
+            <el-button class="tijiao" type="primary" @click="submitForm('ruleForm')">提交</el-button>
+            <el-button @click="resetForm('ruleForm')">重置</el-button>
+          </el-form-item>
+        </el-form>
+        <div slot="footer" class="dialog-footer">
+          <el-button @click="dialogFormVisible = false">取 消</el-button>
+        </div>
+      </el-dialog>
+    </div>
+    <!-- 课程列表 -->
+    <div id="lib" class="lib ismain" v-show="show">
+      <template>
+        <el-table class="el-table" :data="lib" style="width: 100%">
+          <el-table-column type="index" prop="id" label="序号" width="90">
+          </el-table-column>
+          <el-table-column prop="courseName" label="课程名称">
+          </el-table-column>
+          <el-table-column prop="credit" label="学分" width="90">
+          </el-table-column>
+        </el-table>
+      </template>
+    </div>
+    <!-- 选择课程 -->
+    <div id="select" class="select ismain" v-show="show">
+      <template>
+        <!-- 可选课程 -->
+        <el-table class="el-table" v-model="selectlib" :data="selectlib" style="width: 100%" ref="multipleTable" tooltip-effect="dark"
+          @selection-change="handleSelectionChange" >
+          <el-table-column label="可选课程">
+            <el-table-column type="selection" width="55">
+            </el-table-column>
+            <el-table-column type="index" prop="id" label="序号" width="90">
+            </el-table-column>
+            <el-table-column prop="courseName" label="课程名称">
+            </el-table-column>
+            <el-table-column prop="credit" label="学分" width="90">
+            </el-table-column>
+          </el-table-column>
+        </el-table>
+      </template>
+      <!-- 选课按钮 -->
+      <div class="selectbutton">
+        <el-button type="primary" size="medium  " @click="isSelect">双击选择课程</el-button>
+      </div>
+      <!-- 已选课程 -->
+      <template>
+        <el-table class="el-table" :data="lib" style="width: 100%" ref="multipleTable" tooltip-effect="dark"
+          @selection-change="handleSelectionChange">
+          <el-table-column label="已选课程">
+            <el-table-column type="selection" width="55">
+            </el-table-column>
+            <el-table-column type="index" prop="id" label="序号" width="90">
+            </el-table-column>
+            <el-table-column prop="courseName" label="课程名称">
+            </el-table-column>
+            <el-table-column prop="credit" label="学分" width="90">
+            </el-table-column>
+          </el-table-column>
+        </el-table>
+      </template>
+      <div class="selectbutton">
+        <el-button type="danger" size="medium" @click="isoutSelect">双击确定退课</el-button>
+      </div>
+    </div>
+    <!-- 查询成绩 -->
+    <div id="result" class="result ismain" v-show="show">
+      <template>
+        <el-table class="el-table" :data="resultlib" style="width: 100%">
+          <el-table-column type="index" prop="id" label="序号" width="90">
+          </el-table-column>
+          <el-table-column prop="courseName" label="课程名称">
+          </el-table-column>
+          <el-table-column prop="credit" label="学分" width="90">
+          </el-table-column>
+          <el-table-column prop="teacherName" label="授课老师" width="180">
+          </el-table-column>
+          <el-table-column prop="score" label="成绩" width="200">
+          </el-table-column>
+        </el-table>
+      </template>
+    </div>
+  </div>
+  <script src="../about/js/axios-0.18.0.js"></script>
+  <script src="../about/js/studentPage.js"></script>
+  <script>
+  </script>
+  <div class="footerblock"></div>
+  <footer class="footer">
+    <p>© 2023.5.1 ChiYMY学生选课系统</p>
+    <p>-強くなりつつ　小チより-</p>
+  </footer>
+</body>
+
+
+</html>
