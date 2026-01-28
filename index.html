@@ -1,19 +1,691 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>チハの雪</title>
-</head>
-
-<body>
-    <h1>欢迎来到我的小破站</h1>
-    <h1>ようこそ、、つまらない場所へ</h1>
-    <a href="个人网站0.3/index.html" target="_self">这里进入v0.3</a>
-    <br>
-    <a href="http://chiymy.fun/dist_release/" target="_self">个人网站v0.4</a>
-</body>
-
+<!doctype html>
+<html class="light" lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Software Engineer Portfolio - K. TANAKA</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&amp;family=Noto+Sans+JP:wght@400;500;700;900&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#2D5A27",
+              "background-light": "#F8F9FA",
+              "background-dark": "#101922",
+              "border-subtle": "#E9ECEF",
+            },
+            fontFamily: {
+              display: ["Inter", "Noto+Sans+JP", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "4px",
+              lg: "0.5rem",
+              xl: "1rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+    <style type="text/tailwindcss">
+      body {
+        font-family: "Inter", "Noto Sans JP", sans-serif;
+        letter-spacing: -0.01em;
+      }
+      .technical-label {
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+      }
+      .lang-active {
+        @apply text-primary font-bold border-b-2 border-primary;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-background-light dark:bg-background-dark text-[#111418] dark:text-gray-100 font-display transition-colors duration-200"
+  >
+    <header
+      class="sticky top-0 z-50 w-full bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-border-subtle dark:border-gray-800"
+    >
+      <div
+        class="max-w-[1200px] mx-auto px-6 h-16 flex items-center justify-between"
+      >
+        <div class="flex items-center gap-3">
+          <div class="bg-primary text-white p-1 rounded-sm">
+            <span class="material-symbols-outlined text-[20px] block"
+              >terminal</span
+            >
+          </div>
+          <h2
+            class="text-[#111418] dark:text-white text-lg font-bold tracking-tight"
+          >
+            K. TANAKA
+          </h2>
+        </div>
+        <nav class="hidden md:flex items-center gap-8">
+          <div
+            class="flex items-center gap-6 mr-4 border-r border-border-subtle pr-8 py-1"
+          >
+            <a
+              class="text-sm font-medium hover:text-primary transition-colors"
+              href="#about"
+              >自己紹介</a
+            >
+            <a
+              class="text-sm font-medium hover:text-primary transition-colors"
+              href="#experience"
+              >経歴</a
+            >
+            <a
+              class="text-sm font-medium hover:text-primary transition-colors"
+              href="#projects"
+              >実績</a
+            >
+            <a
+              class="text-sm font-medium hover:text-primary transition-colors"
+              href="#skills"
+              >スキル</a
+            >
+          </div>
+          <div
+            class="flex items-center gap-3 text-[11px] font-bold tracking-wider mr-4"
+          >
+            <button class="text-primary border-b-2 border-primary pb-0.5">
+              JP
+            </button>
+            <button
+              class="text-slate-400 hover:text-primary transition-colors pb-0.5"
+            >
+              EN
+            </button>
+            <button
+              class="text-slate-400 hover:text-primary transition-colors pb-0.5"
+            >
+              CN
+            </button>
+          </div>
+          <button
+            class="bg-primary text-white text-[11px] font-bold px-5 py-2.5 rounded-[4px] tracking-wider uppercase"
+          >
+            履歴書 PDF
+          </button>
+        </nav>
+      </div>
+    </header>
+    <main class="max-w-[1200px] mx-auto px-6">
+      <section class="py-20 md:py-32" id="about">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+          <div class="md:col-span-7 flex flex-col gap-8">
+            <div class="flex flex-col gap-4">
+              <span class="text-primary font-semibold technical-label"
+                >シニアフルスタックエンジニア</span
+              >
+              <h1
+                class="text-4xl md:text-6xl font-black leading-[1.2] tracking-tighter text-slate-900 dark:text-white"
+              >
+                技術的合理性を追求する<br />ソフトウェアエンジニアリング
+              </h1>
+              <p
+                class="text-lg text-slate-600 dark:text-gray-400 max-w-xl leading-relaxed"
+              >
+                日本国内のエンタープライズ市場向けに、スケーラブルでミッションクリティカルなソリューションを構築。
+                堅牢なアーキテクチャ、技術ドキュメンテーション、高可用性システムの設計を専門としています。
+              </p>
+            </div>
+            <div class="flex gap-4">
+              <button
+                class="bg-primary text-white text-sm font-bold px-8 py-3.5 rounded-[4px] hover:brightness-110 transition-all"
+              >
+                お問い合わせ
+              </button>
+              <button
+                class="border border-slate-200 dark:border-gray-700 text-sm font-bold px-8 py-3.5 rounded-[4px] hover:bg-slate-50 dark:hover:bg-gray-800 transition-all"
+              >
+                GitHubを見る
+              </button>
+            </div>
+          </div>
+          <div class="md:col-span-5 relative">
+            <div
+              class="aspect-square bg-slate-200 dark:bg-gray-800 rounded-lg overflow-hidden border border-border-subtle dark:border-gray-700 shadow-sm"
+              style="
+                background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuAlXHOk2d9c9cL4X0pWdcq-rWw3hI2hAF1xHg9qrq9reI2TfVhGHxCVJYTrr4AZ13hcg6HZrp_BVne0I8nKo9It7tCT8XwrmVQjIAJpasLMy5zLek1M0TdmdmJcOL7m-vu1MpbF4x62DpajY7pCortTMg56kXL1t1eCG1EEf7G9otuaafZpg2Nunyaxc3Ebla--7nfLkgBB06Kat8jfpXMSdaiYE8jfUWKC0rWgeXjghC7jEHHZsLEfdNp6GtK1x7sIlcQbIN3y_J29&quot;);
+                background-size: cover;
+                background-position: center;
+              "
+            ></div>
+            <div
+              class="absolute -bottom-6 -left-6 bg-white dark:bg-gray-900 p-6 border border-border-subtle dark:border-gray-700 shadow-xl rounded-lg hidden lg:block"
+            >
+              <div class="flex gap-6">
+                <div class="text-center">
+                  <div class="text-2xl font-bold text-primary">8+</div>
+                  <div
+                    class="text-[10px] text-slate-400 uppercase font-bold tracking-widest"
+                  >
+                    実務経験（年）
+                  </div>
+                </div>
+                <div class="w-px bg-slate-100 dark:bg-gray-800"></div>
+                <div class="text-center">
+                  <div class="text-2xl font-bold text-primary">40+</div>
+                  <div
+                    class="text-[10px] text-slate-400 uppercase font-bold tracking-widest"
+                  >
+                    プロジェクト
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        class="py-20 border-t border-border-subtle dark:border-gray-800"
+        id="experience"
+      >
+        <div class="flex flex-col md:flex-row gap-12">
+          <div class="md:w-1/3">
+            <h2
+              class="text-2xl font-bold tracking-tight text-slate-900 dark:text-white sticky top-24"
+            >
+              職務経歴
+            </h2>
+            <p
+              class="mt-4 text-slate-500 dark:text-gray-400 text-sm leading-relaxed"
+            >
+              都内の多様な規模のITオペレーションにおいて、技術的な卓越性を追求してきた歩み。
+            </p>
+          </div>
+          <div class="md:w-2/3">
+            <div class="flex flex-col">
+              <div class="grid grid-cols-[2px_1fr] gap-x-8">
+                <div class="relative flex flex-col items-center">
+                  <div
+                    class="w-3 h-3 rounded-full bg-primary z-10 -ml-[5px]"
+                  ></div>
+                  <div class="w-[1px] bg-slate-200 dark:bg-gray-800 grow"></div>
+                </div>
+                <div class="pb-12">
+                  <div
+                    class="flex flex-col md:flex-row md:justify-between md:items-center mb-2"
+                  >
+                    <h3
+                      class="text-lg font-bold text-slate-900 dark:text-white"
+                    >
+                      シニア ソフトウェアアーキテクト
+                    </h3>
+                    <span class="text-xs font-mono text-slate-400"
+                      >2021 — 現在</span
+                    >
+                  </div>
+                  <p class="text-primary font-medium text-sm mb-3">
+                    Global Finance Solutions, 東京
+                  </p>
+                  <ul
+                    class="text-sm text-slate-600 dark:text-gray-400 space-y-2 list-disc ml-4"
+                  >
+                    <li>
+                      毎秒100万件以上のトランザクションを処理する高頻度取引プラットフォームを設計。
+                    </li>
+                    <li>
+                      コンテナオーケストレーションの最適化により、インフラコストを35%削減。
+                    </li>
+                    <li>
+                      アジャイル手法に基づき、12名の開発チームをリードおよびメンタリング。
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="grid grid-cols-[2px_1fr] gap-x-8">
+                <div class="relative flex flex-col items-center">
+                  <div
+                    class="w-3 h-3 rounded-full bg-slate-300 dark:bg-gray-700 z-10 -ml-[5px]"
+                  ></div>
+                  <div class="w-[1px] bg-slate-200 dark:bg-gray-800 grow"></div>
+                </div>
+                <div class="pb-12">
+                  <div
+                    class="flex flex-col md:flex-row md:justify-between md:items-center mb-2"
+                  >
+                    <h3
+                      class="text-lg font-bold text-slate-900 dark:text-white"
+                    >
+                      フルスタックエンジニア
+                    </h3>
+                    <span class="text-xs font-mono text-slate-400"
+                      >2018 — 2021</span
+                    >
+                  </div>
+                  <p class="text-primary font-medium text-sm mb-3">
+                    Innovative Inc, 渋谷
+                  </p>
+                  <ul
+                    class="text-sm text-slate-600 dark:text-gray-400 space-y-2 list-disc ml-4"
+                  >
+                    <li>ReactとNode.jsを用いた社内ERPシステムの開発。</li>
+                    <li>
+                      CI/CDパイプラインの実装により、デプロイ時間を60%短縮。
+                    </li>
+                    <li>
+                      日本語および英語での包括的な技術ドキュメントの作成。
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="grid grid-cols-[2px_1fr] gap-x-8">
+                <div class="relative flex flex-col items-center">
+                  <div
+                    class="w-3 h-3 rounded-full bg-slate-300 dark:bg-gray-700 z-10 -ml-[5px]"
+                  ></div>
+                </div>
+                <div class="pb-0">
+                  <div
+                    class="flex flex-col md:flex-row md:justify-between md:items-center mb-2"
+                  >
+                    <h3
+                      class="text-lg font-bold text-slate-900 dark:text-white"
+                    >
+                      ジュニアエンジニア
+                    </h3>
+                    <span class="text-xs font-mono text-slate-400"
+                      >2016 — 2018</span
+                    >
+                  </div>
+                  <p class="text-primary font-medium text-sm mb-3">
+                    StartUp Hub, 港区
+                  </p>
+                  <p class="text-sm text-slate-600 dark:text-gray-400">
+                    ECプラットフォームのフロントエンド実装およびバグ修正に従事。
+                    GitワークフローとSQL最適化の基礎を習得。
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        class="py-20 border-t border-border-subtle dark:border-gray-800"
+        id="projects"
+      >
+        <div class="flex justify-between items-end mb-12">
+          <div>
+            <h2
+              class="text-2xl font-bold tracking-tight text-slate-900 dark:text-white"
+            >
+              開発実績
+            </h2>
+            <p class="mt-2 text-slate-500 dark:text-gray-400 text-sm">
+              技術的合理性と問題解決に焦点を当てた事例紹介。
+            </p>
+          </div>
+          <a
+            class="text-sm font-bold text-primary flex items-center gap-2 hover:underline"
+            href="#"
+          >
+            アーカイブを見る
+            <span class="material-symbols-outlined text-sm">arrow_forward</span>
+          </a>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div
+            class="bg-white dark:bg-gray-900 border border-border-subtle dark:border-gray-800 rounded-lg overflow-hidden flex flex-col hover:shadow-md transition-shadow"
+          >
+            <div
+              class="h-48 bg-slate-100 dark:bg-gray-800 overflow-hidden"
+              style="
+                background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuB6D_kOPAvsFGrFHv6MV0QPxpLaKCeFroohWy1pUTVqD8YqRIkk19aeodbRgoPstyB8Rc8-_4cliTVNtAieZdGUwSv2lhWmqc5TcIeHCJdDhQ88BdNbH9pvUpxlYAQOAmwpVbwdCktbvVGITPHBsqKtWWvFZJ_hpdq9SVBZKv3YCEwfvY2t_VZ6Nw5eBp4r_LRS47cfmEyev0wLKw_TcbGxSDw7jlesY9JL8egMVOERzOzgcFnKelWBKKRM1lm_UO0vcRNaRewH3Gbu&quot;);
+                background-size: cover;
+              "
+            ></div>
+            <div class="p-6 flex flex-col grow">
+              <h3 class="text-lg font-bold mb-2 text-slate-900 dark:text-white">
+                Logistics Neural-Net
+              </h3>
+              <p
+                class="text-xs text-slate-500 dark:text-gray-400 mb-4 line-clamp-3 leading-relaxed"
+              >
+                ラストワンマイル配送のためのAI駆動型ルート最適化エンジン。5万人の同時ドライバー処理に対応。
+              </p>
+              <div class="mt-auto">
+                <div class="technical-label text-slate-400 mb-2">採用技術</div>
+                <div class="flex flex-wrap gap-x-3 gap-y-1">
+                  <span
+                    class="text-[11px] font-mono text-slate-600 dark:text-gray-300"
+                    >Python</span
+                  >
+                  <span
+                    class="text-[11px] font-mono text-slate-600 dark:text-gray-300"
+                    >TensorFlow</span
+                  >
+                  <span
+                    class="text-[11px] font-mono text-slate-600 dark:text-gray-300"
+                    >FastAPI</span
+                  >
+                  <span
+                    class="text-[11px] font-mono text-slate-600 dark:text-gray-300"
+                    >Redis</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="bg-white dark:bg-gray-900 border border-border-subtle dark:border-gray-800 rounded-lg overflow-hidden flex flex-col hover:shadow-md transition-shadow"
+          >
+            <div
+              class="h-48 bg-slate-100 dark:bg-gray-800 overflow-hidden"
+              style="
+                background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuCGChcDWF_XIvQSdu9gkEDySb3aUmVIPMXvZyUI4tSaDTIiY0mhjZztsrFDJK-IE21wCVcXGKRZImJ18JvWhYY0mtcrXaoQEeEtseBYZadn9nwEDYo3T6-0xUe6QX_1BOfZodc7_tIJ2lNikSHDtnJVibF87alMhD03-5yxUVKvrOE74lyEvYBkkdjsuKOD4PBEFJD4-COIubC_KIYbxHNz_StEkRCKMITPeqIUMXcqm5zGy5ZKJgNE5WZLADNDZUDKNm6Bq826Gxdf&quot;);
+                background-size: cover;
+              "
+            ></div>
+            <div class="p-6 flex flex-col grow">
+              <h3 class="text-lg font-bold mb-2 text-slate-900 dark:text-white">
+                Core Banking Gateway
+              </h3>
+              <p
+                class="text-xs text-slate-500 dark:text-gray-400 mb-4 line-clamp-3 leading-relaxed"
+              >
+                レガシー銀行システムとモダンAPIを統合するセキュアなミドルウェア。ゼロダウンタイム移行を実現。
+              </p>
+              <div class="mt-auto">
+                <div class="technical-label text-slate-400 mb-2">採用技術</div>
+                <div class="flex flex-wrap gap-x-3 gap-y-1">
+                  <span
+                    class="text-[11px] font-mono text-slate-600 dark:text-gray-300"
+                    >Go</span
+                  >
+                  <span
+                    class="text-[11px] font-mono text-slate-600 dark:text-gray-300"
+                    >gRPC</span
+                  >
+                  <span
+                    class="text-[11px] font-mono text-slate-600 dark:text-gray-300"
+                    >PostgreSQL</span
+                  >
+                  <span
+                    class="text-[11px] font-mono text-slate-600 dark:text-gray-300"
+                    >Docker</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="bg-white dark:bg-gray-900 border border-border-subtle dark:border-gray-800 rounded-lg overflow-hidden flex flex-col hover:shadow-md transition-shadow"
+          >
+            <div
+              class="h-48 bg-slate-100 dark:bg-gray-800 overflow-hidden"
+              style="
+                background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuBvEnMNHB4pyOIlnbiYpK26AjV5zjTt7WYWyCjFO7phWgGLHFMUioRugcyWScs6Z6md7xxXvkSaL7sArfypcOnYUiAkyZOKHEgAHog-QBnRPltlFhHP2GY3b1hUoNhSUPO7tv3MdDZAzsbxzeuCnBLiGQRKqn06NaR6z0hV7ePhrPKw2_cW26O82pB6DiKwOeXCQmvjlZgnzIS1Py5DOxBpnR7_tPczvjGbo8Ly8YDUd472P_kufwuXVunbQltvvuH5lA0sVAt8SZw3&quot;);
+                background-size: cover;
+              "
+            ></div>
+            <div class="p-6 flex flex-col grow">
+              <h3 class="text-lg font-bold mb-2 text-slate-900 dark:text-white">
+                HealthData Encryptor
+              </h3>
+              <p
+                class="text-xs text-slate-500 dark:text-gray-400 mb-4 line-clamp-3 leading-relaxed"
+              >
+                病院向けAES-256準拠データ管理システム。セキュリティ監査とHIPAAコンプライアンスを重視。
+              </p>
+              <div class="mt-auto">
+                <div class="technical-label text-slate-400 mb-2">採用技術</div>
+                <div class="flex flex-wrap gap-x-3 gap-y-1">
+                  <span
+                    class="text-[11px] font-mono text-slate-600 dark:text-gray-300"
+                    >TypeScript</span
+                  >
+                  <span
+                    class="text-[11px] font-mono text-slate-600 dark:text-gray-300"
+                    >Node.js</span
+                  >
+                  <span
+                    class="text-[11px] font-mono text-slate-600 dark:text-gray-300"
+                    >AWS KMS</span
+                  >
+                  <span
+                    class="text-[11px] font-mono text-slate-600 dark:text-gray-300"
+                    >MongoDB</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        class="py-20 border-t border-border-subtle dark:border-gray-800"
+        id="skills"
+      >
+        <h2
+          class="text-2xl font-bold tracking-tight text-slate-900 dark:text-white mb-10"
+        >
+          スキルセット
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+          <div class="flex flex-col gap-4">
+            <div class="flex items-center gap-3 mb-2">
+              <span class="material-symbols-outlined text-primary">layers</span>
+              <h3
+                class="font-bold text-slate-900 dark:text-white uppercase tracking-wider text-sm"
+              >
+                バックエンド &amp; アーキテクチャ
+              </h3>
+            </div>
+            <div class="flex flex-wrap gap-2">
+              <span
+                class="px-3 py-1 bg-slate-100 dark:bg-gray-800 text-xs font-medium rounded-sm"
+                >Node.js</span
+              >
+              <span
+                class="px-3 py-1 bg-slate-100 dark:bg-gray-800 text-xs font-medium rounded-sm"
+                >Python</span
+              >
+              <span
+                class="px-3 py-1 bg-slate-100 dark:bg-gray-800 text-xs font-medium rounded-sm"
+                >Golang</span
+              >
+              <span
+                class="px-3 py-1 bg-slate-100 dark:bg-gray-800 text-xs font-medium rounded-sm"
+                >マイクロサービス</span
+              >
+              <span
+                class="px-3 py-1 bg-slate-100 dark:bg-gray-800 text-xs font-medium rounded-sm"
+                >REST/GraphQL</span
+              >
+              <span
+                class="px-3 py-1 bg-slate-100 dark:bg-gray-800 text-xs font-medium rounded-sm"
+                >PostgreSQL</span
+              >
+            </div>
+          </div>
+          <div class="flex flex-col gap-4">
+            <div class="flex items-center gap-3 mb-2">
+              <span class="material-symbols-outlined text-primary">cloud</span>
+              <h3
+                class="font-bold text-slate-900 dark:text-white uppercase tracking-wider text-sm"
+              >
+                インフラ &amp; DevOps
+              </h3>
+            </div>
+            <div class="flex flex-wrap gap-2">
+              <span
+                class="px-3 py-1 bg-slate-100 dark:bg-gray-800 text-xs font-medium rounded-sm"
+                >AWS / Azure</span
+              >
+              <span
+                class="px-3 py-1 bg-slate-100 dark:bg-gray-800 text-xs font-medium rounded-sm"
+                >Docker / K8s</span
+              >
+              <span
+                class="px-3 py-1 bg-slate-100 dark:bg-gray-800 text-xs font-medium rounded-sm"
+                >Terraform</span
+              >
+              <span
+                class="px-3 py-1 bg-slate-100 dark:bg-gray-800 text-xs font-medium rounded-sm"
+                >CI/CD (GitHub Actions)</span
+              >
+              <span
+                class="px-3 py-1 bg-slate-100 dark:bg-gray-800 text-xs font-medium rounded-sm"
+                >Linux Admin</span
+              >
+            </div>
+          </div>
+          <div class="flex flex-col gap-4">
+            <div class="flex items-center gap-3 mb-2">
+              <span class="material-symbols-outlined text-primary"
+                >auto_stories</span
+              >
+              <h3
+                class="font-bold text-slate-900 dark:text-white uppercase tracking-wider text-sm"
+              >
+                ビジネス・専門性
+              </h3>
+            </div>
+            <div class="flex flex-wrap gap-2">
+              <span
+                class="px-3 py-1 bg-slate-100 dark:bg-gray-800 text-xs font-medium rounded-sm"
+                >アジャイル/スクラム</span
+              >
+              <span
+                class="px-3 py-1 bg-slate-100 dark:bg-gray-800 text-xs font-medium rounded-sm"
+                >技術文書作成</span
+              >
+              <span
+                class="px-3 py-1 bg-slate-100 dark:bg-gray-800 text-xs font-medium rounded-sm"
+                >日英バイリンガル</span
+              >
+              <span
+                class="px-3 py-1 bg-slate-100 dark:bg-gray-800 text-xs font-medium rounded-sm"
+                >システム設計</span
+              >
+              <span
+                class="px-3 py-1 bg-slate-100 dark:bg-gray-800 text-xs font-medium rounded-sm"
+                >メンタリング</span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        class="py-20 border-t border-border-subtle dark:border-gray-800"
+        id="contact"
+      >
+        <div class="max-w-2xl mx-auto">
+          <div class="text-center mb-12">
+            <h2
+              class="text-2xl font-bold tracking-tight text-slate-900 dark:text-white mb-4"
+            >
+              お問い合わせ
+            </h2>
+            <p class="text-slate-500 dark:text-gray-400 text-sm">
+              大規模システムの設計や技術コンサルティングのご依頼を承っております。
+            </p>
+          </div>
+          <form class="space-y-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div class="flex flex-col gap-2">
+                <label
+                  class="text-[11px] font-bold uppercase tracking-widest text-slate-400"
+                  >お名前</label
+                >
+                <input
+                  class="w-full bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-[4px] px-4 py-2.5 text-sm focus:ring-1 focus:ring-primary focus:border-primary outline-none"
+                  placeholder="田中 太郎"
+                  type="text"
+                />
+              </div>
+              <div class="flex flex-col gap-2">
+                <label
+                  class="text-[11px] font-bold uppercase tracking-widest text-slate-400"
+                  >メールアドレス</label
+                >
+                <input
+                  class="w-full bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-[4px] px-4 py-2.5 text-sm focus:ring-1 focus:ring-primary focus:border-primary outline-none"
+                  placeholder="example@company.co.jp"
+                  type="email"
+                />
+              </div>
+            </div>
+            <div class="flex flex-col gap-2">
+              <label
+                class="text-[11px] font-bold uppercase tracking-widest text-slate-400"
+                >メッセージ</label
+              >
+              <textarea
+                class="w-full bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-[4px] px-4 py-2.5 text-sm focus:ring-1 focus:ring-primary focus:border-primary outline-none"
+                placeholder="プロジェクトの概要やご相談内容をご記入ください..."
+                rows="5"
+              ></textarea>
+            </div>
+            <button
+              class="w-full bg-primary text-white font-bold py-3.5 rounded-[4px] text-sm hover:brightness-110 transition-all shadow-sm"
+              type="submit"
+            >
+              送信する
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer
+      class="bg-white dark:bg-background-dark border-t border-border-subtle dark:border-gray-800 py-12 mt-20"
+    >
+      <div
+        class="max-w-[1200px] mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8"
+      >
+        <div class="flex items-center gap-3">
+          <div class="bg-slate-100 dark:bg-gray-800 p-1 rounded-sm">
+            <span
+              class="material-symbols-outlined text-slate-600 text-[18px] block"
+              >code</span
+            >
+          </div>
+          <span class="text-sm font-bold text-slate-900 dark:text-white"
+            >K. Tanaka — ポートフォリオ 2024</span
+          >
+        </div>
+        <div class="flex gap-8">
+          <a
+            class="text-xs font-medium text-slate-400 hover:text-primary transition-colors"
+            href="#"
+            >GitHub</a
+          >
+          <a
+            class="text-xs font-medium text-slate-400 hover:text-primary transition-colors"
+            href="#"
+            >LinkedIn</a
+          >
+          <a
+            class="text-xs font-medium text-slate-400 hover:text-primary transition-colors"
+            href="#"
+            >Zenn.dev</a
+          >
+          <a
+            class="text-xs font-medium text-slate-400 hover:text-primary transition-colors"
+            href="#"
+            >Contact</a
+          >
+        </div>
+        <div class="text-[10px] text-slate-400 uppercase tracking-widest">
+          Based in Tokyo, Japan
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
