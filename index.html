@@ -1,691 +1,808 @@
 <!doctype html>
 <html class="light" lang="ja">
-  <head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Software Engineer Portfolio - K. TANAKA</title>
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&amp;family=Noto+Sans+JP:wght@400;500;700;900&amp;display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-      rel="stylesheet"
-    />
-    <script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            colors: {
-              primary: "#2D5A27",
-              "background-light": "#F8F9FA",
-              "background-dark": "#101922",
-              "border-subtle": "#E9ECEF",
-            },
-            fontFamily: {
-              display: ["Inter", "Noto+Sans+JP", "sans-serif"],
-            },
-            borderRadius: {
-              DEFAULT: "4px",
-              lg: "0.5rem",
-              xl: "1rem",
-              full: "9999px",
-            },
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>K. Tanaka - Professional Portfolio (JP)</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&amp;family=Noto+Sans+JP:wght@400;500;700;900&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <Style type="text/tailwindcss">
+    body {
+      font-family: "Inter", "Noto Sans JP", sans-serif;
+      letter-spacing: -0.01em;
+    }
+    .technical-label {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    .lang-active {
+      @apply text-primary font-bold border-b-2 border-primary;
+    }
+    .abstract-grid {
+      background-image: radial-gradient(circle, #2d5a27 1px, transparent 1px);
+      background-size: 24px 24px;
+      opacity: 0.1;
+    }
+    .system-panel {
+      @apply absolute bg-white/60 dark:bg-slate-900/60 backdrop-blur-sm border border-slate-200 dark:border-slate-700 shadow-sm rounded-sm p-4;
+    }
+  </Style>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: "#2D5A27",
+            "background-light": "#F8F9FA",
+            "background-dark": "#101922",
+            "border-subtle": "#E9ECEF",
+          },
+          fontFamily: {
+            display: ["Inter", "Noto Sans JP", "sans-serif"],
+          },
+          borderRadius: {
+            DEFAULT: "4px",
+            lg: "0.5rem",
+            xl: "1rem",
+            full: "9999px",
           },
         },
-      };
-    </script>
-    <style type="text/tailwindcss">
-      body {
-        font-family: "Inter", "Noto Sans JP", sans-serif;
-        letter-spacing: -0.01em;
-      }
-      .technical-label {
-        font-size: 0.7rem;
-        text-transform: uppercase;
-        letter-spacing: 0.1em;
-      }
-      .lang-active {
-        @apply text-primary font-bold border-b-2 border-primary;
-      }
-    </style>
-  </head>
-  <body
-    class="bg-background-light dark:bg-background-dark text-[#111418] dark:text-gray-100 font-display transition-colors duration-200"
-  >
-    <header
-      class="sticky top-0 z-50 w-full bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-border-subtle dark:border-gray-800"
-    >
-      <div
-        class="max-w-[1200px] mx-auto px-6 h-16 flex items-center justify-between"
-      >
-        <div class="flex items-center gap-3">
-          <div class="bg-primary text-white p-1 rounded-sm">
-            <span class="material-symbols-outlined text-[20px] block"
-              >terminal</span
-            >
-          </div>
-          <h2
-            class="text-[#111418] dark:text-white text-lg font-bold tracking-tight"
-          >
-            K. TANAKA
-          </h2>
+      },
+    };
+  </script>
+</head>
+
+<body
+  class="bg-background-light dark:bg-background-dark text-[#111418] dark:text-gray-100 font-display transition-colors duration-200">
+  <header
+    class="sticky top-0 z-50 w-full bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-border-subtle dark:border-gray-800">
+    <div class="max-w-[1200px] mx-auto px-6 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="bg-primary text-white p-1 rounded-sm">
+          <span class="material-symbols-outlined text-[20px] block">terminal</span>
         </div>
-        <nav class="hidden md:flex items-center gap-8">
-          <div
-            class="flex items-center gap-6 mr-4 border-r border-border-subtle pr-8 py-1"
-          >
-            <a
-              class="text-sm font-medium hover:text-primary transition-colors"
-              href="#about"
-              >自己紹介</a
-            >
-            <a
-              class="text-sm font-medium hover:text-primary transition-colors"
-              href="#experience"
-              >経歴</a
-            >
-            <a
-              class="text-sm font-medium hover:text-primary transition-colors"
-              href="#projects"
-              >実績</a
-            >
-            <a
-              class="text-sm font-medium hover:text-primary transition-colors"
-              href="#skills"
-              >スキル</a
-            >
-          </div>
-          <div
-            class="flex items-center gap-3 text-[11px] font-bold tracking-wider mr-4"
-          >
-            <button class="text-primary border-b-2 border-primary pb-0.5">
-              JP
-            </button>
-            <button
-              class="text-slate-400 hover:text-primary transition-colors pb-0.5"
-            >
-              EN
-            </button>
-            <button
-              class="text-slate-400 hover:text-primary transition-colors pb-0.5"
-            >
-              CN
-            </button>
-          </div>
-          <button
-            class="bg-primary text-white text-[11px] font-bold px-5 py-2.5 rounded-[4px] tracking-wider uppercase"
-          >
-            履歴書 PDF
-          </button>
-        </nav>
+        <h2 class="text-[#111418] dark:text-white text-lg font-bold tracking-tight">
+          チハの雪's Portfolio
+        </h2>
       </div>
-    </header>
-    <main class="max-w-[1200px] mx-auto px-6">
-      <section class="py-20 md:py-32" id="about">
-        <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
-          <div class="md:col-span-7 flex flex-col gap-8">
-            <div class="flex flex-col gap-4">
-              <span class="text-primary font-semibold technical-label"
-                >シニアフルスタックエンジニア</span
-              >
-              <h1
-                class="text-4xl md:text-6xl font-black leading-[1.2] tracking-tighter text-slate-900 dark:text-white"
-              >
-                技術的合理性を追求する<br />ソフトウェアエンジニアリング
-              </h1>
-              <p
-                class="text-lg text-slate-600 dark:text-gray-400 max-w-xl leading-relaxed"
-              >
-                日本国内のエンタープライズ市場向けに、スケーラブルでミッションクリティカルなソリューションを構築。
-                堅牢なアーキテクチャ、技術ドキュメンテーション、高可用性システムの設計を専門としています。
-              </p>
-            </div>
-            <div class="flex gap-4">
-              <button
-                class="bg-primary text-white text-sm font-bold px-8 py-3.5 rounded-[4px] hover:brightness-110 transition-all"
-              >
-                お問い合わせ
-              </button>
-              <button
-                class="border border-slate-200 dark:border-gray-700 text-sm font-bold px-8 py-3.5 rounded-[4px] hover:bg-slate-50 dark:hover:bg-gray-800 transition-all"
-              >
-                GitHubを見る
-              </button>
-            </div>
+      <nav class="hidden md:flex items-center gap-8">
+        <div class="flex items-center gap-6 mr-4 border-r border-border-subtle pr-8 py-1">
+          <a class="text-sm font-medium hover:text-primary transition-colors" href="#about">自己紹介</a>
+          <a class="text-sm font-medium hover:text-primary transition-colors" href="#experience">経歴</a>
+          <a class="text-sm font-medium hover:text-primary transition-colors" href="#projects">実績</a>
+          <a class="text-sm font-medium hover:text-primary transition-colors" href="#skills">スキル</a>
+        </div>
+        <div class="flex items-center gap-3 text-[11px] font-bold tracking-wider mr-4">
+          <button class="text-primary border-b-2 border-primary pb-0.5">
+            JP
+          </button>
+          <button class="text-slate-400 hover:text-primary transition-colors pb-0.5">
+            EN
+          </button>
+          <button class="text-slate-400 hover:text-primary transition-colors pb-0.5">
+            CN
+          </button>
+        </div>
+        <button class="bg-primary text-white text-[11px] font-bold px-5 py-2.5 rounded-[4px] tracking-wider uppercase">
+          履歴書 PDF
+        </button>
+      </nav>
+    </div>
+  </header>
+  <main class="max-w-[1200px] mx-auto px-6">
+    <section class="py-20 md:py-32" id="about">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+        <div class="md:col-span-6 flex flex-col gap-8">
+          <div class="flex flex-col gap-4">
+            <span class="text-primary font-semibold technical-label">Webソフトウェアエンジニア</span>
+            <h1
+              class="text-4xl md:text-5xl font-black leading-[1.3] tracking-tighter text-slate-900 dark:text-white whitespace-pre-line">
+              技術と業務の橋渡しを担う Webソフトウェアエンジニア
+            </h1>
+            <p class="text-lg text-slate-600 dark:text-gray-400 max-w-xl leading-relaxed">
+              日本の製造業における社内システムの開発・保守を経験。 JSP
+              を中心とした既存システムを理解しながら、 Vue 3 / TypeScript
+              などのモダン Web 技術にも継続的に取り組んでいます。
+              <br>
+              <br>
+              業務要件を正確に整理し、
+              安定性と保守性を重視した実装を得意としています
+            </p>
           </div>
-          <div class="md:col-span-5 relative">
+          <div class="flex gap-4">
+            <button
+              class="bg-primary text-white text-sm font-bold px-8 py-3.5 rounded-[4px] hover:brightness-110 transition-all">
+              お問い合わせ
+            </button>
+            <button
+              class="border border-slate-200 dark:border-gray-700 text-sm font-bold px-8 py-3.5 rounded-[4px] hover:bg-slate-50 dark:hover:bg-gray-800 transition-all">
+              GitHubを見る
+            </button>
+          </div>
+        </div>
+        <div class="md:col-span-6 relative">
+          <div
+            class="aspect-square bg-slate-50 dark:bg-slate-900/40 rounded-lg border border-border-subtle dark:border-gray-700 shadow-sm relative">
+            <div class="absolute inset-0 abstract-grid"></div>
+            <div class="system-panel top-[10%] left-[10%] w-[50%] z-10">
+              <div class="flex items-center gap-2 mb-3 border-b border-slate-100 dark:border-slate-800 pb-2">
+                <span class="material-symbols-outlined text-[14px] text-primary">database</span>
+                <span class="text-[10px] font-mono font-bold text-slate-400">DB_SCHEMA_CORE</span>
+              </div>
+              <div class="space-y-2">
+                <div class="flex justify-between items-center bg-slate-50 dark:bg-slate-800 p-1 px-2 rounded-sm">
+                  <span class="text-[9px] font-mono text-slate-500">primary_key</span>
+                  <div class="w-2 h-2 rounded-full border border-primary"></div>
+                </div>
+                <div class="flex justify-between items-center p-1 px-2">
+                  <span class="text-[9px] font-mono text-slate-400">updated_at</span>
+                  <div class="w-8 h-[1px] bg-slate-200 dark:bg-slate-700"></div>
+                </div>
+                <div class="flex justify-between items-center p-1 px-2">
+                  <span class="text-[9px] font-mono text-slate-400">status_code</span>
+                  <div class="w-12 h-[1px] bg-slate-200 dark:bg-slate-700"></div>
+                </div>
+              </div>
+            </div>
+            <div class="system-panel top-[40%] right-[10%] w-[55%] z-20">
+              <div class="flex items-center gap-2 mb-3 border-b border-slate-100 dark:border-slate-800 pb-2">
+                <span class="material-symbols-outlined text-[14px] text-primary">api</span>
+                <span class="text-[10px] font-mono font-bold text-slate-400">API_CONTROLLER_V3</span>
+              </div>
+              <div class="flex flex-col items-center gap-2 py-2">
+                <div class="w-full h-4 border border-slate-200 dark:border-slate-700 rounded-sm flex items-center px-2">
+                  <div class="w-full h-[1px] bg-primary/30"></div>
+                </div>
+                <span class="material-symbols-outlined text-[12px] text-slate-300">arrow_downward</span>
+                <div class="w-3/4 flex justify-between gap-2">
+                  <div class="w-1/2 h-4 border border-primary/40 rounded-sm"></div>
+                  <div class="w-1/2 h-4 border border-slate-200 dark:border-slate-700 rounded-sm"></div>
+                </div>
+              </div>
+            </div>
+            <div class="system-panel bottom-[15%] left-[15%] w-[45%] z-30">
+              <div class="flex items-center gap-2 mb-2 border-b border-slate-100 dark:border-slate-800 pb-2">
+                <span class="material-symbols-outlined text-[14px] text-primary">account_tree</span>
+                <span class="text-[10px] font-mono font-bold text-slate-400">STATE_TRANSITION</span>
+              </div>
+              <div class="flex items-center justify-around py-2">
+                <div class="w-4 h-4 rounded-full border border-primary flex items-center justify-center">
+                  <div class="w-1 h-1 bg-primary rounded-full"></div>
+                </div>
+                <div class="w-10 h-[1px] bg-slate-200 dark:bg-slate-700 relative">
+                  <div class="absolute right-0 -top-[3px] w-1.5 h-1.5 border-t border-r border-slate-300 rotate-45">
+                  </div>
+                </div>
+                <div class="w-4 h-4 border border-slate-300 dark:border-slate-600"></div>
+              </div>
+            </div>
+            <div class="absolute top-[20%] right-[20%] w-32 h-32 border border-primary/5 rounded-full"></div>
             <div
-              class="aspect-square bg-slate-200 dark:bg-gray-800 rounded-lg overflow-hidden border border-border-subtle dark:border-gray-700 shadow-sm"
-              style="
-                background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuAlXHOk2d9c9cL4X0pWdcq-rWw3hI2hAF1xHg9qrq9reI2TfVhGHxCVJYTrr4AZ13hcg6HZrp_BVne0I8nKo9It7tCT8XwrmVQjIAJpasLMy5zLek1M0TdmdmJcOL7m-vu1MpbF4x62DpajY7pCortTMg56kXL1t1eCG1EEf7G9otuaafZpg2Nunyaxc3Ebla--7nfLkgBB06Kat8jfpXMSdaiYE8jfUWKC0rWgeXjghC7jEHHZsLEfdNp6GtK1x7sIlcQbIN3y_J29&quot;);
-                background-size: cover;
-                background-position: center;
-              "
-            ></div>
+              class="absolute bottom-[30%] left-[5%] w-16 h-16 border border-slate-200 dark:border-slate-800 rotate-45">
+            </div>
             <div
-              class="absolute -bottom-6 -left-6 bg-white dark:bg-gray-900 p-6 border border-border-subtle dark:border-gray-700 shadow-xl rounded-lg hidden lg:block"
-            >
+              class="absolute -bottom-6 -left-6 bg-white dark:bg-gray-900 p-6 border border-border-subtle dark:border-gray-700 shadow-xl rounded-lg hidden lg:block">
               <div class="flex gap-6">
                 <div class="text-center">
-                  <div class="text-2xl font-bold text-primary">8+</div>
+                  <div class="text-2xl font-bold text-primary">2+</div>
                   <div
-                    class="text-[10px] text-slate-400 uppercase font-bold tracking-widest"
-                  >
-                    実務経験（年）
+                    class="text-[10px] text-slate-400 uppercase font-bold tracking-widest whitespace-pre-line text-left">
+                    日本企業での 開発経験
                   </div>
                 </div>
                 <div class="w-px bg-slate-100 dark:bg-gray-800"></div>
                 <div class="text-center">
-                  <div class="text-2xl font-bold text-primary">40+</div>
+                  <div class="text-2xl font-bold text-primary">3+</div>
                   <div
-                    class="text-[10px] text-slate-400 uppercase font-bold tracking-widest"
-                  >
-                    プロジェクト
+                    class="text-[10px] text-slate-400 uppercase font-bold tracking-widest whitespace-pre-line text-left">
+                    業務画面・機能の 実装経験
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </section>
-      <section
-        class="py-20 border-t border-border-subtle dark:border-gray-800"
-        id="experience"
-      >
-        <div class="flex flex-col md:flex-row gap-12">
-          <div class="md:w-1/3">
-            <h2
-              class="text-2xl font-bold tracking-tight text-slate-900 dark:text-white sticky top-24"
-            >
-              職務経歴
-            </h2>
-            <p
-              class="mt-4 text-slate-500 dark:text-gray-400 text-sm leading-relaxed"
-            >
-              都内の多様な規模のITオペレーションにおいて、技術的な卓越性を追求してきた歩み。
-            </p>
-          </div>
-          <div class="md:w-2/3">
-            <div class="flex flex-col">
-              <div class="grid grid-cols-[2px_1fr] gap-x-8">
-                <div class="relative flex flex-col items-center">
-                  <div
-                    class="w-3 h-3 rounded-full bg-primary z-10 -ml-[5px]"
-                  ></div>
-                  <div class="w-[1px] bg-slate-200 dark:bg-gray-800 grow"></div>
-                </div>
-                <div class="pb-12">
-                  <div
-                    class="flex flex-col md:flex-row md:justify-between md:items-center mb-2"
-                  >
-                    <h3
-                      class="text-lg font-bold text-slate-900 dark:text-white"
-                    >
-                      シニア ソフトウェアアーキテクト
-                    </h3>
-                    <span class="text-xs font-mono text-slate-400"
-                      >2021 — 現在</span
-                    >
-                  </div>
-                  <p class="text-primary font-medium text-sm mb-3">
-                    Global Finance Solutions, 東京
-                  </p>
-                  <ul
-                    class="text-sm text-slate-600 dark:text-gray-400 space-y-2 list-disc ml-4"
-                  >
-                    <li>
-                      毎秒100万件以上のトランザクションを処理する高頻度取引プラットフォームを設計。
-                    </li>
-                    <li>
-                      コンテナオーケストレーションの最適化により、インフラコストを35%削減。
-                    </li>
-                    <li>
-                      アジャイル手法に基づき、12名の開発チームをリードおよびメンタリング。
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="grid grid-cols-[2px_1fr] gap-x-8">
-                <div class="relative flex flex-col items-center">
-                  <div
-                    class="w-3 h-3 rounded-full bg-slate-300 dark:bg-gray-700 z-10 -ml-[5px]"
-                  ></div>
-                  <div class="w-[1px] bg-slate-200 dark:bg-gray-800 grow"></div>
-                </div>
-                <div class="pb-12">
-                  <div
-                    class="flex flex-col md:flex-row md:justify-between md:items-center mb-2"
-                  >
-                    <h3
-                      class="text-lg font-bold text-slate-900 dark:text-white"
-                    >
-                      フルスタックエンジニア
-                    </h3>
-                    <span class="text-xs font-mono text-slate-400"
-                      >2018 — 2021</span
-                    >
-                  </div>
-                  <p class="text-primary font-medium text-sm mb-3">
-                    Innovative Inc, 渋谷
-                  </p>
-                  <ul
-                    class="text-sm text-slate-600 dark:text-gray-400 space-y-2 list-disc ml-4"
-                  >
-                    <li>ReactとNode.jsを用いた社内ERPシステムの開発。</li>
-                    <li>
-                      CI/CDパイプラインの実装により、デプロイ時間を60%短縮。
-                    </li>
-                    <li>
-                      日本語および英語での包括的な技術ドキュメントの作成。
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="grid grid-cols-[2px_1fr] gap-x-8">
-                <div class="relative flex flex-col items-center">
-                  <div
-                    class="w-3 h-3 rounded-full bg-slate-300 dark:bg-gray-700 z-10 -ml-[5px]"
-                  ></div>
-                </div>
-                <div class="pb-0">
-                  <div
-                    class="flex flex-col md:flex-row md:justify-between md:items-center mb-2"
-                  >
-                    <h3
-                      class="text-lg font-bold text-slate-900 dark:text-white"
-                    >
-                      ジュニアエンジニア
-                    </h3>
-                    <span class="text-xs font-mono text-slate-400"
-                      >2016 — 2018</span
-                    >
-                  </div>
-                  <p class="text-primary font-medium text-sm mb-3">
-                    StartUp Hub, 港区
-                  </p>
-                  <p class="text-sm text-slate-600 dark:text-gray-400">
-                    ECプラットフォームのフロントエンド実装およびバグ修正に従事。
-                    GitワークフローとSQL最適化の基礎を習得。
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
+    </section>
+    <section class="py-20 border-t border-border-subtle dark:border-gray-800" id="experience">
+      <div class="flex flex-col md:flex-row gap-12">
+        <div class="md:w-1/3">
+          <h2 class="text-2xl font-bold tracking-tight text-slate-900 dark:text-white sticky top-24">
+            経歴
+          </h2>
+          <p class="mt-4 text-slate-500 dark:text-gray-400 text-sm leading-relaxed">
+            既存システムの制約を理解しながら、業務要件を確実に形にすることを重視してきました。
+          </p>
         </div>
-      </section>
-      <section
-        class="py-20 border-t border-border-subtle dark:border-gray-800"
-        id="projects"
-      >
-        <div class="flex justify-between items-end mb-12">
-          <div>
-            <h2
-              class="text-2xl font-bold tracking-tight text-slate-900 dark:text-white"
-            >
-              開発実績
-            </h2>
-            <p class="mt-2 text-slate-500 dark:text-gray-400 text-sm">
-              技術的合理性と問題解決に焦点を当てた事例紹介。
-            </p>
-          </div>
-          <a
-            class="text-sm font-bold text-primary flex items-center gap-2 hover:underline"
-            href="#"
-          >
-            アーカイブを見る
-            <span class="material-symbols-outlined text-sm">arrow_forward</span>
-          </a>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div
-            class="bg-white dark:bg-gray-900 border border-border-subtle dark:border-gray-800 rounded-lg overflow-hidden flex flex-col hover:shadow-md transition-shadow"
-          >
-            <div
-              class="h-48 bg-slate-100 dark:bg-gray-800 overflow-hidden"
-              style="
-                background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuB6D_kOPAvsFGrFHv6MV0QPxpLaKCeFroohWy1pUTVqD8YqRIkk19aeodbRgoPstyB8Rc8-_4cliTVNtAieZdGUwSv2lhWmqc5TcIeHCJdDhQ88BdNbH9pvUpxlYAQOAmwpVbwdCktbvVGITPHBsqKtWWvFZJ_hpdq9SVBZKv3YCEwfvY2t_VZ6Nw5eBp4r_LRS47cfmEyev0wLKw_TcbGxSDw7jlesY9JL8egMVOERzOzgcFnKelWBKKRM1lm_UO0vcRNaRewH3Gbu&quot;);
-                background-size: cover;
-              "
-            ></div>
-            <div class="p-6 flex flex-col grow">
-              <h3 class="text-lg font-bold mb-2 text-slate-900 dark:text-white">
-                Logistics Neural-Net
-              </h3>
-              <p
-                class="text-xs text-slate-500 dark:text-gray-400 mb-4 line-clamp-3 leading-relaxed"
-              >
-                ラストワンマイル配送のためのAI駆動型ルート最適化エンジン。5万人の同時ドライバー処理に対応。
-              </p>
-              <div class="mt-auto">
-                <div class="technical-label text-slate-400 mb-2">採用技術</div>
-                <div class="flex flex-wrap gap-x-3 gap-y-1">
-                  <span
-                    class="text-[11px] font-mono text-slate-600 dark:text-gray-300"
-                    >Python</span
-                  >
-                  <span
-                    class="text-[11px] font-mono text-slate-600 dark:text-gray-300"
-                    >TensorFlow</span
-                  >
-                  <span
-                    class="text-[11px] font-mono text-slate-600 dark:text-gray-300"
-                    >FastAPI</span
-                  >
-                  <span
-                    class="text-[11px] font-mono text-slate-600 dark:text-gray-300"
-                    >Redis</span
-                  >
+        <div class="md:w-2/3">
+          <div class="flex flex-col">
+            <div class="grid grid-cols-[2px_1fr] gap-x-8">
+              <div class="relative flex flex-col items-center">
+                <div class="w-3 h-3 rounded-full bg-primary z-10 -ml-[5px]"></div>
+                <div class="w-[1px] bg-slate-200 dark:bg-gray-800 grow"></div>
+              </div>
+              <div class="pb-12">
+                <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-2">
+                  <h3 class="text-lg font-bold text-slate-900 dark:text-white">
+                    株式会社 PILLAR
+                  </h3>
+                  <span class="text-xs font-mono text-slate-400">2025 – 現在</span>
                 </div>
+                <p class="text-primary font-medium text-sm mb-3">
+                  社内システムエンジニア
+                </p>
+                <ul class="text-sm text-slate-600 dark:text-gray-400 space-y-2 list-disc ml-4">
+                  <li>社内基幹システムの新規開発および保守運用。</li>
+                  <li>
+                    JSPおよびSQLを用いたデータ連携・帳票出力機能の改修。
+                  </li>
+                  <li>
+                    業務部門からのヒアリングに基づくシステム要件の整理。
+                  </li>
+                  <li>Windows Server環境におけるシステム運用管理。</li>
+                </ul>
               </div>
             </div>
           </div>
-          <div
-            class="bg-white dark:bg-gray-900 border border-border-subtle dark:border-gray-800 rounded-lg overflow-hidden flex flex-col hover:shadow-md transition-shadow"
-          >
-            <div
-              class="h-48 bg-slate-100 dark:bg-gray-800 overflow-hidden"
-              style="
-                background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuCGChcDWF_XIvQSdu9gkEDySb3aUmVIPMXvZyUI4tSaDTIiY0mhjZztsrFDJK-IE21wCVcXGKRZImJ18JvWhYY0mtcrXaoQEeEtseBYZadn9nwEDYo3T6-0xUe6QX_1BOfZodc7_tIJ2lNikSHDtnJVibF87alMhD03-5yxUVKvrOE74lyEvYBkkdjsuKOD4PBEFJD4-COIubC_KIYbxHNz_StEkRCKMITPeqIUMXcqm5zGy5ZKJgNE5WZLADNDZUDKNm6Bq826Gxdf&quot;);
-                background-size: cover;
-              "
-            ></div>
-            <div class="p-6 flex flex-col grow">
-              <h3 class="text-lg font-bold mb-2 text-slate-900 dark:text-white">
-                Core Banking Gateway
-              </h3>
-              <p
-                class="text-xs text-slate-500 dark:text-gray-400 mb-4 line-clamp-3 leading-relaxed"
-              >
-                レガシー銀行システムとモダンAPIを統合するセキュアなミドルウェア。ゼロダウンタイム移行を実現。
-              </p>
-              <div class="mt-auto">
-                <div class="technical-label text-slate-400 mb-2">採用技術</div>
-                <div class="flex flex-wrap gap-x-3 gap-y-1">
-                  <span
-                    class="text-[11px] font-mono text-slate-600 dark:text-gray-300"
-                    >Go</span
-                  >
-                  <span
-                    class="text-[11px] font-mono text-slate-600 dark:text-gray-300"
-                    >gRPC</span
-                  >
-                  <span
-                    class="text-[11px] font-mono text-slate-600 dark:text-gray-300"
-                    >PostgreSQL</span
-                  >
-                  <span
-                    class="text-[11px] font-mono text-slate-600 dark:text-gray-300"
-                    >Docker</span
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            class="bg-white dark:bg-gray-900 border border-border-subtle dark:border-gray-800 rounded-lg overflow-hidden flex flex-col hover:shadow-md transition-shadow"
-          >
-            <div
-              class="h-48 bg-slate-100 dark:bg-gray-800 overflow-hidden"
-              style="
-                background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuBvEnMNHB4pyOIlnbiYpK26AjV5zjTt7WYWyCjFO7phWgGLHFMUioRugcyWScs6Z6md7xxXvkSaL7sArfypcOnYUiAkyZOKHEgAHog-QBnRPltlFhHP2GY3b1hUoNhSUPO7tv3MdDZAzsbxzeuCnBLiGQRKqn06NaR6z0hV7ePhrPKw2_cW26O82pB6DiKwOeXCQmvjlZgnzIS1Py5DOxBpnR7_tPczvjGbo8Ly8YDUd472P_kufwuXVunbQltvvuH5lA0sVAt8SZw3&quot;);
-                background-size: cover;
-              "
-            ></div>
-            <div class="p-6 flex flex-col grow">
-              <h3 class="text-lg font-bold mb-2 text-slate-900 dark:text-white">
-                HealthData Encryptor
-              </h3>
-              <p
-                class="text-xs text-slate-500 dark:text-gray-400 mb-4 line-clamp-3 leading-relaxed"
-              >
-                病院向けAES-256準拠データ管理システム。セキュリティ監査とHIPAAコンプライアンスを重視。
-              </p>
-              <div class="mt-auto">
-                <div class="technical-label text-slate-400 mb-2">採用技術</div>
-                <div class="flex flex-wrap gap-x-3 gap-y-1">
-                  <span
-                    class="text-[11px] font-mono text-slate-600 dark:text-gray-300"
-                    >TypeScript</span
-                  >
-                  <span
-                    class="text-[11px] font-mono text-slate-600 dark:text-gray-300"
-                    >Node.js</span
-                  >
-                  <span
-                    class="text-[11px] font-mono text-slate-600 dark:text-gray-300"
-                    >AWS KMS</span
-                  >
-                  <span
-                    class="text-[11px] font-mono text-slate-600 dark:text-gray-300"
-                    >MongoDB</span
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section
-        class="py-20 border-t border-border-subtle dark:border-gray-800"
-        id="skills"
-      >
-        <h2
-          class="text-2xl font-bold tracking-tight text-slate-900 dark:text-white mb-10"
-        >
-          スキルセット
-        </h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
-          <div class="flex flex-col gap-4">
-            <div class="flex items-center gap-3 mb-2">
-              <span class="material-symbols-outlined text-primary">layers</span>
-              <h3
-                class="font-bold text-slate-900 dark:text-white uppercase tracking-wider text-sm"
-              >
-                バックエンド &amp; アーキテクチャ
-              </h3>
-            </div>
-            <div class="flex flex-wrap gap-2">
-              <span
-                class="px-3 py-1 bg-slate-100 dark:bg-gray-800 text-xs font-medium rounded-sm"
-                >Node.js</span
-              >
-              <span
-                class="px-3 py-1 bg-slate-100 dark:bg-gray-800 text-xs font-medium rounded-sm"
-                >Python</span
-              >
-              <span
-                class="px-3 py-1 bg-slate-100 dark:bg-gray-800 text-xs font-medium rounded-sm"
-                >Golang</span
-              >
-              <span
-                class="px-3 py-1 bg-slate-100 dark:bg-gray-800 text-xs font-medium rounded-sm"
-                >マイクロサービス</span
-              >
-              <span
-                class="px-3 py-1 bg-slate-100 dark:bg-gray-800 text-xs font-medium rounded-sm"
-                >REST/GraphQL</span
-              >
-              <span
-                class="px-3 py-1 bg-slate-100 dark:bg-gray-800 text-xs font-medium rounded-sm"
-                >PostgreSQL</span
-              >
-            </div>
-          </div>
-          <div class="flex flex-col gap-4">
-            <div class="flex items-center gap-3 mb-2">
-              <span class="material-symbols-outlined text-primary">cloud</span>
-              <h3
-                class="font-bold text-slate-900 dark:text-white uppercase tracking-wider text-sm"
-              >
-                インフラ &amp; DevOps
-              </h3>
-            </div>
-            <div class="flex flex-wrap gap-2">
-              <span
-                class="px-3 py-1 bg-slate-100 dark:bg-gray-800 text-xs font-medium rounded-sm"
-                >AWS / Azure</span
-              >
-              <span
-                class="px-3 py-1 bg-slate-100 dark:bg-gray-800 text-xs font-medium rounded-sm"
-                >Docker / K8s</span
-              >
-              <span
-                class="px-3 py-1 bg-slate-100 dark:bg-gray-800 text-xs font-medium rounded-sm"
-                >Terraform</span
-              >
-              <span
-                class="px-3 py-1 bg-slate-100 dark:bg-gray-800 text-xs font-medium rounded-sm"
-                >CI/CD (GitHub Actions)</span
-              >
-              <span
-                class="px-3 py-1 bg-slate-100 dark:bg-gray-800 text-xs font-medium rounded-sm"
-                >Linux Admin</span
-              >
-            </div>
-          </div>
-          <div class="flex flex-col gap-4">
-            <div class="flex items-center gap-3 mb-2">
-              <span class="material-symbols-outlined text-primary"
-                >auto_stories</span
-              >
-              <h3
-                class="font-bold text-slate-900 dark:text-white uppercase tracking-wider text-sm"
-              >
-                ビジネス・専門性
-              </h3>
-            </div>
-            <div class="flex flex-wrap gap-2">
-              <span
-                class="px-3 py-1 bg-slate-100 dark:bg-gray-800 text-xs font-medium rounded-sm"
-                >アジャイル/スクラム</span
-              >
-              <span
-                class="px-3 py-1 bg-slate-100 dark:bg-gray-800 text-xs font-medium rounded-sm"
-                >技術文書作成</span
-              >
-              <span
-                class="px-3 py-1 bg-slate-100 dark:bg-gray-800 text-xs font-medium rounded-sm"
-                >日英バイリンガル</span
-              >
-              <span
-                class="px-3 py-1 bg-slate-100 dark:bg-gray-800 text-xs font-medium rounded-sm"
-                >システム設計</span
-              >
-              <span
-                class="px-3 py-1 bg-slate-100 dark:bg-gray-800 text-xs font-medium rounded-sm"
-                >メンタリング</span
-              >
-            </div>
-          </div>
-        </div>
-      </section>
-      <section
-        class="py-20 border-t border-border-subtle dark:border-gray-800"
-        id="contact"
-      >
-        <div class="max-w-2xl mx-auto">
-          <div class="text-center mb-12">
-            <h2
-              class="text-2xl font-bold tracking-tight text-slate-900 dark:text-white mb-4"
-            >
-              お問い合わせ
-            </h2>
-            <p class="text-slate-500 dark:text-gray-400 text-sm">
-              大規模システムの設計や技術コンサルティングのご依頼を承っております。
-            </p>
-          </div>
-          <form class="space-y-6">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div class="flex flex-col gap-2">
-                <label
-                  class="text-[11px] font-bold uppercase tracking-widest text-slate-400"
-                  >お名前</label
-                >
-                <input
-                  class="w-full bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-[4px] px-4 py-2.5 text-sm focus:ring-1 focus:ring-primary focus:border-primary outline-none"
-                  placeholder="田中 太郎"
-                  type="text"
-                />
-              </div>
-              <div class="flex flex-col gap-2">
-                <label
-                  class="text-[11px] font-bold uppercase tracking-widest text-slate-400"
-                  >メールアドレス</label
-                >
-                <input
-                  class="w-full bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-[4px] px-4 py-2.5 text-sm focus:ring-1 focus:ring-primary focus:border-primary outline-none"
-                  placeholder="example@company.co.jp"
-                  type="email"
-                />
-              </div>
-            </div>
-            <div class="flex flex-col gap-2">
-              <label
-                class="text-[11px] font-bold uppercase tracking-widest text-slate-400"
-                >メッセージ</label
-              >
-              <textarea
-                class="w-full bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-[4px] px-4 py-2.5 text-sm focus:ring-1 focus:ring-primary focus:border-primary outline-none"
-                placeholder="プロジェクトの概要やご相談内容をご記入ください..."
-                rows="5"
-              ></textarea>
-            </div>
-            <button
-              class="w-full bg-primary text-white font-bold py-3.5 rounded-[4px] text-sm hover:brightness-110 transition-all shadow-sm"
-              type="submit"
-            >
-              送信する
-            </button>
-          </form>
-        </div>
-      </section>
-    </main>
-    <footer
-      class="bg-white dark:bg-background-dark border-t border-border-subtle dark:border-gray-800 py-12 mt-20"
-    >
-      <div
-        class="max-w-[1200px] mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8"
-      >
-        <div class="flex items-center gap-3">
-          <div class="bg-slate-100 dark:bg-gray-800 p-1 rounded-sm">
-            <span
-              class="material-symbols-outlined text-slate-600 text-[18px] block"
-              >code</span
-            >
-          </div>
-          <span class="text-sm font-bold text-slate-900 dark:text-white"
-            >K. Tanaka — ポートフォリオ 2024</span
-          >
-        </div>
-        <div class="flex gap-8">
-          <a
-            class="text-xs font-medium text-slate-400 hover:text-primary transition-colors"
-            href="#"
-            >GitHub</a
-          >
-          <a
-            class="text-xs font-medium text-slate-400 hover:text-primary transition-colors"
-            href="#"
-            >LinkedIn</a
-          >
-          <a
-            class="text-xs font-medium text-slate-400 hover:text-primary transition-colors"
-            href="#"
-            >Zenn.dev</a
-          >
-          <a
-            class="text-xs font-medium text-slate-400 hover:text-primary transition-colors"
-            href="#"
-            >Contact</a
-          >
-        </div>
-        <div class="text-[10px] text-slate-400 uppercase tracking-widest">
-          Based in Tokyo, Japan
         </div>
       </div>
-    </footer>
-  </body>
+    </section>
+    <section class="py-20 border-t border-border-subtle dark:border-gray-800" id="projects">
+      <div class="flex justify-between items-end mb-12">
+        <div>
+          <h2 class="text-2xl font-bold tracking-tight text-slate-900 dark:text-white">
+            実績
+          </h2>
+          <p class="mt-2 text-slate-500 dark:text-gray-400 text-sm">
+            技術的合理性と問題解決に焦点を当てた事例紹介。
+          </p>
+        </div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div
+          class="bg-white dark:bg-gray-900 border border-border-subtle dark:border-gray-800 rounded-lg overflow-hidden flex flex-col hover:shadow-md transition-shadow">
+          <div class="h-48 bg-slate-100 dark:bg-gray-800 overflow-hidden" style="
+                background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuB6D_kOPAvsFGrFHv6MV0QPxpLaKCeFroohWy1pUTVqD8YqRIkk19aeodbRgoPstyB8Rc8-_4cliTVNtAieZdGUwSv2lhWmqc5TcIeHCJdDhQ88BdNbH9pvUpxlYAQOAmwpVbwdCktbvVGITPHBsqKtWWvFZJ_hpdq9SVBZKv3YCEwfvY2t_VZ6Nw5eBp4r_LRS47cfmEyev0wLKw_TcbGxSDw7jlesY9JL8egMVOERzOzgcFnKelWBKKRM1lm_UO0vcRNaRewH3Gbu&quot;);
+                background-size: cover;
+              "></div>
+          <div class="p-6 flex flex-col grow">
+            <h3 class="text-lg font-bold mb-2 text-slate-900 dark:text-white">
+              業務画面機能開発（社内システム）
+            </h3>
+            <p class="text-xs text-slate-500 dark:text-gray-400 mb-4 leading-relaxed">
+              既存の社内ツールに新機能を統合。UIの改善とデータ処理の高速化を実現しました。
+            </p>
+            <div class="mt-auto">
+              <div class="technical-label text-slate-400 mb-2">採用技術</div>
+              <div class="flex flex-wrap gap-x-3 gap-y-1">
+                <span class="text-[11px] font-mono text-slate-600 dark:text-gray-300">JSP</span>
+                <span class="text-[11px] font-mono text-slate-600 dark:text-gray-300">Java</span>
+                <span class="text-[11px] font-mono text-slate-600 dark:text-gray-300">SQL</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="bg-white dark:bg-gray-900 border border-border-subtle dark:border-gray-800 rounded-lg overflow-hidden flex flex-col hover:shadow-md transition-shadow">
+          <div class="h-48 bg-slate-100 dark:bg-gray-800 overflow-hidden" style="
+                background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuCGChcDWF_XIvQSdu9gkEDySb3aUmVIPMXvZyUI4tSaDTIiY0mhjZztsrFDJK-IE21wCVcXGKRZImJ18JvWhYY0mtcrXaoQEeEtseBYZadn9nwEDYo3T6-0xUe6QX_1BOfZodc7_tIJ2lNikSHDtnJVibF87alMhD03-5yxUVKvrOE74lyEvYBkkdjsuKOD4PBEFJD4-COIubC_KIYbxHNz_StEkRCKMITPeqIUMXcqm5zGy5ZKJgNE5WZLADNDZUDKNm6Bq826Gxdf&quot;);
+                background-size: cover;
+              "></div>
+          <div class="p-6 flex flex-col grow">
+            <h3 class="text-lg font-bold mb-2 text-slate-900 dark:text-white">
+              個人Webプロジェクト（Vue）
+            </h3>
+            <p class="text-xs text-slate-500 dark:text-gray-400 mb-4 leading-relaxed">
+              最新のフロントエンドスタックを用いたタスク管理ツールのプロトタイプ開発。
+            </p>
+            <div class="mt-auto">
+              <div class="technical-label text-slate-400 mb-2">採用技術</div>
+              <div class="flex flex-wrap gap-x-3 gap-y-1">
+                <span class="text-[11px] font-mono text-slate-600 dark:text-gray-300">Vue 3</span>
+                <span class="text-[11px] font-mono text-slate-600 dark:text-gray-300">Vite</span>
+                <span class="text-[11px] font-mono text-slate-600 dark:text-gray-300">TypeScript</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="py-20 border-t border-border-subtle dark:border-gray-800" id="skills">
+      <h2 class="text-2xl font-bold tracking-tight text-slate-900 dark:text-white mb-10">
+        スキル
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="flex flex-col gap-4">
+          <div class="flex items-center gap-3 mb-2">
+            <span class="material-symbols-outlined text-primary">database</span>
+            <h3 class="font-bold text-slate-900 dark:text-white uppercase tracking-wider text-sm">
+              Backend
+            </h3>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1 bg-slate-100 dark:bg-gray-800 text-xs font-medium rounded-sm">Java / JSP / SQL</span>
+            <span class="px-3 py-1 bg-slate-100 dark:bg-gray-800 text-xs font-medium rounded-sm">Spring Boot</span>
+            <span class="px-3 py-1 bg-slate-100 dark:bg-gray-800 text-xs font-medium rounded-sm">MyBatis</span>
+          </div>
+        </div>
+        <div class="flex flex-col gap-4">
+          <div class="flex items-center gap-3 mb-2">
+            <span class="material-symbols-outlined text-primary">code</span>
+            <h3 class="font-bold text-slate-900 dark:text-white uppercase tracking-wider text-sm">
+              Frontend
+            </h3>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1 bg-slate-100 dark:bg-gray-800 text-xs font-medium rounded-sm">Vue 3 /
+              TypeScript</span>
+            <span class="px-3 py-1 bg-slate-100 dark:bg-gray-800 text-xs font-medium rounded-sm">HTML / CSS / JS</span>
+          </div>
+        </div>
+        <div class="flex flex-col gap-4">
+          <div class="flex items-center gap-3 mb-2">
+            <span class="material-symbols-outlined text-primary">handyman</span>
+            <h3 class="font-bold text-slate-900 dark:text-white uppercase tracking-wider text-sm">
+              Tools
+            </h3>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1 bg-slate-100 dark:bg-gray-800 text-xs font-medium rounded-sm">Git / GitHub</span>
+            <span class="px-3 py-1 bg-slate-100 dark:bg-gray-800 text-xs font-medium rounded-sm">VS Code</span>
+            <span class="px-3 py-1 bg-slate-100 dark:bg-gray-800 text-xs font-medium rounded-sm">Windows Server</span>
+          </div>
+        </div>
+        <div class="flex flex-col gap-4">
+          <div class="flex items-center gap-3 mb-2">
+            <span class="material-symbols-outlined text-primary">business_center</span>
+            <h3 class="font-bold text-slate-900 dark:text-white uppercase tracking-wider text-sm">
+              Business Skills
+            </h3>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1 bg-slate-100 dark:bg-gray-800 text-xs font-medium rounded-sm">要件整理</span>
+            <span class="px-3 py-1 bg-slate-100 dark:bg-gray-800 text-xs font-medium rounded-sm">業務部門との調整</span>
+            <span class="px-3 py-1 bg-slate-100 dark:bg-gray-800 text-xs font-medium rounded-sm">既存システム理解</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="py-20 border-t border-border-subtle dark:border-gray-800" id="contact">
+      <div class="max-w-2xl mx-auto">
+        <div class="text-center mb-12">
+          <h2 class="text-2xl font-bold tracking-tight text-slate-900 dark:text-white mb-4">
+            お問い合わせ
+          </h2>
+          <p class="text-slate-500 dark:text-gray-400 text-sm">
+            お仕事のご相談やカジュアルなご連絡など、お気軽にお問い合わせください。
+          </p>
+        </div>
+        <form class="space-y-6">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="flex flex-col gap-2">
+              <label class="text-[11px] font-bold uppercase tracking-widest text-slate-400">お名前</label>
+              <input
+                class="w-full bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-[4px] px-4 py-2.5 text-sm focus:ring-1 focus:ring-primary focus:border-primary outline-none"
+                placeholder="田中 太郎" type="text" />
+            </div>
+            <div class="flex flex-col gap-2">
+              <label class="text-[11px] font-bold uppercase tracking-widest text-slate-400">メールアドレス</label>
+              <input
+                class="w-full bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-[4px] px-4 py-2.5 text-sm focus:ring-1 focus:ring-primary focus:border-primary outline-none"
+                placeholder="example@company.co.jp" type="email" />
+            </div>
+          </div>
+          <div class="flex flex-col gap-2">
+            <label class="text-[11px] font-bold uppercase tracking-widest text-slate-400">メッセージ</label>
+            <textarea
+              class="w-full bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-[4px] px-4 py-2.5 text-sm focus:ring-1 focus:ring-primary focus:border-primary outline-none"
+              placeholder="プロジェクトの概要やご相談内容をご記入ください..." rows="5"></textarea>
+          </div>
+          <button
+            class="w-full bg-primary text-white font-bold py-3.5 rounded-[4px] text-sm hover:brightness-110 transition-all shadow-sm"
+            type="submit">
+            送信する
+          </button>
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer class="bg-white dark:bg-background-dark border-t border-border-subtle dark:border-gray-800 py-12 mt-20">
+    <div class="max-w-[1200px] mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
+      <div class="flex items-center gap-3">
+        <div class="bg-slate-100 dark:bg-gray-800 p-1 rounded-sm">
+          <span class="material-symbols-outlined text-slate-600 text-[18px] block">code</span>
+        </div>
+        <span class="text-sm font-bold text-slate-900 dark:text-white">© チハの雪 Portfolio</span>
+      </div>
+      <div class="flex gap-8">
+        <a class="text-xs font-medium text-slate-400 hover:text-primary transition-colors" href="#">GitHub</a>
+        <a class="text-xs font-medium text-slate-400 hover:text-primary transition-colors" href="#">LinkedIn</a>
+        <a class="text-xs font-medium text-slate-400 hover:text-primary transition-colors" href="#">Contact</a>
+      </div>
+      <div class="text-[10px] text-slate-400 uppercase tracking-widest">
+        Based in Japan
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;family=Noto+Sans:wght@400;500;700;900&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <title>Stitch Design - ACG Edition</title>
+  <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <style type="text/tailwindcss">
+    :root {
+            --bg-dreamy: #f3f0ff;--header-bg: #ffffff;
+            --accent-pink: #ffb7ce;--accent-mint: #b9fbc0;--accent-purple: #c084fc;--accent-blue: #bae6fd;--text-main: #4b3f72;--text-muted: #8b79b3;--border-color: #e9e4ff;
+        }
+    </style>
+</head>
+
+<body class="selection:bg-[var(--accent-pink)]">
+  <div
+    class="relative flex h-auto min-h-screen w-full flex-col bg-[var(--bg-dreamy)] group/design-root overflow-x-hidden"
+    style='font-family: Inter, "Noto Sans", sans-serif;'>
+    <div class="layout-container flex h-full grow flex-col">
+      <header
+        class="flex items-center justify-between whitespace-nowrap border-b border-solid border-[var(--border-color)] px-10 py-3 z-20 bg-white/80 backdrop-blur-md sticky top-0">
+        <div class="flex items-center gap-4 text-[var(--accent-purple)]">
+          <div class="size-6 bg-[var(--accent-pink)] rounded-lg flex items-center justify-center text-white shadow-sm">
+            <svg class="size-4" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_6_319)">
+                <path
+                  d="M8.57829 8.57829C5.52816 11.6284 3.451 15.5145 2.60947 19.7452C1.76794 23.9758 2.19984 28.361 3.85056 32.3462C5.50128 36.3314 8.29667 39.7376 11.8832 42.134C15.4698 44.5305 19.6865 45.8096 24 45.8096C28.3135 45.8096 32.5302 44.5305 36.1168 42.134C39.7033 39.7375 42.4987 36.3314 44.1494 32.3462C45.8002 28.361 46.2321 23.9758 45.3905 19.7452C44.549 15.5145 42.4718 11.6284 39.4217 8.57829L24 24L8.57829 8.57829Z"
+                  fill="currentColor"></path>
+              </g>
+              <defs>
+                <clipPath id="clip0_6_319">
+                  <rect fill="white" height="48" width="48"></rect>
+                </clipPath>
+              </defs>
+            </svg>
+          </div>
+          <h2 class="text-[var(--text-main)] text-lg font-black leading-tight tracking-tight">Portfolio <span
+              class="text-[var(--accent-pink)]">☆</span></h2>
+        </div>
+        <div class="flex flex-1 justify-end gap-8">
+          <div class="flex items-center gap-9">
+            <a class="text-[var(--text-main)] hover:text-[var(--accent-purple)] text-sm font-bold leading-normal transition-colors"
+              href="#">JP</a>
+            <a class="text-[var(--text-main)] hover:text-[var(--accent-purple)] text-sm font-bold leading-normal transition-colors"
+              href="#">EN</a>
+            <a class="text-[var(--text-main)] hover:text-[var(--accent-purple)] text-sm font-bold leading-normal transition-colors"
+              href="#">CN</a>
+          </div>
+        </div>
+      </header>
+      <section class="relative w-full overflow-hidden bg-white border-b border-[var(--border-color)]">
+        <div
+          class="absolute inset-0 z-0 opacity-60 flex items-center justify-center overflow-hidden pointer-events-none">
+          <svg class="w-full h-full max-w-[1440px]" preserveAspectRatio="xMidYMid slice" viewBox="0 0 1000 400"
+            xmlns="http://www.w3.org/2000/svg">
+            <line stroke="var(--accent-pink)" stroke-dasharray="12 12" stroke-width="1.5" x1="150" x2="150" y1="50"
+              y2="350"></line>
+            <line stroke="var(--accent-pink)" stroke-dasharray="12 12" stroke-width="1.5" x1="383" x2="383" y1="50"
+              y2="350"></line>
+            <line stroke="var(--accent-pink)" stroke-dasharray="12 12" stroke-width="1.5" x1="616" x2="616" y1="50"
+              y2="350"></line>
+            <line stroke="var(--accent-pink)" stroke-dasharray="12 12" stroke-width="1.5" x1="850" x2="850" y1="50"
+              y2="350"></line>
+            <rect fill="var(--bg-dreamy)" height="30" rx="15" stroke="var(--accent-purple)" stroke-width="2" width="80"
+              x="110" y="20"></rect>
+            <text fill="var(--accent-purple)" font-size="11" font-weight="900" text-anchor="middle" x="150"
+              y="40">CONCEPT</text>
+            <rect fill="var(--bg-dreamy)" height="30" rx="15" stroke="var(--accent-purple)" stroke-width="2" width="80"
+              x="343" y="20"></rect>
+            <text fill="var(--accent-purple)" font-size="11" font-weight="900" text-anchor="middle" x="383"
+              y="40">DESIGN</text>
+            <rect fill="var(--accent-pink)" height="30" rx="15" stroke="var(--accent-purple)" stroke-width="2"
+              width="80" x="576" y="20"></rect>
+            <text fill="white" font-size="11" font-weight="900" text-anchor="middle" x="616" y="40">DEV</text>
+            <rect fill="var(--bg-dreamy)" height="30" rx="15" stroke="var(--accent-purple)" stroke-width="2" width="80"
+              x="810" y="20"></rect>
+            <text fill="var(--accent-purple)" font-size="11" font-weight="900" text-anchor="middle" x="850"
+              y="40">DEPLOY</text>
+            <path d="M150 100 H383" marker-end="url(#arrow-cute)" stroke="var(--accent-purple)" stroke-width="2.5">
+            </path>
+            <path d="M383 140 H616" marker-end="url(#arrow-cute)" stroke="var(--accent-purple)" stroke-width="2.5">
+            </path>
+            <path d="M616 180 Q 733 180 850 180" marker-end="url(#arrow-cute)" stroke="var(--accent-purple)"
+              stroke-width="2.5"></path>
+            <path d="M850 220 H616" marker-end="url(#arrow-cute)" stroke="var(--accent-purple)" stroke-dasharray="6 6"
+              stroke-width="2"></path>
+            <path d="M616 260 H150" marker-end="url(#arrow-cute)" stroke="var(--accent-purple)" stroke-dasharray="4 4"
+              stroke-width="1.5"></path>
+            <circle cx="150" cy="100" fill="var(--accent-pink)" r="6" stroke="white" stroke-width="2"></circle>
+            <circle cx="383" cy="140" fill="var(--accent-pink)" r="6" stroke="white" stroke-width="2"></circle>
+            <circle cx="616" cy="180" fill="var(--accent-mint)" r="10" stroke="var(--accent-purple)" stroke-width="3">
+            </circle>
+            <circle cx="850" cy="220" fill="var(--accent-pink)" r="6" stroke="white" stroke-width="2"></circle>
+            <defs>
+              <marker id="arrow-cute" markerHeight="10" markerUnits="strokeWidth" markerWidth="10" orient="auto"
+                refX="9" refY="3">
+                <path d="M0,0 L0,6 L9,3 z" fill="var(--accent-purple)"></path>
+              </marker>
+            </defs>
+          </svg>
+        </div>
+        <div class="relative z-10 px-10 md:px-40 py-24 flex flex-col items-center text-center">
+          <h1 class="text-[var(--text-main)] tracking-tighter text-[40px] md:text-[56px] font-black leading-tight pb-3">
+            想像を形にする開発者</h1>
+          <h2
+            class="bg-[var(--accent-pink)] text-white text-[14px] font-black uppercase tracking-[0.3em] px-4 py-1 rounded-full mb-8">
+            About</h2>
+          <div class="flex flex-col gap-4 max-w-3xl">
+            <div class="flex flex-col">
+              <p class="text-[var(--text-main)] text-[32px] font-black leading-tight tracking-tight">Ethan Tanaka</p>
+              <p class="text-[var(--accent-purple)] text-xl font-bold italic leading-normal">Full-Stack Developer</p>
+            </div>
+            <p
+              class="text-[var(--text-main)] text-lg font-medium leading-relaxed pt-4 bg-white/40 backdrop-blur-sm rounded-2xl p-6 border border-white">
+              A passionate full-stack developer with a focus on creating innovative and user-centric web applications. I
+              specialize in turning complex ideas into elegant, efficient, and scalable solutions.
+            </p>
+            <div class="flex justify-center pt-10">
+              <div class="flex gap-6 flex-wrap justify-center">
+                <button
+                  class="flex min-w-[160px] cursor-pointer items-center justify-center overflow-hidden rounded-2xl h-12 px-8 bg-[var(--accent-pink)] text-white text-base font-black leading-normal tracking-[0.05em] transition-all hover:scale-105 hover:shadow-[0_8px_0_0_#ff99b8] active:translate-y-1 active:shadow-none">
+                  <span class="truncate">Email 💌</span>
+                </button>
+                <button
+                  class="flex min-w-[160px] cursor-pointer items-center justify-center overflow-hidden rounded-2xl h-12 px-8 bg-[var(--accent-mint)] text-[var(--text-main)] text-base font-black leading-normal tracking-[0.05em] transition-all hover:scale-105 hover:shadow-[0_8px_0_0_#98f3a3] active:translate-y-1 active:shadow-none">
+                  <span class="truncate">GitHub ✦</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="px-10 md:px-40 flex flex-1 justify-center py-5">
+        <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+          <h2
+            class="text-[var(--text-main)] text-[24px] font-black leading-tight tracking-tight px-4 pb-3 pt-8 flex items-center gap-2">
+            <span class="size-2 rounded-full bg-[var(--accent-pink)]"></span> Skills
+          </h2>
+          <div class="flex flex-col gap-10 p-4">
+            <div
+              class="flex flex-col gap-4 border-l-4 border-[var(--accent-purple)] pl-6 py-2 bg-white/40 rounded-r-2xl">
+              <div>
+                <h3 class="text-[var(--text-main)] text-lg font-black leading-tight">Frontend Development</h3>
+                <p class="text-[var(--text-muted)] text-base font-medium leading-normal mt-2">
+                  UI implementation with Vue and TypeScript, focusing on clarity and maintainability.
+                </p>
+              </div>
+              <div class="flex flex-wrap gap-2">
+                <div
+                  class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-[var(--accent-blue)] px-4">
+                  <p class="text-[var(--text-main)] text-sm font-black leading-normal">Vue</p>
+                </div>
+                <div
+                  class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-[var(--accent-blue)] px-4">
+                  <p class="text-[var(--text-main)] text-sm font-black leading-normal">TypeScript</p>
+                </div>
+                <div
+                  class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-[var(--accent-blue)] px-4">
+                  <p class="text-[var(--text-main)] text-sm font-black leading-normal">HTML / CSS</p>
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-col gap-4 border-l-4 border-[var(--accent-mint)] pl-6 py-2 bg-white/40 rounded-r-2xl">
+              <div>
+                <h3 class="text-[var(--text-main)] text-lg font-black leading-tight">Server-side / Business Logic</h3>
+                <p class="text-[var(--text-muted)] text-base font-medium leading-normal mt-2">
+                  Development and maintenance of business-oriented web systems.
+                </p>
+              </div>
+              <div class="flex flex-wrap gap-2">
+                <div
+                  class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-[var(--accent-mint)] px-4">
+                  <p class="text-[var(--text-main)] text-sm font-black leading-normal">Java</p>
+                </div>
+                <div
+                  class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-[var(--accent-mint)] px-4">
+                  <p class="text-[var(--text-main)] text-sm font-black leading-normal">JSP</p>
+                </div>
+                <div
+                  class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-[var(--accent-mint)] px-4">
+                  <p class="text-[var(--text-main)] text-sm font-black leading-normal">SQL</p>
+                </div>
+                <div
+                  class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-[var(--accent-mint)] px-4">
+                  <p class="text-[var(--text-main)] text-sm font-black leading-normal">Spring Boot</p>
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-col gap-4 border-l-4 border-[var(--accent-pink)] pl-6 py-2 bg-white/40 rounded-r-2xl">
+              <div>
+                <h3 class="text-[var(--text-main)] text-lg font-black leading-tight">Development Tools</h3>
+                <p class="text-[var(--text-muted)] text-base font-medium leading-normal mt-2">
+                  Daily development and version control workflow.
+                </p>
+              </div>
+              <div class="flex flex-wrap gap-2">
+                <div
+                  class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-[var(--accent-pink)] px-4">
+                  <p class="text-[var(--text-main)] text-sm font-black leading-normal">Git</p>
+                </div>
+                <div
+                  class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-[var(--accent-pink)] px-4">
+                  <p class="text-[var(--text-main)] text-sm font-black leading-normal">GitHub</p>
+                </div>
+                <div
+                  class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-[var(--accent-pink)] px-4">
+                  <p class="text-[var(--text-main)] text-sm font-black leading-normal">VS Code</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <h2
+            class="text-[var(--text-main)] text-[24px] font-black leading-tight tracking-tight px-4 pb-4 pt-8 flex items-center gap-2">
+            <span class="size-2 rounded-full bg-[var(--accent-mint)]"></span> Projects
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4 pb-8">
+            <div
+              class="group flex flex-col overflow-hidden rounded-3xl border-2 border-[var(--border-color)] bg-white transition-all hover:-translate-y-2 hover:shadow-2xl hover:shadow-[var(--accent-pink)]/20 cursor-pointer">
+              <div class="relative aspect-[16/10] w-full overflow-hidden bg-[var(--accent-blue)]/20">
+                <div class="absolute inset-0 flex items-center justify-center p-6">
+                  <div
+                    class="w-32 h-24 rounded-2xl border-4 border-[var(--accent-purple)] bg-white relative shadow-sm overflow-hidden">
+                    <div
+                      class="w-full h-6 border-b-2 border-[var(--accent-purple)]/30 bg-[var(--bg-dreamy)] flex items-center px-2 justify-between">
+                      <div class="flex items-center gap-1">
+                        <div class="w-2 h-2 rounded-full bg-[var(--accent-pink)]"></div>
+                        <div class="w-2 h-2 rounded-full bg-[var(--accent-mint)]"></div>
+                        <div class="w-2 h-2 rounded-full bg-[var(--accent-blue)]"></div>
+                      </div>
+                    </div>
+                    <div class="p-2 grid grid-cols-2 gap-2">
+                      <div class="h-10 bg-[var(--accent-blue)]/30 rounded-lg border border-[var(--accent-blue)]/50">
+                      </div>
+                      <div class="h-10 bg-[var(--accent-pink)]/30 rounded-lg border border-[var(--accent-pink)]/50">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="flex flex-col p-6">
+                <p class="text-[var(--text-main)] text-xl font-black leading-tight mb-2">E-commerce Platform</p>
+                <p class="text-[var(--text-muted)] text-sm font-medium leading-relaxed mb-4">A high-performance online
+                  store built with modern web technologies.</p>
+                <div
+                  class="mt-auto flex items-center text-[var(--accent-purple)] text-xs font-black uppercase tracking-widest">
+                  <span>View Project ✨</span>
+                  <svg class="ml-2 w-4 h-4 transition-transform group-hover:translate-x-2" fill="none"
+                    stroke="currentColor" viewBox="0 0 24 24">
+                    <path d="M17 8l4 4m0 0l-4 4m4-4H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">
+                    </path>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div
+              class="group flex flex-col overflow-hidden rounded-3xl border-2 border-[var(--border-color)] bg-white transition-all hover:-translate-y-2 hover:shadow-2xl hover:shadow-[var(--accent-mint)]/20 cursor-pointer">
+              <div class="relative aspect-[16/10] w-full overflow-hidden bg-[var(--accent-mint)]/20">
+                <div class="absolute inset-0 flex items-center justify-center p-8">
+                  <div class="flex items-center gap-4">
+                    <div
+                      class="w-12 h-20 rounded-2xl border-4 border-[var(--accent-pink)] bg-white flex flex-col items-center justify-center">
+                      <div class="w-6 h-6 rounded-full bg-[var(--accent-mint)] animate-pulse"></div>
+                    </div>
+                    <div class="text-[var(--accent-purple)]">
+                      <span class="material-symbols-outlined text-4xl">sync_alt</span>
+                    </div>
+                    <div
+                      class="w-16 h-12 bg-[var(--accent-purple)] rounded-2xl flex items-center justify-center shadow-lg">
+                      <div class="w-4 h-4 rounded-full bg-white/80"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="flex flex-col p-6">
+                <p class="text-[var(--text-main)] text-xl font-black leading-tight mb-2">Fitness Tracker</p>
+                <p class="text-[var(--text-muted)] text-sm font-medium leading-relaxed mb-4">A mobile-first application
+                  designed to help users monitor workouts.</p>
+                <div
+                  class="mt-auto flex items-center text-[var(--accent-purple)] text-xs font-black uppercase tracking-widest">
+                  <span>View Project ✨</span>
+                  <svg class="ml-2 w-4 h-4 transition-transform group-hover:translate-x-2" fill="none"
+                    stroke="currentColor" viewBox="0 0 24 24">
+                    <path d="M17 8l4 4m0 0l-4 4m4-4H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">
+                    </path>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div
+              class="group flex flex-col overflow-hidden rounded-3xl border-2 border-[var(--border-color)] bg-white transition-all hover:-translate-y-2 hover:shadow-2xl hover:shadow-[var(--accent-blue)]/20 cursor-pointer">
+              <div class="relative aspect-[16/10] w-full overflow-hidden bg-[var(--accent-purple)]/10">
+                <div class="absolute inset-0 flex items-center justify-center p-8">
+                  <div class="grid grid-cols-2 gap-3">
+                    <div class="w-12 h-12 rounded-full bg-[var(--accent-pink)] border-4 border-white shadow-md"></div>
+                    <div class="w-12 h-12 rounded-full bg-[var(--accent-blue)] border-4 border-white shadow-md"></div>
+                    <div class="w-12 h-12 rounded-full bg-[var(--accent-mint)] border-4 border-white shadow-md"></div>
+                    <div class="w-12 h-12 rounded-full bg-[var(--accent-purple)] border-4 border-white shadow-md"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="flex flex-col p-6">
+                <p class="text-[var(--text-main)] text-xl font-black leading-tight mb-2">Social Media Dashboard</p>
+                <p class="text-[var(--text-muted)] text-sm font-medium leading-relaxed mb-4">Comprehensive analytics
+                  dashboard for multi-channel management.</p>
+                <div
+                  class="mt-auto flex items-center text-[var(--accent-purple)] text-xs font-black uppercase tracking-widest">
+                  <span>View Project ✨</span>
+                  <svg class="ml-2 w-4 h-4 transition-transform group-hover:translate-x-2" fill="none"
+                    stroke="currentColor" viewBox="0 0 24 24">
+                    <path d="M17 8l4 4m0 0l-4 4m4-4H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">
+                    </path>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+          <h2
+            class="text-[var(--text-main)] text-[24px] font-black leading-tight tracking-tight px-4 pb-3 pt-8 flex items-center gap-2">
+            <span class="size-2 rounded-full bg-[var(--accent-purple)]"></span> Experience
+          </h2>
+          <div class="grid grid-cols-[60px_1fr] gap-x-2 px-4 pb-12">
+            <div class="flex flex-col items-center gap-1 pt-3">
+              <div class="text-[var(--accent-pink)]">
+                <span class="material-symbols-outlined text-3xl">star</span>
+              </div>
+              <div class="w-[4px] rounded-full bg-[var(--border-color)] h-16 grow"></div>
+            </div>
+            <div class="flex flex-1 flex-col py-3">
+              <p class="text-[var(--text-main)] text-lg font-black leading-normal">Senior Developer at Tech Innovators
+                Inc.</p>
+              <p class="text-[var(--accent-purple)] text-base font-bold leading-normal">2020 - Present</p>
+            </div>
+            <div class="flex flex-col items-center gap-1">
+              <div class="w-[4px] rounded-full bg-[var(--border-color)] h-4"></div>
+              <div class="text-[var(--accent-mint)]">
+                <span class="material-symbols-outlined text-3xl">favorite</span>
+              </div>
+              <div class="w-[4px] rounded-full bg-[var(--border-color)] h-16 grow"></div>
+            </div>
+            <div class="flex flex-1 flex-col py-3">
+              <p class="text-[var(--text-main)] text-lg font-black leading-normal">Software Engineer at Startup X</p>
+              <p class="text-[var(--accent-purple)] text-base font-bold leading-normal">2018 - 2020</p>
+            </div>
+            <div class="flex flex-col items-center gap-1">
+              <div class="w-[4px] rounded-full bg-[var(--border-color)] h-4"></div>
+              <div class="text-[var(--accent-blue)]">
+                <span class="material-symbols-outlined text-3xl">mood</span>
+              </div>
+            </div>
+            <div class="flex flex-1 flex-col py-3">
+              <p class="text-[var(--text-main)] text-lg font-black leading-normal">Junior Developer at Web Solutions Co.
+              </p>
+              <p class="text-[var(--accent-purple)] text-base font-bold leading-normal">2016 - 2018</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="border-t border-[var(--border-color)] py-10 px-10 text-center">
+        <p class="text-[var(--text-muted)] text-sm font-black tracking-widest uppercase">Made with ♡ and Code</p>
+      </footer>
+    </div>
+  </div>
+
+</body>
+
 </html>
