@@ -1,0 +1,22 @@
+{
+  "name": "chiymiya.github.io",
+  "version": "1.0.0",
+  "description": "- 基于 GitHub Pages 构建个人简历网站，用于展示个人信息与项目经历。",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "start": "vite preview"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/ChiYmiya/ChiYmiya.github.io/issues"
+  },
+  "homepage": "https://github.com/ChiYmiya/ChiYmiya.github.io#readme",
+  "devDependencies": {
+    "vite": "^7.3.1"
+  }
+}

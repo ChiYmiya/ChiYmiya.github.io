@@ -1,0 +1,355 @@
+﻿{
+  "jp": {
+    "meta": {
+      "title": "チハの雪\u0027s Portfolio"
+    },
+    "header": {
+      "brand": "Portfolio",
+      "lang": {
+        "jp": "JP",
+        "en": "EN",
+        "cn": "CN"
+      }
+    },
+    "diagram": {
+      "requirement": "REQUIREMENT",
+      "design": "DESIGN",
+      "implement": "IMPLEMENT",
+      "operation": "OPERATION"
+    },
+    "hero": {
+      "title": {
+        "line1": "課題を",
+        "line2": "設計と技術で解決するエンジニア"
+      },
+      "badge": "About me",
+      "name": "チハの雪",
+      "role": "Webエンジニア（設計・実装・運用）",
+      "about": {
+        "line1": "業務システムの運用・改善経験を基盤に、制約のある環境下でも業務要件を踏まえた設計・実装に携わってきたWebエンジニアです。",
+        "line2": "設計判断は人が担い、実装や改善の工程にAIを取り入れながら、",
+        "line3": "保守性と再現性を重視した開発を行っています。"
+      },
+      "cta": {
+        "contact": "問い合わせ 💌",
+        "github": "GitHub ✦"
+      }
+    },
+    "skills": {
+      "title": "スキル",
+      "frontend": {
+        "title": "フロントエンド開発",
+        "desc": "Vue と TypeScript を用いたUI実装を中心に、 可読性・保守性を意識したフロントエンド開発を行っています。",
+        "tag": {
+          "vue": "Vue",
+          "ts": "TypeScript",
+          "htmlCss": "HTML / CSS"
+        }
+      },
+      "backend": {
+        "title": "サーバーサイド／業務ロジック",
+        "desc": "業務系Webシステムの開発・保守を通じて、 既存コードを理解しながら安全に改善していく実装経験があります。",
+        "tag": {
+          "java": "Java",
+          "jsp": "JSP",
+          "sql": "SQL",
+          "springBoot": "Spring Boot"
+        }
+      },
+      "tools": {
+        "title": "開発ツール・ワークフロー",
+        "desc": "Git を用いたバージョン管理を前提に、 AIツールを取り入れながら実装・リファクタリングの効率化を行っています。",
+        "tag": {
+          "git": "Git",
+          "github": "GitHub",
+          "vscode": "VS Code"
+        }
+      }
+    },
+    "experience": {
+      "title": "経験",
+      "work": {
+        "role": "製造業系企業 / 社内Webエンジニア",
+        "status": "在職中",
+        "item1": "・社内向け業務Webシステムの運用・保守・機能改善を担当",
+        "item2": "・JSP / Java を中心とした既存システムの改修、不具合対応",
+        "item3": "・業務部門との要件調整を行いながら、設計補助〜実装・リリースまで対応",
+        "item4": "・フロントエンドの段階的な改善に取り組み、可読性・保守性を向上"
+      },
+      "self": {
+        "title": "自主学習・自己研鑽",
+        "date": "2023 - 今",
+        "item1": "・大学在学中、半年間のリモート開発活動およびfinal-year-projectを通じて、自律的に学習・実装を進める経験を積みました。",
+        "item2": "・日本語は独学で学習し、日本語能力試験 N1 に合格しています。"
+      },
+      "edu": {
+        "title": "Education / 学歴",
+        "date": "2020 - 2024",
+        "item1": "・情報工学系学科",
+        "item2": "・在学中は、プログラミング基礎、データ構造とアルゴリズム、オペレーティングシステム、データベース、ソフトウェア工学などを学習。",
+        "item3": "・計算機の仕組みやソフトウェアの設計思想を基礎として、現在の業務システム開発や既存コードの理解・改善に活かしています。"
+      }
+    },
+    "projects": {
+      "title": "Projects",
+      "featured": {
+        "badge": "Featured Project"
+      },
+      "p1": {
+        "name": "進行中のWebサイト1",
+        "desc": "未定1",
+        "link": "View Project ✨"
+      },
+      "p2": {
+        "name": "進行中のWebサイト2",
+        "desc": "未定2",
+        "link": "View Project ✨"
+      },
+      "p3": {
+        "name": "進行中のWebサイト3",
+        "desc": "未定3",
+        "link": "View Project ✨"
+      }
+    },
+    "footer": {
+      "tagline": "考えて作り・使われ続けるものを"
+    },
+    "__lang": "jp"
+  },
+
+  "en": {
+    "meta": {
+      "title": "Chiha no Yuki's Portfolio"
+    },
+    "header": {
+      "brand": "Portfolio",
+      "lang": {
+        "jp": "JP",
+        "en": "EN",
+        "cn": "CN"
+      }
+    },
+    "diagram": {
+      "requirement": "REQUIREMENTS",
+      "design": "DESIGN",
+      "implement": "IMPLEMENTATION",
+      "operation": "OPERATIONS"
+    },
+    "hero": {
+      "title": {
+        "line1": "Addressing Business Challenges",
+        "line2": "Through Design and Engineering"
+      },
+      "badge": "About Me",
+      "name": "Chiha no Yuki",
+      "role": "Web Engineer (Design, Development & Operations)",
+      "about": {
+        "line1": "I am a web engineer with hands-on experience in operating and improving business systems, delivering design and implementation grounded in real business requirements—even within constrained environments.",
+        "line2": "While design decisions remain human-driven, I leverage AI throughout implementation and improvement processes,",
+        "line3": "focusing on maintainability, clarity, and reproducibility."
+      },
+      "cta": {
+        "contact": "Contact 💌",
+        "github": "GitHub ✦"
+      }
+    },
+    "skills": {
+      "title": "Skills",
+      "frontend": {
+        "title": "Frontend Development",
+        "desc": "I build user interfaces primarily with Vue and TypeScript, emphasizing readability and long-term maintainability.",
+        "tag": {
+          "vue": "Vue",
+          "ts": "TypeScript",
+          "htmlCss": "HTML / CSS"
+        }
+      },
+      "backend": {
+        "title": "Backend / Business Logic",
+        "desc": "Through maintaining and enhancing business web systems, I have gained practical experience in safely improving legacy code while fully understanding its structure.",
+        "tag": {
+          "java": "Java",
+          "jsp": "JSP",
+          "sql": "SQL",
+          "springBoot": "Spring Boot"
+        }
+      },
+      "tools": {
+        "title": "Development Tools & Workflow",
+        "desc": "With Git-based version control as a foundation, I integrate AI tools to streamline implementation and refactoring workflows.",
+        "tag": {
+          "git": "Git",
+          "github": "GitHub",
+          "vscode": "VS Code"
+        }
+      }
+    },
+    "experience": {
+      "title": "Experience",
+      "work": {
+        "role": "Manufacturing Company / In-house Web Engineer",
+        "status": "Currently Employed",
+        "item1": "- Responsible for operations, maintenance, and feature improvements of internal business web systems",
+        "item2": "- Led enhancements and bug fixes for existing systems centered on JSP / Java",
+        "item3": "- Coordinated requirements with business departments and supported processes from design assistance through implementation and release",
+        "item4": "- Drove incremental frontend improvements to enhance readability and maintainability"
+      },
+      "self": {
+        "title": "Independent Learning & Professional Development",
+        "date": "2023 - Present",
+        "item1": "- During university, I gained experience in self-directed learning and implementation through six months of remote development activities and a final-year project.",
+        "item2": "- Studied Japanese independently and passed the Japanese-Language Proficiency Test (JLPT) N1."
+      },
+      "edu": {
+        "title": "Education",
+        "date": "2020 - 2024",
+        "item1": "- Department of Information Engineering",
+        "item2": "- Studied programming fundamentals, data structures and algorithms, operating systems, databases, and software engineering.",
+        "item3": "- I apply computer fundamentals and software design principles to business system development and to understanding and improving legacy code."
+      }
+    },
+    "projects": {
+      "title": "Projects",
+      "featured": {
+        "badge": "Featured Project"
+      },
+      "p1": {
+        "name": "Ongoing Website Project 1",
+        "desc": "Currently in development",
+        "link": "View Project ✨"
+      },
+      "p2": {
+        "name": "Ongoing Website Project 2",
+        "desc": "Currently in development",
+        "link": "View Project ✨"
+      },
+      "p3": {
+        "name": "Ongoing Website Project 3",
+        "desc": "Currently in development",
+        "link": "View Project ✨"
+      }
+    },
+    "footer": {
+      "tagline": "Think deeply. Build thoughtfully. Create what lasts."
+    },
+    "__lang": "en"
+  },
+
+  "cn": {
+    "meta": {
+      "title": "千羽之雪的作品集"
+    },
+    "header": {
+      "brand": "作品集",
+      "lang": {
+        "jp": "JP",
+        "en": "EN",
+        "cn": "CN"
+      }
+    },
+    "diagram": {
+      "requirement": "需求",
+      "design": "设计",
+      "implement": "开发",
+      "operation": "运维"
+    },
+    "hero": {
+      "title": {
+        "line1": "面向业务课题",
+        "line2": "以设计与技术加以解决"
+      },
+      "badge": "关于我",
+      "name": "千羽之雪",
+      "role": "Web工程师（设计、开发、运维）",
+      "about": {
+        "line1": "我是一名具备业务系统运维与改进经验的 Web 工程师，即使在受限环境下，也能基于业务需求推进设计与落地实现。",
+        "line2": "在由人负责关键设计判断的同时，我在实现与改进流程中合理引入 AI，",
+        "line3": "并始终以可维护性与可复现性为核心进行开发。"
+      },
+      "cta": {
+        "contact": "联系我 💌",
+        "github": "GitHub ✦"
+      }
+    },
+    "skills": {
+      "title": "技能",
+      "frontend": {
+        "title": "前端开发",
+        "desc": "主要使用 Vue 与 TypeScript 进行 UI 开发，注重代码的可读性与长期可维护性。",
+        "tag": {
+          "vue": "Vue",
+          "ts": "TypeScript",
+          "htmlCss": "HTML / CSS"
+        }
+      },
+      "backend": {
+        "title": "后端 / 业务逻辑",
+        "desc": "通过业务 Web 系统的开发与维护，我积累了在理解既有代码结构基础上稳健推进改进的实践经验。",
+        "tag": {
+          "java": "Java",
+          "jsp": "JSP",
+          "sql": "SQL",
+          "springBoot": "Spring Boot"
+        }
+      },
+      "tools": {
+        "title": "开发工具与工作流",
+        "desc": "以 Git 版本管理为基础，引入 AI 工具以提升实现与重构流程的效率。",
+        "tag": {
+          "git": "Git",
+          "github": "GitHub",
+          "vscode": "VS Code"
+        }
+      }
+    },
+    "experience": {
+      "title": "经历",
+      "work": {
+        "role": "制造业企业 / 内部 Web 工程师",
+        "status": "在职",
+        "item1": "- 负责公司内部业务 Web 系统的运维、维护与功能优化",
+        "item2": "- 以 JSP / Java 为核心，对既有系统进行改修与缺陷处理",
+        "item3": "- 与业务部门协调需求，覆盖从设计支持到实现与发布的全过程",
+        "item4": "- 持续推进前端阶段性优化，提升系统可读性与可维护性"
+      },
+      "self": {
+        "title": "自主学习与专业成长",
+        "date": "2023 - 至今",
+        "item1": "- 大学期间通过为期半年的远程开发活动及毕业设计，积累了自主学习与项目推进经验。",
+        "item2": "- 日语为自学，并已通过日本语能力考试 N1。"
+      },
+      "edu": {
+        "title": "教育背景",
+        "date": "2020 - 2024",
+        "item1": "- 计算机大类相关专业",
+        "item2": "- 在校期间系统学习编程基础、数据结构与算法、操作系统、数据库及软件工程等课程。",
+        "item3": "- 将计算机基础与软件设计思想应用于当前业务系统开发及既有代码的理解与优化。"
+      }
+    },
+    "projects": {
+      "title": "项目",
+      "featured": {
+        "badge": "精选项目"
+      },
+      "p1": {
+        "name": "进行中的网站项目 1",
+        "desc": "开发进行中",
+        "link": "查看项目 ✨"
+      },
+      "p2": {
+        "name": "进行中的网站项目 2",
+        "desc": "开发进行中",
+        "link": "查看项目 ✨"
+      },
+      "p3": {
+        "name": "进行中的网站项目 3",
+        "desc": "开发进行中",
+        "link": "查看项目 ✨"
+      }
+    },
+    "footer": {
+      "tagline": "以思考为起点，打造能够长期被使用的产品"
+    },
+    "__lang": "cn"
+  }
+}
