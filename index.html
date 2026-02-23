@@ -1,4 +1,5 @@
-﻿<html lang="jp">
+﻿<!DOCTYPE html>
+<html lang="jp">
 
 <head>
   <meta charset="utf-8" />
@@ -23,8 +24,7 @@
     }
   </style>
   <link rel="stylesheet" href="indexCss.css" />
-  <script src="index.js"></script>
-  <script src="i18n.js"></script>
+  <script src="index.js" type="module"></script>
 </head>
 
 <body class="selection:bg-[var(--accent-pink)]">
@@ -43,7 +43,7 @@
                 <path d="M8.57829 8.57829C5.52816 11.6284 
                   3.451 15.5145 2.60947 19.7452C1.76794 
                   23.9758 2.19984 28.361 3.85056 
-                  32.3462C5.50128 36.3314 8.29667 
+                  32.3462C5.50128 36.3314 8.29667
                   39.7376 11.8832 42.134C15.4698 44.5305 
                   19.6865 45.8096 24 45.8096C28.3135 
                   45.8096 32.5302 44.5305 36.1168 
@@ -66,14 +66,14 @@
         <div class="flex flex-1 justify-end gap-8">
           <div class="flex items-center gap-9">
             <a class="text-[var(--text-main)] hover:text-[var(--accent-purple)] 
-                      text-sm font-bold leading-normal transition-colors cursor-pointer" data-i18n="header.lang.jp"
-              onclick="switchLang('jp')">JP</a>
+                      text-sm font-bold leading-normal transition-colors cursor-pointer"
+              data-i18n="header.lang.jp" id="jp-btn">JP</a>
             <a class="text-[var(--text-main)] hover:text-[var(--accent-purple)] 
-                      text-sm font-bold leading-normal transition-colors cursor-pointer" data-i18n="header.lang.en"
-              onclick="switchLang('en')">EN</a>
+                      text-sm font-bold leading-normal transition-colors cursor-pointer"
+              data-i18n="header.lang.en" id="en-btn">EN</a>
             <a class="text-[var(--text-main)] hover:text-[var(--accent-purple)] 
-                      text-sm font-bold leading-normal transition-colors cursor-pointer" data-i18n="header.lang.cn"
-              onclick="switchLang('cn')">CN</a>
+                      text-sm font-bold leading-normal transition-colors cursor-pointer"
+              data-i18n="header.lang.cn" id="cn-btn">CN</a>
           </div>
         </div>
       </header>
@@ -133,7 +133,7 @@
           <h1 class="text-[var(--text-main)] tracking-tighter text-[40px] 
                      md:text-[56px] font-black leading-tight pb-3">
             <span data-i18n="hero.title.line1">課題を</span>
-            <span data-i18n="hero.title.line2">設計と技術で解決するエンジニア</span>
+            <span data-i18n="hero.title.line2">システム設計と技術で解決する</span>
           </h1>
           <h2 class="bg-[var(--accent-pink)] text-white text-[14px] font-black 
                     uppercase tracking-[0.3em] px-4 py-1 rounded-full mb-8">
@@ -172,7 +172,8 @@
                                text-base font-black leading-normal tracking-[0.05em] 
                                transition-all hover:scale-105 shadow-[0_8px_0_0_#98f3a3] 
                                active:translate-y-1 active:shadow-none">
-                  <span class="truncate" data-i18n="hero.cta.github">GitHub ✦</span>
+                  <span class="truncate" data-i18n="hero.cta.github">
+                    GitHub ✦</span>
                 </button>
               </div>
             </div>
