@@ -1,0 +1,19 @@
+# Node 依赖
+node_modules/
+
+# 构建产物
+dist/
+
+# 本地环境变量
+.env
+.env.local
+
+# 日志文件
+*.log
+
+# 系统文件
+.DS_Store
+Thumbs.db
+
+# VSCode
+.vscode/
