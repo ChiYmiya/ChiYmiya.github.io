@@ -1,6 +1,6 @@
 import { defineConfig } from "vite";
 export default defineConfig({
-  base: "/ChiYmiya.github.io/",
+  base: "/",
   build: {
     minify: "terser",
     terserOptions: {
