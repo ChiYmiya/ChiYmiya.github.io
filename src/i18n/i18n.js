@@ -1,4 +1,4 @@
-import language from "./language.json";
+import language from "../../language.json";
 /**
  * 言語を切り替える関数
  * @param {string} lang - 切り替える言語(jp, en, cn)
@@ -15,9 +15,9 @@ async function switchLang(lang) {
 
 /**
  * オブジェクトから値を取得する関数
- * @param {object} obj - オブジェクト
+ * @param {object} obj - Jsonオブジェクト
  * @param {string} path - 値を取得するパス
- * @returns {string} 値
+ * @returns {string} 取得した値
  */
 function getValue(obj, path) {
   return path.split(".").reduce((acc, item) => acc && acc[item], obj);

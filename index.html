@@ -4,13 +4,13 @@
 <head>
   <meta charset="utf-8" />
   <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect" />
-  <link
+  <!-- <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;family=Noto+Sans:wght@400;500;700;900&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-    rel="stylesheet" />
+    rel="stylesheet" /> -->
   <title data-i18n="meta.title">チハの雪's Portfolio</title>
   <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon" />
-  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-  <style type="text/tailwindcss">
+  <script src="./src/main.js" type="module"></script>
+  <style>
     :root {
       --bg-dreamy: #f3f0ff;
       --header-bg: #ffffff;
@@ -22,12 +22,45 @@
       --text-muted: #8b79b3;
       --border-color: #e9e4ff;
     }
+
+    .Defaultcursor {
+      cursor: default;
+    }
+
+    @import "tailwindcss";
   </style>
-  <link rel="stylesheet" href="indexCss.css" />
-  <script src="index.js" type="module"></script>
 </head>
 
 <body class="selection:bg-[var(--accent-pink)]">
+  <svg width="0" height="0" style="position:absolute">
+    <!-- ⭐ Star -->
+    <symbol id="i-star" viewBox="0 0 24 24">
+      <path d="M12 3.5l2.66 5.39 5.95.87-4.3 4.19 1.02 5.94L12 17.98 6.67 19.89l1.02-5.94-4.3-4.19 5.95-.87L12 3.5z"
+        fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+    </symbol>
+
+    <!-- 💚 Heart -->
+    <symbol id="i-heart" viewBox="0 0 1024 1024">
+      <path
+        d="M512.042667 193.237333a255.914667 255.914667 0 0 1 351.658666 9.728 256 256 0 0 1 10.069334 351.402667l-361.813334 362.325333-361.728-362.325333a256 256 0 0 1 361.813334-361.130667z m291.242666 70.016a170.581333 170.581333 0 0 0-234.24-6.528l-56.96 51.114667-57.002666-51.072a170.666667 170.666667 0 0 0-242.602667 239.146667L512 795.904l299.52-299.946667a170.666667 170.666667 0 0 0-8.234667-232.704z"
+        fill="currentColor" />
+    </symbol>
+
+    <symbol id="i-smile" viewBox="0 0 24 24">
+      <path d="M12 22c5.52 0 10-4.48 10-10S17.52 2 12 2 2 6.48 2 12s4.48 10 10 10z" fill="none" stroke="currentColor"
+        stroke-width="1.8" />
+      <path d="M8.5 10h.01M15.5 10h.01" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" />
+      <path d="M8 14c1.2 1.6 2.7 2.5 4 2.5s2.8-.9 4-2.5" fill="none" stroke="currentColor" stroke-width="1.8"
+        stroke-linecap="round" />
+    </symbol>
+
+    <symbol id="i-arrows" viewBox="0 0 24 24">
+      <path d="M4 8h12M13 5l3 3-3 3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+        stroke-linejoin="round" />
+      <path d="M20 16H8M11 19l-3-3 3-3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+        stroke-linejoin="round" />
+    </symbol>
+  </svg>
   <div class="relative flex h-auto min-h-screen w-full flex-col 
            bg-[var(--bg-dreamy)] group/design-root overflow-x-hidden"
     style='font-family: Inter, "Noto Sans", sans-serif;'>
@@ -66,14 +99,14 @@
         <div class="flex flex-1 justify-end gap-8">
           <div class="flex items-center gap-9">
             <a class="text-[var(--text-main)] hover:text-[var(--accent-purple)] 
-                      text-sm font-bold leading-normal transition-colors cursor-pointer"
-              data-i18n="header.lang.jp" id="jp-btn">JP</a>
+                      text-sm font-bold leading-normal transition-colors cursor-pointer" data-i18n="header.lang.jp"
+              id="jp-btn">JP</a>
             <a class="text-[var(--text-main)] hover:text-[var(--accent-purple)] 
-                      text-sm font-bold leading-normal transition-colors cursor-pointer"
-              data-i18n="header.lang.en" id="en-btn">EN</a>
+                      text-sm font-bold leading-normal transition-colors cursor-pointer" data-i18n="header.lang.en"
+              id="en-btn">EN</a>
             <a class="text-[var(--text-main)] hover:text-[var(--accent-purple)] 
-                      text-sm font-bold leading-normal transition-colors cursor-pointer"
-              data-i18n="header.lang.cn" id="cn-btn">CN</a>
+                      text-sm font-bold leading-normal transition-colors cursor-pointer" data-i18n="header.lang.cn"
+              id="cn-btn">CN</a>
           </div>
         </div>
       </header>
@@ -318,7 +351,10 @@
           <div class="grid grid-cols-[60px_1fr] gap-x-2 px-4">
             <div class="flex flex-col items-center gap-1 pt-3">
               <div class="text-[var(--accent-pink)]">
-                <span class="material-symbols-outlined text-3xl">star</span>
+                <!-- <span class="material-symbols-outlined text-3xl">star</span> -->
+                <svg class="w-6 h-6 text-pink-400" aria-hidden="true">
+                  <use href="#i-star" />
+                </svg>
               </div>
               <div class="w-[4px] rounded-full bg-[var(--border-color)] h-16 grow"></div>
             </div>
@@ -340,7 +376,9 @@
             <div class="flex flex-col items-center gap-1">
               <div class="w-[4px] rounded-full bg-[var(--border-color)] h-4"></div>
               <div class="text-[var(--accent-mint)]">
-                <span class="material-symbols-outlined text-3xl">favorite</span>
+                <svg class="w-6 h-6 text-green-400" aria-hidden="true">
+                  <use href="#i-heart" />
+                </svg>
               </div>
               <div class="w-[4px] rounded-full bg-[var(--border-color)] h-16 grow"></div>
             </div>
@@ -359,7 +397,9 @@
             <div class="flex flex-col items-center gap-1">
               <div class="w-[4px] rounded-full bg-[var(--border-color)] h-4"></div>
               <div class="text-[var(--accent-blue)]">
-                <span class="material-symbols-outlined text-3xl">mood</span>
+                <svg class="w-6 h-6 text-sky-400" aria-hidden="true">
+                  <use href="#i-smile" />
+                </svg>
               </div>
             </div>
             <div class="flex flex-1 flex-col py-3">
@@ -455,7 +495,9 @@
                       </div>
                     </div>
                     <div class="text-[var(--accent-purple)]">
-                      <span class="material-symbols-outlined text-4xl">sync_alt</span>
+                      <svg class="w-7 h-7 text-purple-500">
+                        <use href="#i-arrows" />
+                      </svg>
                     </div>
                     <div
                       class="w-16 h-12 bg-[var(--accent-purple)] rounded-2xl flex items-center justify-center shadow-lg">
