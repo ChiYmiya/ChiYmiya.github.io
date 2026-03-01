@@ -4,9 +4,6 @@
 <head>
   <meta charset="utf-8" />
   <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect" />
-  <!-- <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;family=Noto+Sans:wght@400;500;700;900&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-    rel="stylesheet" /> -->
   <title data-i18n="meta.title">チハの雪's Portfolio</title>
   <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon" />
   <script src="./src/main.js" type="module"></script>
@@ -60,6 +57,76 @@
       <path d="M20 16H8M11 19l-3-3 3-3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
         stroke-linejoin="round" />
     </symbol>
+
+    <symbol id="header-icon">
+      <g clip-path="url(#clip0_6_319)">
+        <path d="M8.57829 8.57829C5.52816 11.6284 
+          3.451 15.5145 2.60947 19.7452C1.76794 
+          23.9758 2.19984 28.361 3.85056 
+          32.3462C5.50128 36.3314 8.29667
+          39.7376 11.8832 42.134C15.4698 44.5305 
+          19.6865 45.8096 24 45.8096C28.3135 
+          45.8096 32.5302 44.5305 36.1168 
+          42.134C39.7033 39.7375 42.4987 36.3314 
+          44.1494 32.3462C45.8002 28.361 46.2321 
+          23.9758 45.3905 19.7452C44.549 15.5145 
+          42.4718 11.6284 39.4217 8.57829L24 
+          24L8.57829 8.57829Z" fill="currentColor"></path>
+      </g>
+      <defs>
+        <clipPath id="clip0_6_319">
+          <rect fill="white" height="48" width="48"></rect>
+        </clipPath>
+      </defs>
+    </symbol>
+
+    <symbol id="background-img">
+      <line stroke="var(--accent-pink)" stroke-dasharray="12 12" stroke-width="1.5" x1="150" x2="150" y1="50" y2="350">
+      </line>
+      <line stroke="var(--accent-pink)" stroke-dasharray="12 12" stroke-width="1.5" x1="383" x2="383" y1="50" y2="350">
+      </line>
+      <line stroke="var(--accent-pink)" stroke-dasharray="12 12" stroke-width="1.5" x1="616" x2="616" y1="50" y2="350">
+      </line>
+      <line stroke="var(--accent-pink)" stroke-dasharray="12 12" stroke-width="1.5" x1="850" x2="850" y1="50" y2="350">
+      </line>
+      <rect fill="var(--bg-dreamy)" height="30" rx="15" stroke="var(--accent-purple)" stroke-width="2" width="80"
+        x="110" y="20"></rect>
+      <text data-i18n="diagram.requirement" fill="var(--accent-purple)" font-size="11" font-weight="900"
+        text-anchor="middle" x="150" y="40">REQUIREMENT</text>
+      <rect fill="var(--bg-dreamy)" height="30" rx="15" stroke="var(--accent-purple)" stroke-width="2" width="80"
+        x="343" y="20"></rect>
+      <text data-i18n="diagram.design" fill="var(--accent-purple)" font-size="11" font-weight="900" text-anchor="middle"
+        x="383" y="40">DESIGN</text>
+      <rect fill="var(--accent-pink)" height="30" rx="15" stroke="var(--accent-purple)" stroke-width="2" width="80"
+        x="576" y="20"></rect>
+      <text data-i18n="diagram.implement" fill="white" font-size="11" font-weight="900" text-anchor="middle" x="616"
+        y="40">IMPLEMENT</text>
+      <rect fill="var(--bg-dreamy)" height="30" rx="15" stroke="var(--accent-purple)" stroke-width="2" width="80"
+        x="810" y="20"></rect>
+      <text data-i18n="diagram.operation" fill="var(--accent-purple)" font-size="11" font-weight="900"
+        text-anchor="middle" x="850" y="40">OPERATION</text>
+      <path d="M150 100 H383" marker-end="url(#arrow-cute)" stroke="var(--accent-purple)" stroke-width="2.5">
+      </path>
+      <path d="M383 140 H616" marker-end="url(#arrow-cute)" stroke="var(--accent-purple)" stroke-width="2.5">
+      </path>
+      <path d="M616 180 Q 733 180 850 180" marker-end="url(#arrow-cute)" stroke="var(--accent-purple)"
+        stroke-width="2.5"></path>
+      <path d="M850 220 H616" marker-end="url(#arrow-cute)" stroke="var(--accent-purple)" stroke-dasharray="6 6"
+        stroke-width="2"></path>
+      <path d="M616 260 H150" marker-end="url(#arrow-cute)" stroke="var(--accent-purple)" stroke-dasharray="4 4"
+        stroke-width="1.5"></path>
+      <circle cx="150" cy="100" fill="var(--accent-pink)" r="6" stroke="white" stroke-width="2"></circle>
+      <circle cx="383" cy="140" fill="var(--accent-pink)" r="6" stroke="white" stroke-width="2"></circle>
+      <circle cx="616" cy="180" fill="var(--accent-mint)" r="10" stroke="var(--accent-purple)" stroke-width="3">
+      </circle>
+      <circle cx="850" cy="220" fill="var(--accent-pink)" r="6" stroke="white" stroke-width="2"></circle>
+      <defs>
+        <marker id="arrow-cute" markerHeight="10" markerUnits="strokeWidth" markerWidth="10" orient="auto" refX="9"
+          refY="3">
+          <path d="M0,0 L0,6 L9,3 z" fill="var(--accent-purple)"></path>
+        </marker>
+      </defs>
+    </symbol>
   </svg>
   <div class="relative flex h-auto min-h-screen w-full flex-col 
            bg-[var(--bg-dreamy)] group/design-root overflow-x-hidden"
@@ -72,28 +139,10 @@
           <div class="size-6 bg-[var(--accent-pink)] rounded-lg flex items-center 
                       justify-center text-white shadow-sm">
             <svg class="size-4" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-              <g clip-path="url(#clip0_6_319)">
-                <path d="M8.57829 8.57829C5.52816 11.6284 
-                  3.451 15.5145 2.60947 19.7452C1.76794 
-                  23.9758 2.19984 28.361 3.85056 
-                  32.3462C5.50128 36.3314 8.29667
-                  39.7376 11.8832 42.134C15.4698 44.5305 
-                  19.6865 45.8096 24 45.8096C28.3135 
-                  45.8096 32.5302 44.5305 36.1168 
-                  42.134C39.7033 39.7375 42.4987 36.3314 
-                  44.1494 32.3462C45.8002 28.361 46.2321 
-                  23.9758 45.3905 19.7452C44.549 15.5145 
-                  42.4718 11.6284 39.4217 8.57829L24 
-                  24L8.57829 8.57829Z" fill="currentColor"></path>
-              </g>
-              <defs>
-                <clipPath id="clip0_6_319">
-                  <rect fill="white" height="48" width="48"></rect>
-                </clipPath>
-              </defs>
+              <use href="#header-icon"></use>
             </svg>
           </div>
-          <h2 class="text-[var(--text-main)] text-lg font-black leading-tight tracking-tight"><span
+          <h2 class=" text-[var(--text-main)] text-lg font-black leading-tight tracking-tight"><span
               data-i18n="header.brand">Portfolio</span> <span class="text-[var(--accent-pink)]">☆</span></h2>
         </div>
         <div class="flex flex-1 justify-end gap-8">
@@ -115,51 +164,7 @@
                  overflow-hidden pointer-events-none">
           <svg class="w-full h-full max-w-[1490px]" preserveAspectRatio="xMidYMid slice" viewBox="0 0 1000 400"
             xmlns="http://www.w3.org/2000/svg">
-            <line stroke="var(--accent-pink)" stroke-dasharray="12 12" stroke-width="1.5" x1="150" x2="150" y1="50"
-              y2="350"></line>
-            <line stroke="var(--accent-pink)" stroke-dasharray="12 12" stroke-width="1.5" x1="383" x2="383" y1="50"
-              y2="350"></line>
-            <line stroke="var(--accent-pink)" stroke-dasharray="12 12" stroke-width="1.5" x1="616" x2="616" y1="50"
-              y2="350"></line>
-            <line stroke="var(--accent-pink)" stroke-dasharray="12 12" stroke-width="1.5" x1="850" x2="850" y1="50"
-              y2="350"></line>
-            <rect fill="var(--bg-dreamy)" height="30" rx="15" stroke="var(--accent-purple)" stroke-width="2" width="80"
-              x="110" y="20"></rect>
-            <text data-i18n="diagram.requirement" fill="var(--accent-purple)" font-size="11" font-weight="900"
-              text-anchor="middle" x="150" y="40">REQUIREMENT</text>
-            <rect fill="var(--bg-dreamy)" height="30" rx="15" stroke="var(--accent-purple)" stroke-width="2" width="80"
-              x="343" y="20"></rect>
-            <text data-i18n="diagram.design" fill="var(--accent-purple)" font-size="11" font-weight="900"
-              text-anchor="middle" x="383" y="40">DESIGN</text>
-            <rect fill="var(--accent-pink)" height="30" rx="15" stroke="var(--accent-purple)" stroke-width="2"
-              width="80" x="576" y="20"></rect>
-            <text data-i18n="diagram.implement" fill="white" font-size="11" font-weight="900" text-anchor="middle"
-              x="616" y="40">IMPLEMENT</text>
-            <rect fill="var(--bg-dreamy)" height="30" rx="15" stroke="var(--accent-purple)" stroke-width="2" width="80"
-              x="810" y="20"></rect>
-            <text data-i18n="diagram.operation" fill="var(--accent-purple)" font-size="11" font-weight="900"
-              text-anchor="middle" x="850" y="40">OPERATION</text>
-            <path d="M150 100 H383" marker-end="url(#arrow-cute)" stroke="var(--accent-purple)" stroke-width="2.5">
-            </path>
-            <path d="M383 140 H616" marker-end="url(#arrow-cute)" stroke="var(--accent-purple)" stroke-width="2.5">
-            </path>
-            <path d="M616 180 Q 733 180 850 180" marker-end="url(#arrow-cute)" stroke="var(--accent-purple)"
-              stroke-width="2.5"></path>
-            <path d="M850 220 H616" marker-end="url(#arrow-cute)" stroke="var(--accent-purple)" stroke-dasharray="6 6"
-              stroke-width="2"></path>
-            <path d="M616 260 H150" marker-end="url(#arrow-cute)" stroke="var(--accent-purple)" stroke-dasharray="4 4"
-              stroke-width="1.5"></path>
-            <circle cx="150" cy="100" fill="var(--accent-pink)" r="6" stroke="white" stroke-width="2"></circle>
-            <circle cx="383" cy="140" fill="var(--accent-pink)" r="6" stroke="white" stroke-width="2"></circle>
-            <circle cx="616" cy="180" fill="var(--accent-mint)" r="10" stroke="var(--accent-purple)" stroke-width="3">
-            </circle>
-            <circle cx="850" cy="220" fill="var(--accent-pink)" r="6" stroke="white" stroke-width="2"></circle>
-            <defs>
-              <marker id="arrow-cute" markerHeight="10" markerUnits="strokeWidth" markerWidth="10" orient="auto"
-                refX="9" refY="3">
-                <path d="M0,0 L0,6 L9,3 z" fill="var(--accent-purple)"></path>
-              </marker>
-            </defs>
+            <use href="#background-img"></use>
           </svg>
         </div>
         <div class="relative z-10 px-10 md:px-40 py-24 flex flex-col items-center text-center Defaultcursor">
