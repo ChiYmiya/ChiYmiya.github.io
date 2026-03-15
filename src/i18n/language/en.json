@@ -1,0 +1,112 @@
+{
+  "en": {
+    "meta": {
+      "title": "Chiha no Yuki's Portfolio"
+    },
+    "header": {
+      "brand": "Portfolio",
+      "lang": {
+        "ja": "JA",
+        "en": "EN",
+        "zh-CN": "ZH"
+      }
+    },
+    "hero": {
+      "title": {
+        "line1": "Solving business problems through system design and technology"
+      },
+      "badge": "About me",
+      "name": "Chiha no Yuki",
+      "role": "Web Engineer (Design / Development / Operations)",
+      "about": {
+        "line1": "I am a web engineer with experience maintaining and improving internal business systems, capable of designing and implementing solutions based on real business requirements even in constrained environments.",
+        "line2": "While architectural decisions remain human-driven, I incorporate AI tools into implementation and improvement processes to enhance productivity while maintaining code quality and maintainability."
+      },
+      "cta": {
+        "contact": "Contact 💌",
+        "github": "GitHub ✦"
+      }
+    },
+    "skills": {
+      "title": "Skills",
+      "frontend": {
+        "title": "Frontend Development",
+        "desc": "Building UI primarily with Vue and TypeScript, focusing on code readability and maintainability.",
+        "tag": {
+          "vue": "Vue",
+          "ts": "TypeScript",
+          "htmlCss": "HTML / SCSS"
+        }
+      },
+      "backend": {
+        "title": "Server-side / Business Logic",
+        "desc": "Experience improving and maintaining business web systems while carefully understanding existing codebases.",
+        "tag": {
+          "java": "Java",
+          "jsp": "JSP",
+          "sql": "SQL",
+          "springBoot": "Spring Boot"
+        }
+      },
+      "tools": {
+        "title": "Development Tools & Workflow",
+        "desc": "Working with Git-based workflows while incorporating AI tools to improve implementation and refactoring efficiency.",
+        "tag": {
+          "github": "GitHub",
+          "cursor": "Cursor",
+          "codex": "Codex",
+          "stitch": "Google Stitch"
+        }
+      }
+    },
+    "experience": {
+      "title": "Experience",
+      "work": {
+        "role": "Manufacturing Company / In-house Web Engineer",
+        "status": "Current",
+        "item1": "・Responsible for maintenance, operation, and feature improvements of internal business web systems",
+        "item2": "・Maintained and improved existing JSP / Java systems and resolved system bugs",
+        "item3": "・Collaborated with business teams to clarify requirements and support design, development, and release",
+        "item4": "・Gradually improved frontend structure to enhance code readability and maintainability"
+      },
+      "self": {
+        "title": "Self-learning / Personal Development",
+        "date": "2023 - Present",
+        "item1": "・Participated in a 6-month remote development experience and completed a final-year project during university.",
+        "item2": "・Self-studied Japanese and passed the Japanese Language Proficiency Test (JLPT) N1."
+      },
+      "edu": {
+        "title": "Education",
+        "date": "2020 - 2024",
+        "item1": "・Information Engineering / Computer Science related major",
+        "item2": "・Studied programming fundamentals, data structures and algorithms, operating systems, databases, and software engineering.",
+        "item3": "・Applying computer science fundamentals to understand existing systems and improve them effectively."
+      }
+    },
+    "projects": {
+      "title": "Projects",
+      "featured": {
+        "badge": "Featured Project"
+      },
+      "p1": {
+        "name": "Website Project 1",
+        "desc": "Coming soon",
+        "link": "View Project ✨"
+      },
+      "p2": {
+        "name": "Website Project 2",
+        "desc": "Coming soon",
+        "link": "View Project ✨"
+      },
+      "p3": {
+        "name": "Website Project 3",
+        "desc": "Coming soon",
+        "link": "View Project ✨"
+      }
+    },
+    "footer": {
+      "tagline": "Build thoughtfully, and create things that last"
+    },
+    "__lang": "en"
+  }
+}

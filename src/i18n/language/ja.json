@@ -1,0 +1,112 @@
+{
+    "ja": {
+        "meta": {
+            "title": "チハの雪\u0027s Portfolio"
+        },
+        "header": {
+            "brand": "Portfolio",
+            "lang": {
+                "ja": "JA",
+                "en": "EN",
+                "zh-CN": "ZH"
+            }
+        },
+        "hero": {
+            "title": {
+                "line1": "業務課題をシステム設計と技術で解決する"
+            },
+            "badge": "About me",
+            "name": "チハの雪",
+            "role": "Webエンジニア（設計・実装・運用）",
+            "about": {
+                "line1": "業務システムの運用・改善経験を基盤に、制約のある環境下でも業務要件を踏まえた設計・実装に取り組んできたWebエンジニアです。",
+                "line2": "設計判断は人が担い、実装や改善の工程にはAIツールも取り入れ、保守性と再現性を重視した開発を行っています。"
+            },
+            "cta": {
+                "contact": "問い合わせ 💌",
+                "github": "GitHub ✦"
+            }
+        },
+        "skills": {
+            "title": "スキル",
+            "frontend": {
+                "title": "フロントエンド開発",
+                "desc": "Vue と TypeScript を用いたUI実装を中心に、可読性や保守性を意識したフロントエンド開発に取り組んでいます。",
+                "tag": {
+                    "vue": "Vue",
+                    "ts": "TypeScript",
+                    "htmlCss": "HTML / SCSS"
+                }
+            },
+            "backend": {
+                "title": "サーバーサイド／業務ロジック",
+                "desc": "業務系Webシステムの開発・保守を通じて、既存コードを理解しながら安全に改善していく実装経験を積んできました。",
+                "tag": {
+                    "java": "Java",
+                    "jsp": "JSP",
+                    "sql": "SQL",
+                    "springBoot": "Spring Boot"
+                }
+            },
+            "tools": {
+                "title": "開発ツール・ワークフロー",
+                "desc": "Git を用いたバージョン管理を前提に、AIツールも取り入れながら実装やリファクタリングの効率化に取り組んでいます。",
+                "tag": {
+                    "github": "GitHub",
+                    "cursor": "Cursor",
+                    "codex": "Codex",
+                    "stitch": "Google Stitch"
+                }
+            }
+        },
+        "experience": {
+            "title": "経験",
+            "work": {
+                "role": "製造業系企業 / 社内Webエンジニア",
+                "status": "在職中",
+                "item1": "・社内向け業務Webシステムの運用・保守・機能改善を担当",
+                "item2": "・JSP / Java を中心とした既存システムの改修、不具合対応",
+                "item3": "・業務部門と要件調整を行いながら、設計補助から実装・リリースまで対応",
+                "item4": "・フロントエンドの段階的な改善に取り組み、可読性・保守性を向上"
+            },
+            "self": {
+                "title": "自主学習・自己研鑽",
+                "date": "2023 - 今",
+                "item1": "・大学在学中、半年間のリモート開発活動や卒業研究を通じて、自律的に学習・実装を進める経験を積みました。",
+                "item2": "・日本語は独学で学習し、日本語能力試験 N1 に合格しています。"
+            },
+            "edu": {
+                "title": "Education / 学歴",
+                "date": "2020 - 2024",
+                "item1": "・情報工学系学科",
+                "item2": "・在学中は、プログラミング基礎、データ構造とアルゴリズム、オペレーティングシステム、データベース、ソフトウェア工学などを学習。",
+                "item3": "・コンピュータサイエンスの基礎知識を活かし、既存コードの背景や設計意図を理解したうえで業務システムの改善に取り組んでいます。"
+            }
+        },
+        "projects": {
+            "title": "Projects",
+            "featured": {
+                "badge": "Featured Project"
+            },
+            "p1": {
+                "name": "進行中のWebサイト1",
+                "desc": "未定1",
+                "link": "View Project ✨"
+            },
+            "p2": {
+                "name": "進行中のWebサイト2",
+                "desc": "未定2",
+                "link": "View Project ✨"
+            },
+            "p3": {
+                "name": "進行中のWebサイト3",
+                "desc": "未定3",
+                "link": "View Project ✨"
+            }
+        },
+        "footer": {
+            "tagline": "考えて作り、長く使われるものを"
+        },
+        "__lang": "ja"
+    }
+}
